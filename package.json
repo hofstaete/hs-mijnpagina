@@ -1,0 +1,19 @@
+{
+  "name": "hs-mijnpagina",
+  "version": "0.0.1",
+  "description": "Klantensite Hofstaete Klanten",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michelvdwereld/hs-mijnpagina.git"
+  },
+  "author": "Michel van der Wereld",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michelvdwereld/hs-mijnpagina/issues"
+  },
+  "homepage": "https://github.com/michelvdwereld/hs-mijnpagina#readme"
+}
