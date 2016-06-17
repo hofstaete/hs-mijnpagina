@@ -1,0 +1,17 @@
+{
+  "name": "hs-mijnpagina",
+  "description": "Klantensite Hofstaete Klanten",
+  "main": "index.js",
+  "authors": [
+    "Michel van der Wereld"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/michelvdwereld/hs-mijnpagina",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

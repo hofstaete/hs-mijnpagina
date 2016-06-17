@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/michelvdwereld/hs-mijnpagina/issues"
   },
-  "homepage": "https://github.com/michelvdwereld/hs-mijnpagina#readme"
+  "homepage": "https://github.com/michelvdwereld/hs-mijnpagina#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0"
+  }
 }
