@@ -1,0 +1,19 @@
+/// Test Comment Sassdoc 1
+/// @author Michel van der Wereld
+/// @example
+///   4 + 2 = 8
+///   4 / 2 = 2
+///
+/// @example scss - Clamp function
+///   clamp(42, $min: 13, $max: 37)
+///   // 37
+/// @link http://some.url
+/// @link http://some.url Optional caption
+/// @output Description
+/// @param {type} $name
+/// @param {type | othertype} $name
+/// @param {type} $name - description
+/// @param {type} $name [default value] - description
+@mixin background-color($color){
+	background-color: $color;
+}

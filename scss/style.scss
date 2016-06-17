@@ -1,0 +1,76 @@
+////
+/// @author Michel van der Wereld
+////
+
+/// Imports 
+@import "normalize";
+@import "bower_components/susy/sass/susy";
+@import "bower_components/breakpoint-sass/stylesheets/breakpoint";
+
+@import '_mixins';
+
+$susy: (
+  columns: 12, 
+  container: 1140px,
+  gutters: 0.25,
+  global-box-sizing: border-box,
+  debug: (image: show-columns)
+);
+
+@include border-box-sizing;
+
+/// Color 1
+$color1: orange;
+
+.container {
+  background: $color1;
+  @include container;
+}
+
+.header{
+  @include span(12);
+  background-color: grey;
+
+  @include breakpoint( 320px ){
+    background-color: white;
+  }
+}
+
+.content {
+  @include span(8); 
+  background-color: blue;
+}
+
+.sidebar {
+  @include span(4 last); 
+  background-color: red;
+}
+
+
+
+
+
+// .m-navigation {
+//   &:after {
+//   	color: blue; 
+//   	@media screen and (min-width: 320px) {
+//       content: '320px';
+//       display: block;
+//       width: 50%;
+//     }
+//     @media screen and (min-width: 767px) {
+//       content: '767px';
+//       display: inline-block;
+//       width: 100%;
+//     }
+//   }
+//   li {
+//     display: block;
+ 
+//     @media screen and (min-width: 767px) {
+//       float: left;
+//     }
+//   }
+// }
+
+
