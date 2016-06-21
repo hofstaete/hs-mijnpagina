@@ -27,7 +27,7 @@ var sassOptions = {
 	outputStyle: 'expanded'
 };
 var sassdocOptions = {
-	dest: './dev/sassdoc'
+	dest: './scss/sassdoc'
 };
 var autoprefixerOptions = {
 	browsers: ['last 2 versions', '> 2%', 'Firefox ESR']
