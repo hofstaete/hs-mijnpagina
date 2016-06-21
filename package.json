@@ -22,8 +22,10 @@
     "gulp-autoprefixer": "^3.1.0",
     "gulp-csslint": "^0.3.1",
     "gulp-csslint-scss-reporter": "0.0.1",
+    "gulp-modernizr": "^1.0.0-alpha",
     "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.3",
     "sassdoc": "^2.1.20"
   }
 }

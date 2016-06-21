@@ -1,13 +1,15 @@
 // INCLUDES
 //-----------------------------------------------------------//
-var gulp = require('gulp');
-var sass = require('gulp-sass');
+var gulp 					= require('gulp');
+var sass 					= require('gulp-sass');
 
-var sourcemaps = require('gulp-sourcemaps');
+var sourcemaps 		= require('gulp-sourcemaps');
 
-var autoprefixer = require('gulp-autoprefixer');
-var sassdoc = require('sassdoc');
-var browserSync = require('browser-sync').create();
+var autoprefixer 	= require('gulp-autoprefixer');
+var uglify 				= require('gulp-uglify');
+var sassdoc 			= require('sassdoc');
+var browserSync 	= require('browser-sync').create();
+var modernizr 		= require('gulp-modernizr');
 // Nog toevoegen: imagemin = require 'gulp-imagemin' 
 // pngquant = require 'imagemin-pngquant'
 // gulp-plumber
@@ -16,11 +18,11 @@ var browserSync = require('browser-sync').create();
 
 // PATHS
 //-----------------------------------------------------------//
-//var pathSass = './scss/**/*.scss';
-var pathSass = './scss/{,*/}*.{scss,sass}';
-var pathCss = './css/';
-var pathHtml = './*.html';
-var pathJs = './*.js';
+var pathSass 			= './scss/{,*/}*.{scss,sass}';
+var pathCss 			= './css/';
+var pathHtml 			= './*.html';
+var pathJs 				= './js/';
+var pathJsFile 		= './js/*.js';
 
 // OPTIONS
 //-----------------------------------------------------------//
@@ -51,6 +53,14 @@ gulp.task('browserSync', function() {
 	})
 })
 
+// Modernizr
+gulp.task('modernizr', function() {
+  gulp.src(pathJsFile)
+    .pipe(modernizr())
+    .pipe(uglify())
+    .pipe(gulp.dest(pathJs))
+});
+
 // For developing, compile sass
 gulp.task('sass', function () {
 	return gulp
@@ -58,10 +68,6 @@ gulp.task('sass', function () {
 	    .pipe(sourcemaps.init())
 	    .pipe(sass(sassOptions)
 	    	.on('error', sass.logError))
-	    //.pipe(csslint())
-    	//.pipe(scssReporter('scss/**/*.scss'))
-	    //.pipe(sourcemaps.write({includeContent: false}))
-			//.pipe(sourcemaps.init())
 	    .pipe(autoprefixer(autoprefixerOptions))
 	    .pipe(sourcemaps.write())
 	    .pipe(gulp.dest(pathCss))
