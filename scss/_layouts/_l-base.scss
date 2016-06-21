@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+body{
+	color: $cape-cod;
+	@include open-sans();
+  line-height: 1.6em;
+
+
+  // Box - margin, padding, display, etc.
+	// Border & Background - border, border-radius, background-color, etc.
+	// Text - color, font-size, text-transform, etc.
+	// Other stuff - animations, transforms, etc.
+}
+
+.l-container {
+  @include container;
+}
+
+.l-header{
+  @include span(12);
+}
+
+.l-content {
+  @include span(12); 
+}
+
+.l-footer {
+  @include span(12);
+}

@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+////
+/// @author Michel van der Wereld
+////
+
+/// COMPONENT IMPORTS 
+@import "bower_components/susy/sass/susy";
+@import "bower_components/breakpoint-sass/stylesheets/breakpoint";
+@import "bower_components/sass-mq/mq";
+
+// BASE IMPORTS
+@import "_base/_config";
+@import "_base/_global";
+@import "_base/_mixins";
+@import "_base/_normalize";
+
+// LAYOUTS IMPORTS
+@import "_layouts/_l-base";
+
+// MODULES IMPORTS
+@import "_modules/_m-header";
+@import "_modules/_m-button";
+
+.test{
+  display: flex;
+}
+
+
+// .responsive-example {
+//     // Apply styling to mobile and upwards
+//     @include mq($from: mobile) {
+//         color: red;
+//     }
+//     // Apply styling up to devices smaller than tablets (exclude tablets)
+//     @include mq($until: tablet) {
+//         color: blue;
+//     }
+//     // Same thing, in landscape orientation
+//     @include mq($until: tablet, $and: '(orientation: landscape)') {
+//         color: hotpink;
+//     }
+//     // Apply styling to tablets up to desktop (exclude desktop)
+//     @include mq(tablet, desktop) {
+//         color: green;
+//     }
+// }
+

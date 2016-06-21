@@ -1,3 +1,7 @@
+@charset "UTF-8";
+
+
+
 /// Test Comment Sassdoc 1
 /// @author Michel van der Wereld
 /// @example
@@ -14,6 +18,12 @@
 /// @param {type | othertype} $name
 /// @param {type} $name - description
 /// @param {type} $name [default value] - description
-@mixin background-color($color){
-	background-color: $color;
+@mixin open-sans($weight: 400){
+	// pls choose 400 or 700
+	font-family: "Open Sans",sans-serif;
+	font-weight: $weight;
+  font-style: normal;
+  font-variant: normal;
 }
+
+

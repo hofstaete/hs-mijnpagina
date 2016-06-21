@@ -1,0 +1,22 @@
+	@charset "UTF-8";
+	 
+	// Config
+	//$button-bgcolor: $blue;
+	//$button-fontcolor: $white;
+	 
+	// Base
+	.m-header {
+		background-color: $persian-green;
+
+	  @include mq($from: tablet) {
+	  	background-color: $white;
+	  }
+		
+		// Box - margin, padding, display, etc.
+		// Border & Background - border, border-radius, background-color, etc.
+		// Text - color, font-size, text-transform, etc.
+		// Other stuff - animations, transforms, etc.
+	}
+	 
+	// States
+	//@import "../_states/_s-buttons";

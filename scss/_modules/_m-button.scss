@@ -1,0 +1,21 @@
+	@charset "UTF-8";
+	 
+	// Config
+	//$button-bgcolor: $blue;
+	//$button-fontcolor: $white;
+	 
+	// Base
+	.m-button {
+		display: inline-block;
+		
+		// Box - margin, padding, display, etc.
+		// Border & Background - border, border-radius, background-color, etc.
+		// Text - color, font-size, text-transform, etc.
+		// Other stuff - animations, transforms, etc.
+
+		&--primary {}
+		&--secondary {}
+	}
+	 
+	// States
+	//@import "../_states/_s-buttons";
