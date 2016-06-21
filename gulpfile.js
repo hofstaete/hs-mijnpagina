@@ -61,7 +61,7 @@ gulp.task('sass', function () {
 	    //.pipe(csslint())
     	//.pipe(scssReporter('scss/**/*.scss'))
 	    //.pipe(sourcemaps.write({includeContent: false}))
-		//.pipe(sourcemaps.init())
+			//.pipe(sourcemaps.init())
 	    .pipe(autoprefixer(autoprefixerOptions))
 	    .pipe(sourcemaps.write())
 	    .pipe(gulp.dest(pathCss))
