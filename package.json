@@ -27,5 +27,8 @@
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^1.5.3",
     "sassdoc": "^2.1.20"
+  },
+  "dependencies": {
+    "customizr": "^1.0.0-alpha"
   }
 }

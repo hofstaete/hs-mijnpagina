@@ -2,14 +2,11 @@
 //-----------------------------------------------------------//
 var gulp 					= require('gulp');
 var sass 					= require('gulp-sass');
-
 var sourcemaps 		= require('gulp-sourcemaps');
-
 var autoprefixer 	= require('gulp-autoprefixer');
 var uglify 				= require('gulp-uglify');
 var sassdoc 			= require('sassdoc');
 var browserSync 	= require('browser-sync').create();
-var modernizr 		= require('gulp-modernizr');
 // Nog toevoegen: imagemin = require 'gulp-imagemin' 
 // pngquant = require 'imagemin-pngquant'
 // gulp-plumber
@@ -18,11 +15,10 @@ var modernizr 		= require('gulp-modernizr');
 
 // PATHS
 //-----------------------------------------------------------//
-var pathSass 			= './scss/{,*/}*.{scss,sass}';
-var pathCss 			= './css/';
-var pathHtml 			= './*.html';
-var pathJs 				= './js/';
-var pathJsFile 		= './js/*.js';
+var pathSass 							= './scss/{,*/}*.{scss,sass}';
+var pathCss 							= './css/';
+var pathHtml 							= './*.html';
+var pathJs								= './js/';
 
 // OPTIONS
 //-----------------------------------------------------------//
@@ -52,14 +48,6 @@ gulp.task('browserSync', function() {
 		browser: ["chrome", "firefox", "iexplore"]
 	})
 })
-
-// Modernizr
-gulp.task('modernizr', function() {
-  gulp.src(pathJsFile)
-    .pipe(modernizr())
-    .pipe(uglify())
-    .pipe(gulp.dest(pathJs))
-});
 
 // For developing, compile sass
 gulp.task('sass', function () {
@@ -95,7 +83,7 @@ gulp.task('watch', ['browserSync', 'sass'], function() {
 });
 
 // For production:  compress all sass + add necessary prefixes, compile to css
-gulp.task('prod', ['sassdoc'], function () {
+gulp.task('prod', ['sassdoc', 'modernizr'], function () {
   return gulp
     .src(pathSass)
     .pipe(sass({ outputStyle: 'compressed' }))
