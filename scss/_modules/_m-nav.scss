@@ -1,0 +1,54 @@
+// Box - margin, padding, display, etc.
+// Border & Background - border, border-radius, background-color, etc.
+// Text - color, font-size, text-transform, etc.
+// Other stuff - animations, transforms, etc. 
+
+@charset "UTF-8";
+
+/// Module Header
+
+// Config
+$module:	'nav';
+
+$nav__fontcolor--primary:					$white;
+$nav__fontcolor--secondary:				$downy;
+$nav__backgroundcolor--primary:		$hs-green;
+$nav__bordercolor--primary:				$gray_chateau;
+
+// Base
+.m-#{$module} {
+  &__item{
+    &--mobile{
+      width: 20%;
+      height: rem(48px);
+      display: block;
+      float: left;
+    }
+    &--tablet{}
+  }
+
+  &--mobile{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: rem(48px);
+    width: 100%;
+
+    border-top: 1px solid $nav__bordercolor--primary;
+
+    @include mq($from: tablet) {
+      display: none;
+    }
+  }
+
+  &--tablet{
+    display: none;
+    @include mq($from: tablet) {
+      display: block;
+    }
+  }
+
+}
+ 
+// States
+//@import "../_states/_s-buttons";

@@ -406,3 +406,12 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
+// Reset UL to default
+ul{
+  padding: 0;
+  margin: 0;
+}
+
+@include border-box-sizing;
+

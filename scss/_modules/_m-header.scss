@@ -8,14 +8,36 @@
 /// Module Header
 
 // Config
- 
+$module:	'header';
+$header__fontcolor--primary:					$gray_chateau;
+$header__backgroundcolor--primary:		$persian-green;
+$header__backgroundcolor--secondary:	$white;
+
 // Base
-.m-header {
-	background-color: $persian-green;
+.m-#{$module} {
+	background-color: $header__backgroundcolor--primary;
 	@include clearfix;
 
   @include mq($from: tablet) {
-  	background-color: $white;
+  	background-color: $header__backgroundcolor--secondary;
+  }
+
+  &--mobile {
+  	display: flex; 
+
+  	@include mq($from: tablet) {
+	  	display: none;
+	  }
+  }
+
+  &--tablet {
+  	display: none;
+  	
+
+  	@include mq($from: tablet) {
+  		float: right;
+	  	display: flex;
+	  }
   }
 
 	&__logo {
@@ -27,22 +49,11 @@
 	  }
 	}
 
-  &--mobile {
-  	display: flex; 
+	&__phonenumber {
+		color: $header__fontcolor--primary;
+	}
 
-  	@include mq($from: tablet) {
-	  	display: none;
-	  }
-  }
-  &--tablet {
-  	display: none;
-  	
 
-  	@include mq($from: tablet) {
-  		float: right;
-	  	display: flex;
-	  }
-  }
 }
  
 // States

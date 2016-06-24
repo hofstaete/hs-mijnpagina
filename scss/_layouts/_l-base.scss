@@ -31,8 +31,6 @@ html{
 
 	&__item {
 		display: inline-block;
-		@include span(12);
-		vertical-align: top;
 	}
 }
 
@@ -42,8 +40,58 @@ html{
 	}
 }
 
+// MARGIN
+.l-mt {
+	margin-top: rem($gel-spacing-unit);
+
+	&--double {
+		margin-top: rem(double($gel-spacing-unit));
+	}
+}
+
 .l-mb {
 	margin-bottom: rem($gel-spacing-unit);
+
+	&--double {
+		margin-bottom: rem(double($gel-spacing-unit));
+	}
+}
+
+.l-mtb {
+	margin-top: rem($gel-spacing-unit);
+	margin-bottom: rem($gel-spacing-unit);
+	
+	&--double {
+		margin-top: rem(double($gel-spacing-unit));
+		margin-bottom: rem(double($gel-spacing-unit));
+	}
+}
+
+// PADDING
+.l-pt {
+	padding-top: rem($gel-spacing-unit);
+
+	&--double {
+		padding-top: rem(double($gel-spacing-unit));
+	}
+}
+
+.l-pb {
+	padding-bottom: rem($gel-spacing-unit);
+
+	&--double {
+		padding-bottom: rem(double($gel-spacing-unit));
+	}
+}
+
+.l-ptb {
+	padding-top: rem($gel-spacing-unit);
+	padding-bottom: rem($gel-spacing-unit);
+	
+	&--double {
+		padding-top: rem(double($gel-spacing-unit));
+		padding-bottom: rem(double($gel-spacing-unit));
+	}
 }
 
 // STATES

@@ -20,7 +20,6 @@ $button__fontcolor--secondary:	$white;
 	padding: rem($gel-spacing-unit) rem($gel-spacing-unit);
 	width: auto;
 	position: relative;
-	//margin-left: -2px; // fix for inline-block problem with, white-space between 2 buttons
 
 	border-radius: rem(halve($gel-spacing-unit));
 
