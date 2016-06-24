@@ -83,7 +83,7 @@ gulp.task('watch', ['browserSync', 'sass'], function() {
 });
 
 // For production:  compress all sass + add necessary prefixes, compile to css
-gulp.task('prod', ['sassdoc', 'modernizr'], function () {
+gulp.task('prod', ['sassdoc'], function () {
   return gulp
     .src(pathSass)
     .pipe(sass({ outputStyle: 'compressed' }))
