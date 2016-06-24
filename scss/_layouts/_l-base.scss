@@ -1,29 +1,50 @@
+// Box - margin, padding, display, etc.
+// Border & Background - border, border-radius, background-color, etc.
+// Text - color, font-size, text-transform, etc.
+// Other stuff - animations, transforms, etc.
+
 @charset "UTF-8";
 
-body{
-	color: $cape-cod;
+/// LAYOUT BASE
+
+// CONFIG
+
+// BASE
+html{
+	min-height: 100%;
+	overflow-y: scroll;
+
+  color: $cape-cod;
+
 	@include open-sans();
-  line-height: 1.6em;
-
-
-  // Box - margin, padding, display, etc.
-	// Border & Background - border, border-radius, background-color, etc.
-	// Text - color, font-size, text-transform, etc.
-	// Other stuff - animations, transforms, etc.
+	line-height: 1.6rem;
+	font-size: 1rem;
 }
 
-.l-container {
-  @include container;
+.l-wrapper {
+	@include container;
 }
 
-.l-header{
-  @include span(12);
+.l-layout {
+	padding: 0 rem(double($gel-spacing-unit));
+	margin: 0;
+
+	&__item {
+		display: inline-block;
+		@include span(12);
+		vertical-align: top;
+	}
 }
 
-.l-content {
-  @include span(12); 
+.l-hide-tablet-and-up {
+	@include mq($from: tablet) {
+		display: none;
+	}
 }
 
-.l-footer {
-  @include span(12);
+.l-mb {
+	margin-bottom: rem($gel-spacing-unit);
 }
+
+// STATES
+//@import "../_states/_s-buttons";

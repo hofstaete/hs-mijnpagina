@@ -1,21 +1,60 @@
-	@charset "UTF-8";
-	 
-	// Config
-	//$button-bgcolor: $blue;
-	//$button-fontcolor: $white;
-	 
-	// Base
-	.m-button {
-		display: inline-block;
-		
-		// Box - margin, padding, display, etc.
-		// Border & Background - border, border-radius, background-color, etc.
-		// Text - color, font-size, text-transform, etc.
-		// Other stuff - animations, transforms, etc.
+// Box - margin, padding, display, etc.
+// Border & Background - border, border-radius, background-color, etc.
+// Text - color, font-size, text-transform, etc.
+// Other stuff - animations, transforms, etc. 
 
-		&--primary {}
-		&--secondary {}
+@charset "UTF-8";
+ 
+/// Module Button
+
+// Config
+$module: 												'button';
+$border__color--primary:				$geyser;
+$border__color--secondary:			$downy;
+$button__fontcolor--primary:		$gray_chateau;
+$button__fontcolor--secondary:	$white;
+
+// Base
+.m-#{$module} {
+	display: inline-block;
+	padding: rem($gel-spacing-unit) rem($gel-spacing-unit);
+	width: auto;
+	position: relative;
+	//margin-left: -2px; // fix for inline-block problem with, white-space between 2 buttons
+
+	border-radius: rem(halve($gel-spacing-unit));
+
+	text-decoration: none;
+	text-align: center;
+
+	&--primary {
+		border: 1px solid $border__color--primary;
+
+		color: $button__fontcolor--primary;
 	}
-	 
-	// States
-	//@import "../_states/_s-buttons";
+
+	&--secondary {
+		border: 1px solid $border__color--secondary;
+
+		color: $button__fontcolor--secondary;
+	}
+
+	&--half {
+		width: 50%;
+	}
+
+	&--full {
+		width: 100%;
+	}
+
+	&--margin-right {
+		margin-right: rem($gel-spacing-unit);
+	}
+
+	&--margin-left {
+		margin-left: rem($gel-spacing-unit);
+	}
+}
+ 
+// States
+//@import "../_states/_s-buttons";

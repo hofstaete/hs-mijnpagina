@@ -6,7 +6,7 @@
 $susy: (
   //debug: (image: show-columns),
   columns: 12, 
-  container: 1140px,
+  container: 1200px,
   gutters: 0.25,
   global-box-sizing: border-box,
   math: fluid
@@ -30,4 +30,3 @@ $mq-breakpoints: (
 
 // If you want to display the currently active breakpoint in the top right corner of your site during development, add the breakpoints to this list, ordered by width, e.g. (mobile, tablet, desktop).
 $mq-show-breakpoints: (mobile, mobileLandscape, tablet, desktop, wide);
-

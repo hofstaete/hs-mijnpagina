@@ -1,22 +1,49 @@
-	@charset "UTF-8";
-	 
-	// Config
-	//$button-bgcolor: $blue;
-	//$button-fontcolor: $white;
-	 
-	// Base
-	.m-header {
-		background-color: $persian-green;
+// Box - margin, padding, display, etc.
+// Border & Background - border, border-radius, background-color, etc.
+// Text - color, font-size, text-transform, etc.
+// Other stuff - animations, transforms, etc. 
 
-	  @include mq($from: tablet) {
-	  	background-color: $white;
-	  }
+@charset "UTF-8";
+
+/// Module Header
+
+// Config
+ 
+// Base
+.m-header {
+	background-color: $persian-green;
+	@include clearfix;
+
+  @include mq($from: tablet) {
+  	background-color: $white;
+  }
+
+	&__logo {
+		display: none;
 		
-		// Box - margin, padding, display, etc.
-		// Border & Background - border, border-radius, background-color, etc.
-		// Text - color, font-size, text-transform, etc.
-		// Other stuff - animations, transforms, etc.
+		@include mq($from: tablet) {
+			float: left;
+	  	display: flex;
+	  }
 	}
-	 
-	// States
-	//@import "../_states/_s-buttons";
+
+  &--mobile {
+  	display: flex; 
+
+  	@include mq($from: tablet) {
+	  	display: none;
+	  }
+  }
+  &--tablet {
+  	display: none;
+  	
+
+  	@include mq($from: tablet) {
+  		float: right;
+	  	display: flex;
+	  }
+  }
+}
+ 
+// States
+//@import "../_states/_s-buttons";

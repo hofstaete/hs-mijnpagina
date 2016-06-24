@@ -16,7 +16,8 @@
   ],
   "dependencies": {
     "susy": "^2.2.12",
-    "breakpoint-sass": "^2.7.0"
+    "breakpoint-sass": "^2.7.0",
+    "gel-sass-tools": "^1.1.1"
   },
   "devDependencies": {
     "sass-mq": "^3.2.9"
