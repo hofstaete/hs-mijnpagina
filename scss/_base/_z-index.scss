@@ -1,0 +1,16 @@
+// Z-index Leveling
+
+$z-index: (
+  popup: 							500,
+  overlay:						400,
+  navigation:      	 	300,
+  footer: 						200,
+);
+
+@function z-index($key) {
+  @return map-get($z-index, $key);
+}
+
+@mixin z-index($key) {
+  z-index: z-index($key);
+}

@@ -28,3 +28,8 @@ $mq-breakpoints: (
 
 // If you want to display the currently active breakpoint in the top right corner of your site during development, add the breakpoints to this list, ordered by width, e.g. (mobile, tablet, desktop).
 $mq-show-breakpoints: (mobile, mobileLandscape, tablet, desktop, wide);
+
+$mq_highdensity:    "(-webkit-min-device-pixel-ratio: 1.5)",
+                    "( min-device-pixel-ratio: 1.5)",
+                    "( min-resolution: 144dpi)",
+                    "( min-resolution: 1.5dppx)";

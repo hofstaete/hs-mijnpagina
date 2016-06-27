@@ -5,15 +5,15 @@
 
 @charset "UTF-8";
 
-/// Module Header
+/// MODULE HEADER
 
-// Config
+// CONFIG
 $module:	'header';
 $header__fontcolor--primary:					$gray_chateau;
 $header__backgroundcolor--primary:		$persian-green;
 $header__backgroundcolor--secondary:	$white;
 
-// Base
+// BASE
 .m-#{$module} {
 	background-color: $header__backgroundcolor--primary;
 	@include clearfix;
@@ -56,5 +56,5 @@ $header__backgroundcolor--secondary:	$white;
 
 }
  
-// States
+// STATES
 //@import "../_states/_s-buttons";

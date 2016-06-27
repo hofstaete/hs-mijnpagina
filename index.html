@@ -33,42 +33,47 @@
 </head>
 <body>
 
-  <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="l-wrapper">
-    <div class="l-layout m-header">
+    <div class="[ l-layout ] m-header">
       <div class="m-header__logo">
         <img src="img/logo-hofstaete.png" alt="Hofstaete" srcset="img/logo-hofstaete.svg" width="145">
       </div>
 
       <section class="l-ptb--double m-header--mobile">
-        <a href="tel:033 888 55 22" class="m-button m-button--secondary m-button--half m-button--margin-right">bel ons</a>
-        <a href="#" class="m-button m-button--secondary m-button--half m-button--margin-left">mail ons</a>
+        <a href="tel:033 888 55 22" class="m-button --secondary --half --margin-right">bel ons</a>
+        <a href="#" class="m-button --secondary --half --margin-left">mail ons</a>
       </section>
 
       <section class="m-header--tablet">
         <div class="m-header__phonenumber">Bel 033 888 55 22</div>
-        <a href="#" class="m-button m-button--primary">FAQ</a>
-        <a href="#" class="m-button m-button--primary m-button--margin-left">Contact</a>
+        <a href="#" class="m-button --primary">FAQ</a>
+        <a href="#" class="m-button --primary --margin-left">Contact</a>
       </section>
     </div>
 
     <nav>
-      <div class="m-nav m-nav--mobile">
+      <div class="m-nav --mobile">
         <ul>
-          <li class="m-nav__item--mobile"><a href="#">Producten</a></li>
-          <li class="m-nav__item--mobile"><a href="#">Gegevens</a></li>
-          <li class="m-nav__item--mobile"><a href="#">Schades</a></li>
-          <li class="m-nav__item--mobile"><a href="#">Betalingen</a></li>
-          <li class="m-nav__item--mobile"><a href="#">Contact</a></li>
+          <li class="m-nav__item --mobile">
+            <a href="#" class="m-nav__link --mobile">
+              <span class="m-nav__icon --mobile --products"></span>
+              <span class="m-nav__text --mobile">Producten</span>
+            </a>
+          </li>
+          <li class="m-nav__item --mobile --data"><a href="#" class="m-nav__link --mobile">Gegevens</a></li>
+          <li class="m-nav__item --mobile --damage"><a href="#" class="m-nav__link --mobile">Schades <span class="m-nav__damage-counter">3</span></a></li>
+          <li class="m-nav__item --mobile --payments"><a href="#" class="m-nav__link --mobile">Betalingen</a></li>
+          <li class="m-nav__item --mobile --contact"><a href="#" class="m-nav__link --mobile">Contact</a></li>
         </ul>
       </div>
-      <div class="m-nav--tablet"></div>
+      <div class="m-nav --tablet">
+        Tablet Nav
+      </div>
     </nav>
 
     <section class="l-layout l-ptb--double m-user-mobile">
       <div class="m-user-mobile__profile-picture-wrapper">
-        <img class="m-user-mobile__profile-picture" src="https://placeimg.com/200/200/people" />
+        <img class="m-user-mobile__profile-picture" src="http://placekitten.com/g/200/200" /><!-- https://placeimg.com/200/200/people -->
       </div>
       <div class="m-user-mobile__name">A. de Vries</div>
       <div class="m-user-mobile__download-links">
@@ -77,12 +82,17 @@
     </section>
 
     <div class="l-layout">
-      test
+      <h1 class="h1">Dit is een h1 titel</h1>
+      <h2 class="h2">Dit is een h2 titel</h2>
+      <h3 class="h3">Dit is een h3 titel</h3>
+      <h4 class="h4">Dit is een h4 titel</h4>
+      <h5 class="h5">Dit is een h5 titel</h5>
+
+      <a href="#">Dit is een link</a>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut sequi, id eius, earum similique excepturi fugiat veritatis eveniet ullam! Reiciendis quos possimus dignissimos nihil obcaecati quod dolorem culpa unde, illo?</p>
     </div>
     <footer class="l-layout">Footer</footer>
   </div>
 
-<!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
 </html>

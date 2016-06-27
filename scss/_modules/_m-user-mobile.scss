@@ -5,9 +5,9 @@
 
 @charset "UTF-8";
 
-/// Module Header
+/// MODULE USER-MOBILE
 
-// Config
+// CONFIG
 $module:	'user-mobile';
 
 $user-mobile__fontcolor--primary:					$white;
@@ -15,7 +15,7 @@ $user-mobile__fontcolor--secondary:				$downy;
 $user-mobile__backgroundcolor--primary:		$hs-green;
 $user-mobile__bordercolor--primary:				$white;
 
-// Base
+// BASE
 .m-#{$module} {
 	background-color: $user-mobile__backgroundcolor--primary;
 	@include clearfix;
@@ -52,5 +52,5 @@ $user-mobile__bordercolor--primary:				$white;
   }
 }
  
-// States
+// STATES
 //@import "../_states/_s-buttons";

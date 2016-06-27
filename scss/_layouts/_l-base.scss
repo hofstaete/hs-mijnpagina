@@ -10,17 +10,6 @@
 // CONFIG
 
 // BASE
-html{
-	min-height: 100%;
-	overflow-y: scroll;
-
-  color: $cape-cod;
-
-	@include open-sans();
-	line-height: 1.6rem;
-	font-size: 1rem;
-}
-
 .l-wrapper {
 	@include container;
 }
@@ -28,6 +17,8 @@ html{
 .l-layout {
 	padding: 0 rem(double($gel-spacing-unit));
 	margin: 0;
+	@include clearfix;
+
 
 	&__item {
 		display: inline-block;

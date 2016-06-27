@@ -5,30 +5,25 @@
 
 @charset "UTF-8";
 
-/// Module Header
+/// MODULE NAV
 
-// Config
+// CONFIG
 $module:	'nav';
 
-$nav__fontcolor--primary:					$white;
+$nav__fontcolor--primary:					$gray_chateau;
 $nav__fontcolor--secondary:				$downy;
-$nav__backgroundcolor--primary:		$hs-green;
-$nav__bordercolor--primary:				$gray_chateau;
+$nav__backgroundcolor--primary:   $alabaster;
+$nav__bordercolor--primary:       $gray_chateau;
+$nav__backgroundcolor--secondary:	$hs-green;
+$nav-damage-backgroundcolor:      $scarlet;
+$nav-damage-fontcolor:            $white;
 
-// Base
+// BASE
 .m-#{$module} {
-  &__item{
-    &--mobile{
-      width: 20%;
-      height: rem(48px);
-      display: block;
-      float: left;
-    }
-    &--tablet{}
-  }
+  z-index: map-get($z-index, navigation);
 
-  &--mobile{
-    position: absolute;
+  &.--mobile {
+    position: fixed;
     bottom: 0;
     left: 0;
     height: rem(48px);
@@ -36,19 +31,88 @@ $nav__bordercolor--primary:				$gray_chateau;
 
     border-top: 1px solid $nav__bordercolor--primary;
 
+    background-color: $nav__backgroundcolor--primary;
+    
     @include mq($from: tablet) {
       display: none;
     }
   }
 
-  &--tablet{
+  &.--tablet {
     display: none;
     @include mq($from: tablet) {
       display: block;
     }
   }
 
+  &__item {
+    
+    &.--mobile {
+      width: 20%;
+      height: rem(48px);
+      display: block;
+      float: left;
+
+      text-align: center;
+    }
+
+    &.--tablet {}
+  }
+
+  &__link {
+
+    &.--mobile {
+      position: relative;
+      width: 100%;
+      height: rem(48px);
+      display: block;
+
+      text-align: center;
+      font-size: $small-font-size;
+      color: $nav__fontcolor--primary;
+    }
+  }
+
+  &__icon {
+   
+
+    &.--mobile {
+      width: 100%;
+      height: 20px;
+      display: block;
+      //float: left;
+          margin: 0;
+    padding: 0;
+      
+      &.--products {
+        background-color: red;
+      }
+    }
+    
+  }
+
+  &__text {
+    display: block;
+    margin: 0;
+    padding: 0;
+
+    line-height: 0.4rem;
+  }
+
+  &__damage-counter {
+    position: absolute;
+    top: -6px;
+    right: -15px;
+    width: 15px;
+    height: 15px;
+
+    border-radius: 50%;
+
+    line-height: 0.9rem;    
+    background-color: $nav-damage-backgroundcolor;
+    color: $nav-damage-fontcolor;
+  }
 }
  
-// States
+// STATES
 //@import "../_states/_s-buttons";

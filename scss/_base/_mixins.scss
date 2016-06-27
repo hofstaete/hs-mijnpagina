@@ -17,3 +17,16 @@
   font-style: normal;
   font-variant: normal;
 }
+
+@mixin img-retina-svg($file, $extension, $width, $height, $repeat:no-repeat, $position:center) {
+    background-image: url("#{$file}.#{$extension}");
+    background-size: $width $height;
+    background-repeat: $repeat;
+    background-position: $position;
+
+    @media #{$mq_highdensity} {
+        html.svg & {
+            background-image: url("#{$file}.svg");
+        }
+    }
+}
