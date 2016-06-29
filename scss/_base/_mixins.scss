@@ -11,7 +11,7 @@
 
 // Open Sans Font
 @mixin open-sans($weight: 400){
-	// pls choose 400 or 700
+	// pls choose 400, 600 or 700
 	font-family: "Open Sans",sans-serif;
 	font-weight: $weight;
   font-style: normal;

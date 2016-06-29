@@ -1,13 +1,16 @@
+// Import fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
+
 // Font weights
-$light: 100;
 $regular: 400;
-$bold: 600;
+$semi-bold: 600;
+$bold: 700;
 
 // CONFIG
 $small-font-size: 				rem(10px);
 $base-font-size: 					1rem;
 $base-line-height: 				2rem;
-$base-font-color: 				$cape-cod;
+$base-font-color: 				$primary-font-color;
 
 $h1-font-size: 						rem(38px);
 $h2-font-size: 						rem(30px);
@@ -15,14 +18,11 @@ $h3-font-size: 						rem(24px);
 $h4-font-size: 						rem(20px);
 $h5-font-size: 						rem(18px);
 
-$link-font-color: 				$persian-green;
-$link-font-hover-color: 	$hs-green;
+$link-font-color: 				lighten($primary-color, 7%);
+$link-font-hover-color: 	darken($primary-color, 10%);
 
 // BASE
 html{
-	min-height: 100%;
-	overflow-y: scroll;
-
   color: $base-font-color;
 
 	@include open-sans();
@@ -41,10 +41,10 @@ html{
 
 // LINKS
 a {
-	text-decoration: underline;
-	color: $persian-green;
+		text-decoration: underline;
+	color: $link-font-color;
 
 	&:hover {
-		color: $gray_chateau;
+		color: $link-font-hover-color;
 	}
 }

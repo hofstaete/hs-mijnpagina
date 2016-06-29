@@ -6,13 +6,12 @@
 @charset "UTF-8";
 
 /// MODULE USER-MOBILE
+$module:  'user-mobile';
 
 // CONFIG
-$module:	'user-mobile';
-
 $user-mobile__fontcolor--primary:					$white;
-$user-mobile__fontcolor--secondary:				$downy;
-$user-mobile__backgroundcolor--primary:		$hs-green;
+$user-mobile__fontcolor--secondary:				mix($primary-color, $white);
+$user-mobile__backgroundcolor--primary:		$primary-color;
 $user-mobile__bordercolor--primary:				$white;
 
 // BASE

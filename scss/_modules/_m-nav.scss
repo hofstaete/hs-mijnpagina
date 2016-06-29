@@ -6,17 +6,20 @@
 @charset "UTF-8";
 
 /// MODULE NAV
+$module:  'nav';
 
 // CONFIG
-$module:	'nav';
+$mobile-background:               darken($white, 2%);
+$mobile-border:                   $secondary-font-color;
+$mobile-link:                     $secondary-font-color;
+$mobile-link--hover:              lighten($primary-color, 10%);
+$mobile-damage:                   $warning;
+$mobile-damage-text:              $white;
 
-$nav__fontcolor--primary:					$gray_chateau;
-$nav__fontcolor--secondary:				$downy;
-$nav__backgroundcolor--primary:   $alabaster;
-$nav__bordercolor--primary:       $gray_chateau;
-$nav__backgroundcolor--secondary:	$hs-green;
-$nav-damage-backgroundcolor:      $scarlet;
-$nav-damage-fontcolor:            $white;
+$tablet-background:               $primary-color;
+$tablet-border:                   rgba($black, 0.08);
+$tablet-item--hover:              rgba($black, 0.08);
+$tablet-link:                     $white;
 
 // BASE
 .m-#{$module} {
@@ -29,9 +32,9 @@ $nav-damage-fontcolor:            $white;
     height: rem(48px);
     width: 100%;
 
-    border-top: 1px solid $nav__bordercolor--primary;
+    border-top: 1px solid $mobile-border;
 
-    background-color: $nav__backgroundcolor--primary;
+    background-color: $mobile-background;
     
     @include mq($from: tablet) {
       display: none;
@@ -42,11 +45,19 @@ $nav-damage-fontcolor:            $white;
     display: none;
     @include mq($from: tablet) {
       display: block;
+
+      background-color: $tablet-background;
+    }
+  }
+  
+  &__ul {
+    &.--tablet {
+      list-style-type: none;
     }
   }
 
   &__item {
-    
+
     &.--mobile {
       width: 20%;
       height: rem(48px);
@@ -56,36 +67,76 @@ $nav-damage-fontcolor:            $white;
       text-align: center;
     }
 
-    &.--tablet {}
+    &.--tablet {
+      display: block;
+      float: left;
+
+      border-right: 1px solid $tablet-border;
+    }
+
+    &:first-child{
+      & > .m-nav__link{
+        @include img-retina-svg('../img/icons/home', 'png', 20px, 20px, no-repeat, 16px 50%);
+        padding-left: rem(48px);
+      }
+    }
   }
 
   &__link {
 
     &.--mobile {
-      position: relative;
       width: 100%;
       height: rem(48px);
       display: block;
 
       text-align: center;
+      text-decoration: none;
       font-size: $small-font-size;
-      color: $nav__fontcolor--primary;
+      color: $mobile-link;
+
+      &:hover{
+        color: $mobile-link--hover;
+      }
+    }
+
+    &.--tablet {
+      display: inline-block;
+
+      padding: rem(double($gel-spacing-unit));
+
+      color: $tablet-link;
+      text-decoration: none;
+      @include open-sans(600);
+
+      &:hover{
+        background-color: $tablet-item--hover;
+      }
     }
   }
 
   &__icon {
    
-
     &.--mobile {
-      width: 100%;
+      position: relative;
+      width: 20px;
       height: 20px;
       display: block;
-      //float: left;
-          margin: 0;
-    padding: 0;
+      margin: rem(8px) auto 0;
       
       &.--products {
-        background-color: red;
+        @include img-retina-svg('../img/icons/products', 'png', 20px, 20px);
+      }
+      &.--data {
+        @include img-retina-svg('../img/icons/products', 'png', 20px, 20px);
+      }
+      &.--damage {
+        @include img-retina-svg('../img/icons/products', 'png', 20px, 20px);
+      }
+      &.--payments {
+        @include img-retina-svg('../img/icons/products', 'png', 20px, 20px);
+      }
+      &.--contact {
+        @include img-retina-svg('../img/icons/products', 'png', 20px, 20px);
       }
     }
     
@@ -96,21 +147,21 @@ $nav-damage-fontcolor:            $white;
     margin: 0;
     padding: 0;
 
-    line-height: 0.4rem;
+    line-height: 1rem;
   }
 
   &__damage-counter {
     position: absolute;
-    top: -6px;
-    right: -15px;
+    top: -5px;
+    right: -10px;
     width: 15px;
     height: 15px;
 
     border-radius: 50%;
 
     line-height: 0.9rem;    
-    background-color: $nav-damage-backgroundcolor;
-    color: $nav-damage-fontcolor;
+    background-color: $mobile-damage;
+    color: $mobile-damage-text;
   }
 }
  

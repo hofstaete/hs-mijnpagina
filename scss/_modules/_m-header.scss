@@ -6,11 +6,11 @@
 @charset "UTF-8";
 
 /// MODULE HEADER
+$module:	'header';
 
 // CONFIG
-$module:	'header';
-$header__fontcolor--primary:					$gray_chateau;
-$header__backgroundcolor--primary:		$persian-green;
+$header__fontcolor--primary:					$secondary-font-color;
+$header__backgroundcolor--primary:		lighten($primary-color, 2%);
 $header__backgroundcolor--secondary:	$white;
 
 // BASE
@@ -20,6 +20,7 @@ $header__backgroundcolor--secondary:	$white;
 
   @include mq($from: tablet) {
   	background-color: $header__backgroundcolor--secondary;
+  	margin: rem(double($gel-spacing-unit)) 0;
   }
 
   &--mobile {
@@ -32,11 +33,11 @@ $header__backgroundcolor--secondary:	$white;
 
   &--tablet {
   	display: none;
-  	
 
   	@include mq($from: tablet) {
   		float: right;
 	  	display: flex;
+	  	
 	  }
   }
 
@@ -44,16 +45,19 @@ $header__backgroundcolor--secondary:	$white;
 		display: none;
 		
 		@include mq($from: tablet) {
+			min-height: 50px;
 			float: left;
-	  	display: flex;
-	  }
+	    display: flex;
+	    flex-direction: column;
+	    align-items: center;
+	    justify-content: center;	  
+  	}
 	}
 
 	&__phonenumber {
+		padding: rem($gel-spacing-unit) rem(double($gel-spacing-unit));
 		color: $header__fontcolor--primary;
 	}
-
-
 }
  
 // STATES

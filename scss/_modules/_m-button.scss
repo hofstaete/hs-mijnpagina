@@ -6,13 +6,14 @@
 @charset "UTF-8";
  
 /// MODULE BUTTON
+$module: 												'button';
 
 // CONFIG
-$module: 												'button';
-$border__color--primary:				$geyser;
-$border__color--secondary:			$downy;
-$button__fontcolor--primary:		$gray_chateau;
-$button__fontcolor--secondary:	$white;
+$border__color--primary:					lighten($secondary-font-color, 20%);
+$border__color--secondary:				mix($primary-color, $white);
+$button__fontcolor--primary:			$secondary-font-color;
+$button__fontcolor--secondary:		$white;
+$button__backgroundcolor--hover:	rgba($black, 0.05);
 
 // BASE
 .m-#{$module} {
@@ -52,6 +53,10 @@ $button__fontcolor--secondary:	$white;
 
 	&.--margin-left {
 		margin-left: rem($gel-spacing-unit);
+	}
+
+	&:hover {
+		background-color: $button__backgroundcolor--hover;
 	}
 }
  

@@ -13,10 +13,6 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="css/styles.css">
@@ -35,9 +31,9 @@
 
   <div class="l-wrapper">
     <div class="[ l-layout ] m-header">
-      <div class="m-header__logo">
-        <img src="img/logo-hofstaete.png" alt="Hofstaete" srcset="img/logo-hofstaete.svg" width="145">
-      </div>
+      <a href="#index" class="m-header__logo">
+          <img src="img/logo-hofstaete.png" alt="Hofstaete" srcset="img/logo-hofstaete.svg" width="145" height="25">
+      </a>
 
       <section class="l-ptb--double m-header--mobile">
         <a href="tel:033 888 55 22" class="m-button --secondary --half --margin-right">bel ons</a>
@@ -50,27 +46,67 @@
         <a href="#" class="m-button --primary --margin-left">Contact</a>
       </section>
     </div>
+  </div>
 
-    <nav>
-      <div class="m-nav --mobile">
-        <ul>
-          <li class="m-nav__item --mobile">
-            <a href="#" class="m-nav__link --mobile">
-              <span class="m-nav__icon --mobile --products"></span>
-              <span class="m-nav__text --mobile">Producten</span>
-            </a>
+  <nav>
+    <div class="m-nav --mobile">
+      <ul>
+        <li class="m-nav__item --mobile">
+          <a href="#products" class="m-nav__link --mobile">
+            <span class="m-nav__icon --mobile --products"></span>
+            <span class="m-nav__text --mobile">Producten</span>
+          </a>
+        </li>
+        <li class="m-nav__item --mobile">
+          <a href="#data" class="m-nav__link --mobile">
+            <span class="m-nav__icon --mobile --data"></span>
+            <span class="m-nav__text --mobile">Gegevens</span>
+          </a>
+        </li>
+        <li class="m-nav__item --mobile">
+          <a href="#damage" class="m-nav__link --mobile">
+            <span class="m-nav__icon --mobile --damage">
+              <span class="m-nav__damage-counter">3</span>
+            </span>
+            <span class="m-nav__text --mobile">Schades</span>
+          </a>
+        </li>
+        <li class="m-nav__item --mobile">
+          <a href="#payments" class="m-nav__link --mobile">
+            <span class="m-nav__icon --mobile --payments"></span>
+            <span class="m-nav__text --mobile">Betalingen</span>
+          </a>
+        </li>
+        <li class="m-nav__item --mobile">
+          <a href="#contact" class="m-nav__link --mobile">
+            <span class="m-nav__icon --mobile --contact"></span>
+            <span class="m-nav__text --mobile">Contact</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="m-nav --tablet">
+      <div class="l-wrapper l-layout">
+        <ul class="m-nav__ul --tablet">
+          <li class="m-nav__item --tablet">
+            <a href="#overview" class="m-nav__link --tablet">Overzicht</a>
           </li>
-          <li class="m-nav__item --mobile --data"><a href="#" class="m-nav__link --mobile">Gegevens</a></li>
-          <li class="m-nav__item --mobile --damage"><a href="#" class="m-nav__link --mobile">Schades <span class="m-nav__damage-counter">3</span></a></li>
-          <li class="m-nav__item --mobile --payments"><a href="#" class="m-nav__link --mobile">Betalingen</a></li>
-          <li class="m-nav__item --mobile --contact"><a href="#" class="m-nav__link --mobile">Contact</a></li>
+          <li class="m-nav__item --tablet">
+            <a href="#products" class="m-nav__link --tablet">Producten</a>
+          </li>
+          <li class="m-nav__item --tablet">
+            <a href="#payments" class="m-nav__link --tablet">Betalingen</a>
+          </li>
+          <li class="m-nav__item --tablet">
+            <a href="#damage" class="m-nav__link --tablet">Schades</a>
+          </li>
         </ul>
-      </div>
-      <div class="m-nav --tablet">
-        Tablet Nav
-      </div>
-    </nav>
-
+      </div> 
+    </div>  
+    
+  </nav>
+    
+  <div class="l-wrapper">
     <section class="l-layout l-ptb--double m-user-mobile">
       <div class="m-user-mobile__profile-picture-wrapper">
         <img class="m-user-mobile__profile-picture" src="http://placekitten.com/g/200/200" /><!-- https://placeimg.com/200/200/people -->
@@ -93,6 +129,7 @@
     </div>
     <footer class="l-layout">Footer</footer>
   </div>
+</div>
 
 </body>
 </html>

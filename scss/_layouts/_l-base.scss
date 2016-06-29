@@ -16,9 +16,7 @@
 
 .l-layout {
 	padding: 0 rem(double($gel-spacing-unit));
-	margin: 0;
 	@include clearfix;
-
 
 	&__item {
 		display: inline-block;
