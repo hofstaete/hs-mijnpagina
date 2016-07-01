@@ -9,9 +9,6 @@ var sassdoc 			= require('sassdoc');
 var browserSync 	= require('browser-sync').create();
 // Nog toevoegen: imagemin = require 'gulp-imagemin' 
 // pngquant = require 'imagemin-pngquant'
-// gulp-plumber
-// var scssReporter = require('gulp-csslint-scss-reporter');
-// var csslint = require('gulp-csslint');
 
 // PATHS
 //-----------------------------------------------------------//
@@ -30,7 +27,7 @@ var sassdocOptions = {
 	dest: './scss/sassdoc'
 };
 var autoprefixerOptions = {
-	browsers: ['last 2 versions', '> 1%', 'Firefox ESR']
+	browsers: ['last 3 versions', '> 2%', 'Firefox ESR']
 };
 
 // TASKS

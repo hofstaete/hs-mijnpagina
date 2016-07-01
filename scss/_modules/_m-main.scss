@@ -1,0 +1,23 @@
+// Box - margin, padding, display, etc.
+// Border & Background - border, border-radius, background-color, etc.
+// Text - color, font-size, text-transform, etc.
+// Other stuff - animations, transforms, etc. 
+
+@charset "UTF-8";
+
+/// MODULE MAIN
+$module:	'main';
+
+// CONFIG
+$main-backgroundcolor:								darken($white, 1%);
+
+// BASE
+.m-#{$module} {
+	background-color: $main-backgroundcolor;
+	display: inline-block;
+	width: 100%;
+}
+ 
+
+// STATES
+//@import "../_states/_s-buttons";

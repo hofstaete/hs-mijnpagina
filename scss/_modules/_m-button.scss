@@ -27,31 +27,31 @@ $button__backgroundcolor--hover:	rgba($black, 0.05);
 	text-decoration: none;
 	text-align: center;
 
-	&.--primary {
+	&.-primary {
 		border: 1px solid $border__color--primary;
 
 		color: $button__fontcolor--primary;
 	}
 
-	&.--secondary {
+	&.-secondary {
 		border: 1px solid $border__color--secondary;
 
 		color: $button__fontcolor--secondary;
 	}
 
-	&.--half {
+	&.-half {
 		width: 50%;
 	}
 
-	&.--full {
+	&.-full {
 		width: 100%;
 	}
 
-	&.--margin-right {
+	&.-margin-right {
 		margin-right: rem($gel-spacing-unit);
 	}
 
-	&.--margin-left {
+	&.-margin-left {
 		margin-left: rem($gel-spacing-unit);
 	}
 
