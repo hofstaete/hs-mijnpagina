@@ -18,7 +18,8 @@ $mobile-damage-text:              $white;
 
 $tablet-background:               $primary-color;
 $tablet-border:                   rgba($black, 0.08);
-$tablet-item--hover:              rgba($black, 0.08);
+$tablet-item--hover:              rgba($black, 0.18);
+$tablet-item--active:             rgba($black, 0.08);
 $tablet-link:                     $white;
 $tablet-profile-image-border:     $white;
 $tablet-damage:                   $white;
@@ -102,7 +103,7 @@ $tablet-damage-text:              $primary-color;
       font-size: $small-font-size;
       color: $mobile-link;
 
-      &:hover{
+      &:hover, &.-active{
         color: $mobile-link--hover;
       }
     }
@@ -117,13 +118,17 @@ $tablet-damage-text:              $primary-color;
       color: $tablet-link;
       text-decoration: none;
       @include open-sans(600);
-
+      
+      &:hover, &:active, &:focus {
+        outline: 0;
+      }
+      
       &:hover{
         background-color: $tablet-item--hover;
       }
       
       &.-active{
-        background-color: $tablet-item--hover;
+        background-color: $tablet-item--active;
       }
 
       &.-data {
@@ -241,5 +246,3 @@ $tablet-damage-text:              $primary-color;
   }
 }
  
-// STATES
-//@import "../_states/_s-buttons";

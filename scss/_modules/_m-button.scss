@@ -23,6 +23,7 @@ $button__backgroundcolor--hover:	rgba($black, 0.05);
 	position: relative;
 
 	border-radius: rem(halve($gel-spacing-unit));
+	outline: 0;
 
 	text-decoration: none;
 	text-align: center;
@@ -55,10 +56,12 @@ $button__backgroundcolor--hover:	rgba($black, 0.05);
 		margin-left: rem($gel-spacing-unit);
 	}
 
+	&:hover, &:active, &:focus {
+		outline: 0;
+	}
+	
 	&:hover {
 		background-color: $button__backgroundcolor--hover;
 	}
 }
  
-// STATES
-//@import "../_states/_s-buttons";

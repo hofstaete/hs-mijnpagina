@@ -31,6 +31,9 @@ html{
 }
 
 // HEADING
+.h1, .h2, .h3, .h4, .h5{
+	display: inline-block;
+}
 .h1, .h2 { line-height: 1.1; }
 .h3, .h4 { line-height: 1.3; }
 .h1 { font-size: $h1-font-size; letter-spacing: -2px; }

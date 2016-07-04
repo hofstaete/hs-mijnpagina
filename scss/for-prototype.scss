@@ -1,0 +1,42 @@
+@import "_base/_z-index";
+@import "_base/_global";
+@import "bower_components/sass-mq/mq";
+
+.page{
+	margin-top: 0;
+
+	&.margin-top{
+		margin-top: 0;
+
+				@include mq($from: tablet) {
+			margin-top: 110px;
+		}
+	}
+}
+
+.for-prototype{
+	@include z-index(popup);
+	display: none;
+	background-color: black;
+	width: 100%;
+	height: 110px;
+	position: fixed;
+	top: 0;
+	padding: 10px;
+	
+	border: 2px dashed grey;
+	
+	color: white;
+	text-align: center;
+
+	&.active {
+		@include mq($from: tablet) {
+			display: block;
+		}
+	}
+
+	> .active {
+		border-color: $primary-color;
+		color: $primary-color;
+	}
+}

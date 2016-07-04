@@ -26,54 +26,72 @@
   <script src="js/modernizr.js" type="text/javascript"></script>
   <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
- <!--  <script src="https://code.jquery.com/jquery-2.2.4.min.js" type="text/javascript"></script> -->
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" type="text/javascript"></script>
 
 
 
 </head>
 <body>
 
-<a class="tab-item tab-item-active" ng-disabled="disabled()" ng-class="{'has-badge':badge, 'tab-hidden':isHidden(), 'tab-item-active': isTabActive()}" icon="ion-home" style=""><span ng-bind-html="title" class="tab-title ng-binding">Home</span></a>
 
-<header>
+<div class="page">
+
+  <!-- For prototyping -->
+  <link rel="stylesheet" href="css/for-prototype.css">
+  <div class="for-prototype">
+    <div>Klik hieronder om te switchen naar:</div>
+    
+    <a href="#" class="m-button -primary overview-action active">De overzichtspagina met actie</a>
+    <a href="#" class="m-button -primary overview-consultant">De overzichtspagina met adviseursinformatie</a>
+
+  </div>
+  <!-- For prototyping -->
+
   <header>
-    <div class="l-wrapper">
-      <div class="[ l-layout ] m-header">
-        <a href="#index" class="m-header__logo">
-          <img src="img/logo-hofstaete.png" alt="Hofstaete" srcset="img/logo-hofstaete.svg" width="145" height="25">
-        </a>
+    <header>
+      <div class="l-wrapper">
+        <div class="[ l-layout ] m-header">
+          <a href="#index" class="m-header__logo">
+            <img src="img/logo-hofstaete.png" alt="Hofstaete" srcset="img/logo-hofstaete.svg" width="145" height="25">
+          </a>
 
-        <section class="l-ptb--double m-header--mobile">
-          <a href="tel:033 888 55 22" class="m-button -secondary -half -margin-right">bel ons</a>
-          <a href="#" class="m-button -secondary -half --margin-left">mail ons</a>
-        </section>
+          <section class="l-ptb--double m-header--mobile">
+            <a href="tel:033 888 55 22" class="m-button -secondary -half -margin-right">bel ons</a>
+            <a href="#" class="m-button -secondary -half --margin-left">mail ons</a>
+          </section>
 
-        <section class="m-header--tablet">
-          <div class="m-header__phonenumber">Bel 033 888 55 22</div>
-          <a href="#" class="m-button -primary">FAQ</a>
-          <a href="#" class="m-button -primary -margin-left">Contact</a>
-        </section>
+          <section class="m-header--tablet">
+            <div class="m-header__phonenumber">Bel 033 888 55 22</div>
+            <a href="#" class="m-button -primary">Over ons</a>
+            <a href="#" class="m-button -primary -margin-left">FAQ</a>
+            <a href="#" class="m-button -primary -margin-left">Contact</a>
+          </section>
+        </div>
+
+        <div class="l-layout">
+          <div class="m-header-image">Action image</div>
+        </div>
       </div>
-    </div>
-  </header>
+
+    </header>
   <nav>
     <!-- Mobile menu -->
     <div class="m-nav -mobile">
       <ul>
         <li class="m-nav__item -mobile">
-          <a href="#products" class="m-nav__link -mobile">
+          <a href="products.html" class="m-nav__link -mobile -active">
             <span class="m-nav__icon -mobile -products"></span>
             <span class="m-nav__text -mobile">Producten</span>
           </a>
         </li>
         <li class="m-nav__item -mobile">
-          <a href="#data" class="m-nav__link -mobile">
+          <a href="data.html" class="m-nav__link -mobile">
             <span class="m-nav__icon -mobile -data"></span>
             <span class="m-nav__text -mobile">Gegevens</span>
           </a>
         </li>
         <li class="m-nav__item -mobile">
-          <a href="#damage" class="m-nav__link -mobile">
+          <a href="damage.html" class="m-nav__link -mobile">
             <span class="m-nav__icon -mobile -damage">
               <span class="m-nav__damage-counter--mobile">3</span>
             </span>
@@ -81,7 +99,7 @@
           </a>
         </li>
         <li class="m-nav__item -mobile">
-          <a href="#payments" class="m-nav__link -mobile">
+          <a href="payments.html" class="m-nav__link -mobile">
             <span class="m-nav__icon -mobile -payments"></span>
             <span class="m-nav__text -mobile">Betalingen</span>
           </a>
@@ -100,24 +118,24 @@
       <div class="l-wrapper l-layout">
         <ul class="m-nav__ul">
           <li class="m-nav__item -tablet">
-            <a href="#overview" class="m-nav__link -tablet">Overzicht</a>
+            <a href="overview.html" data-page="overview" class="m-nav__link -tablet -active">Overzicht</a>
           </li>
           <li class="m-nav__item -tablet">
-            <a href="#products" class="m-nav__link -tablet -active">Producten</a>
+            <a href="products.html" data-page="products" class="m-nav__link -tablet">Producten</a>
           </li>
           <li class="m-nav__item -tablet">
-            <a href="#payments" class="m-nav__link -tablet">Betalingen</a>
+            <a href="payments.html" data-page="payments" class="m-nav__link -tablet">Betalingen</a>
           </li>
           <li class="m-nav__item -tablet">
-            <a href="#damage" class="m-nav__link -tablet">Schades<span class="m-nav__damage-counter--tablet">3</span></a>
+            <a href="damage.html" data-page="damage" class="m-nav__link -tablet">Schades<span class="m-nav__damage-counter--tablet">3</span></a>
           </li>
         </ul>
         <div class="m-nav__right">
-          <a href="#my-data" class="m-nav__link -tablet -data">
+          <a href="data.html" class="m-nav__link -tablet -data">
             Mijn gegevens <img class="m-nav__profile-picture" src="http://placekitten.com/g/200/200" />
           </a>
-          <a href="#cart" class="m-nav__link -tablet -cart">
-            <span class="m-nav__cart--counter">1</span>
+          <a href="#" class="m-nav__link -tablet -cart -active">
+            <span class="m-nav__cart--counter">1</span> 
           </a>
         </div>
       </div> 
@@ -127,34 +145,78 @@
 
 <main>
   <div class="m-main">
-    <div class="l-wrapper">
-      <section class="l-layout l-ptb--double m-user-mobile">
-        <div class="m-user-mobile__profile-picture-wrapper">
-          <img class="m-user-mobile__profile-picture" src="http://placekitten.com/g/200/200" />
-        </div>
-        <div class="m-user-mobile__name">A. de Vries</div>
-        <div class="m-user-mobile__download-links">
-          <a class="m-user-mobile__download-link" href="#download">download polisblad</a>
-        </div>
-      </section>
-      
-      <section>
-        <div class="l-layout">
-          <h1 class="h1">Dit is een h1 titel</h1>
-          <h2 class="h2">Dit is een h2 titel</h2>
-          <h3 class="h3">Dit is een h3 titel</h3>
-          <h4 class="h4">Dit is een h4 titel</h4>
-          <h5 class="h5">Dit is een h5 titel</h5>
-
-          <a href="#">Dit is een link</a>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut sequi, id eius, earum similique excepturi fugiat veritatis eveniet ullam! Reiciendis quos possimus dignissimos nihil obcaecati quod dolorem culpa unde, illo?</p>
-        </div>
-      </section>
-    </div>
+    <!-- here content -->
   </div>
 </main>
+</div>
 
-<footer class="l-layout">Footer</footer>
+
+<footer class="l-layout m-footer">
+  <div m-footer__name>Bedrijfsnaam Tussenpersoon</div>
+  <div m-footer__adress>Straatnaam 123, 1234 AA Zaandam</div>
+  <div m-footer__phonenumber>Tel 012 1234 567</div>
+</footer>
+
+
+
+
+
+<script type="text/javascript">
+
+  $('.for-prototype').addClass('active');
+  $('.page').removeClass('margin-top');
+  $('.page').addClass('margin-top');
+
+  $(document).ready(function(){
+
+    $(function(){
+      $(".m-main").load('overview.html');
+      $('.m-nav__link').click(function (e) { 
+          e.preventDefault();
+          $('a.m-nav__link').removeClass('-active');
+          $(this).addClass('-active');
+          $(".m-main").load($(this).attr("href"));
+
+          // for prototype //
+          if($(this).attr('data-page') == 'overview') {
+            $('.for-prototype').addClass('active');
+            $('.page').removeClass('margin-top');
+            $('.page').addClass('margin-top');
+            $('.m-header-image').show();
+          }
+          else {
+            $('.for-prototype').removeClass('active');
+            $('.page').removeClass('margin-top');
+            $('.m-header-image').hide();
+          }
+          // end for prototype //
+      });
+
+    });
+
+    $('.overview-action').click(function (e) { 
+      e.preventDefault();
+      $('.overview-consultant').removeClass('active');
+      $(this).addClass('active');
+      $('.m-header-image').removeClass('-hide');
+      $('.m-header-image').addClass('-show');
+      $('.m-overview-block--just-blocks').show();
+      $('.m-overview-block--info').hide();
+    });
+
+    $('.overview-consultant').click(function (e) { 
+      e.preventDefault();
+      $('.overview-action').removeClass('active');
+      $(this).addClass('active');
+      $('.m-header-image').removeClass('-show');
+      $('.m-header-image').addClass('-hide')
+      $('.m-overview-block--just-blocks').hide();
+      $('.m-overview-block--info').show();
+    });
+         
+
+  });
+</script>
 
 </body>
 </html>

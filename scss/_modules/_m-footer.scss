@@ -1,0 +1,45 @@
+// Box - margin, padding, display, etc.
+// Border & Background - border, border-radius, background-color, etc.
+// Text - color, font-size, text-transform, etc.
+// Other stuff - animations, transforms, etc. 
+
+@charset "UTF-8";
+
+/// MODULE FOOTER
+$module:	'footer';
+
+// CONFIG
+$footer-background:								darken($white, 6%);
+$footer-border:										$secondary-font-color;
+$footer-font:											$secondary-font-color;
+
+// BASE
+.m-#{$module} {
+	padding-bottom: rem(48px);
+	margin-top: rem(double($gel-spacing-unit));
+	display: inline-block;
+	width: 100%;
+
+	border-top: 1px solid $footer-border;
+
+	background-color: $footer-background;
+	color: $footer-font;
+	text-align: center;
+
+	@include mq($from: tablet) { 
+		padding-bottom: 0;
+	}
+
+	&__name {
+		
+	}
+  
+  &__adress {
+
+  }
+
+  &__phonenumber {
+
+  }
+}
+ 

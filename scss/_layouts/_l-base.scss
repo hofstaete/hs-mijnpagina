@@ -10,6 +10,16 @@
 // CONFIG
 
 // BASE
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.page {
+	  flex: 1;
+}
+
 .l-wrapper {
 	@include container;
 }
@@ -86,6 +96,3 @@
 		padding-bottom: rem(double($gel-spacing-unit));
 	}
 }
-
-// STATES
-//@import "../_states/_s-buttons";

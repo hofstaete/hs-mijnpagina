@@ -5,16 +5,26 @@
 
 @charset "UTF-8";
 
-/// MODULE MAIN
-$module:	'main';
+/// MODULE FOOTER
+$module:	'overview-block';
 
 // CONFIG
-$main-backgroundcolor:								darken($white, 1%);
+$main-backgroundcolor:								darken($white, 3%);
 
 // BASE
 .m-#{$module} {
 	background-color: $main-backgroundcolor;
 	display: inline-block;
 	width: 100%;
+
+	background-color: red;
+	height: 40px;
+	&--info {
+
+	}
+
+	&--just-blocks {
+
+	}
 }
  
