@@ -1,20 +1,26 @@
-// Box - margin, padding, display, etc.
-// Border & Background - border, border-radius, background-color, etc.
-// Text - color, font-size, text-transform, etc.
-// Other stuff - animations, transforms, etc. 
-
 @charset "UTF-8";
+////
+/// @group Module Footer
+////
 
-/// MODULE FOOTER
+/// Module footer
 $module:	'footer';
 
-// CONFIG
+/// Footer background color
+/// @require {$white} $white - Makes the white color 6 percent darker
 $footer-background:								darken($white, 6%);
+
+/// Footer border color
+/// @require {$secondary-font-color} $secondary-font-color
 $footer-border:										$secondary-font-color;
+
+/// Footer font color
+/// @require {$secondary-font-color} $secondary-font-color
 $footer-font:											$secondary-font-color;
 
 // BASE
 .m-#{$module} {
+	flex: none; /* 2 */
 	padding-bottom: rem(48px);
 	margin-top: rem(double($gel-spacing-unit));
 	display: inline-block;

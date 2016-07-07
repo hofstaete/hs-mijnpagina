@@ -1,31 +1,67 @@
-// Box - margin, padding, display, etc.
-// Border & Background - border, border-radius, background-color, etc.
-// Text - color, font-size, text-transform, etc.
-// Other stuff - animations, transforms, etc. 
-
 @charset "UTF-8";
+////
+/// @group Module Nav
+////
 
-/// MODULE NAV
+/// Module nav
 $module:  'nav';
 
-// CONFIG
+/// Nav background-color for mobile
+/// @require {$white} $white - Makes the white color 2 percent darker
 $mobile-background:               darken($white, 2%);
+
+/// Nav border-color for mobile
+/// @require {$secondary-font-color} $secondary-font-color
 $mobile-border:                   $secondary-font-color;
+
+/// Nav link color for mobile
+/// @require {$secondary-font-color} $secondary-font-color
 $mobile-link:                     $secondary-font-color;
+
+/// Nav link hover color for mobile
+/// @require {$primary-color} $primary-color - Makes the primary-color color 10 percent lighter
 $mobile-link--hover:              lighten($primary-color, 10%);
+
+/// Nav damage round background-color for mobile
+/// @require {$warning} $warning
 $mobile-damage:                   $warning;
+
+/// Nav damage round text-color for mobile
+/// @require {$white} $white
 $mobile-damage-text:              $white;
 
+/// Nav background-color for tablet
+/// @require {$primary-color} $primary-color
 $tablet-background:               $primary-color;
+
+/// Nav border color for tablet
+/// @require {$black} $black - Adds opacity of 92 percent to black
 $tablet-border:                   rgba($black, 0.08);
+
+/// Nav item hover color for tablet
+/// @require {$black} $black - Adds opacity of 82 percent to black
 $tablet-item--hover:              rgba($black, 0.18);
+
+/// Nav active item color for tablet
+/// @require {$black} $black - Adds opacity of 92 percent to black
 $tablet-item--active:             rgba($black, 0.08);
+
+/// Nav link color for tablet
+/// @require {$white} $white
 $tablet-link:                     $white;
+
+/// Nav profile image border-color for tablet
+/// @require {$white} $white
 $tablet-profile-image-border:     $white;
+
+/// Nav damage round background-color for tablet
+/// @require {$white} $white
 $tablet-damage:                   $white;
+
+/// Nav damage round text-color for tablet
+/// @require {$primary-color} $primary-color
 $tablet-damage-text:              $primary-color;
 
-// BASE
 .m-#{$module} {
   z-index: map-get($z-index, navigation);
   @include clearfix;
@@ -111,7 +147,11 @@ $tablet-damage-text:              $primary-color;
     &.-tablet {
       display: inline-block;
       position: relative;
-      padding: rem(double($gel-spacing-unit));
+      padding: rem(20px) rem(double($gel-spacing-unit));
+      
+      @include mq($from: desktop) {
+        padding: rem(20px) rem(triple($gel-spacing-unit));
+      }
 
       border-right: 1px solid $tablet-border;
 
@@ -119,6 +159,8 @@ $tablet-damage-text:              $primary-color;
       text-decoration: none;
       @include open-sans(600);
       
+      
+
       &:hover, &:active, &:focus {
         outline: 0;
       }
@@ -133,16 +175,25 @@ $tablet-damage-text:              $primary-color;
 
       &.-data {
         float: left;
-        padding: rem($gel-spacing-unit) rem(double($gel-spacing-unit)); // fix the padding or the rest will break
+        padding: rem(12px) rem(double($gel-spacing-unit)); // fix the padding or the rest will break
+
+        @include mq($from: desktop) {
+          padding: rem(12px) rem(triple($gel-spacing-unit));
+        }
       }
 
-      &.-cart {
+      &.-basket {
         position: relative;
         float: left;
-        width: calc(#{ rem(quadruple($gel-spacing-unit)) } + #{ rem(quadruple($gel-spacing-unit)) });
+        padding: rem(20px) rem(triple($gel-spacing-unit));
+
+        @include mq($from: desktop) {
+          padding: rem(20px) rem(quadruple($gel-spacing-unit));
+        }
 
         border: none;
         @include img-retina-svg('../img/icons/basket', 'png', 24px, 24px);
+        background-color: $tablet-item--active;
         
         text-align: right;
       }
@@ -196,7 +247,7 @@ $tablet-damage-text:              $primary-color;
     vertical-align: middle;
   }
 
-  &__cart--counter {
+  &__basket--counter {
     display: inline-block;
     top: 5px;
     right: 10px;

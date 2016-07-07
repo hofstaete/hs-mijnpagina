@@ -1,19 +1,18 @@
-// Box - margin, padding, display, etc.
-// Border & Background - border, border-radius, background-color, etc.
-// Text - color, font-size, text-transform, etc.
-// Other stuff - animations, transforms, etc. 
+////
+/// @group Module Header
+////
 
 @charset "UTF-8";
-
-/// MODULE MAIN
+/// Module main
 $module:	'main';
 
-// CONFIG
-$main-backgroundcolor:								darken($white, 1%);
+/// Background color of main 
+/// @require {$white} $white - Makes white 1 percent darken
+$main-background-color:								darken($white, 1%);
 
 // BASE
 .m-#{$module} {
-	background-color: $main-backgroundcolor;
+	background-color: $main-background-color;
 	display: inline-block;
 	width: 100%;
 }

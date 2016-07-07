@@ -1,6 +1,10 @@
+////
+/// @author Michel van der Wereld
+////
+
 @charset "UTF-8";
 
-// Clear fix
+/// A clearfix mixin to fix floated elements to start on a new line.
 @mixin clearfix {
   &:after {
     content: "";
@@ -8,8 +12,8 @@
     clear: both;
   }
 }
-
-// Open Sans Font
+/// Open Sans Font mixin
+/// @param {weight} $weight [400] - Pls choose 400, 600 or 700
 @mixin open-sans($weight: 400){
 	// pls choose 400, 600 or 700
 	font-family: "Open Sans",sans-serif;
@@ -18,6 +22,14 @@
   font-variant: normal;
 }
 
+/// Img-retinga-svg mixin
+/// Overrides the image file with svg, when screendensity is over 1.5.
+/// @param {file} $file - filename without extension
+/// @param {extension} $extension - file extension
+/// @param {width} $width - image width
+/// @param {height} $height - image height
+/// @param {$repeat} $repeat [no-repeat] - background-repeat
+/// @param {$position} $position [center] - background-position
 @mixin img-retina-svg($file, $extension, $width, $height, $repeat:no-repeat, $position:center) {
     background-image: url("#{$file}.#{$extension}");
     background-size: $width $height;

@@ -1,23 +1,19 @@
-// Box - margin, padding, display, etc.
-// Border & Background - border, border-radius, background-color, etc.
-// Text - color, font-size, text-transform, etc.
-// Other stuff - animations, transforms, etc.
+////
+/// @author Michel van der Wereld
+/// @group Layout Base
+////
 
 @charset "UTF-8";
 
-/// LAYOUT BASE
-
-// CONFIG
-
-// BASE
-body {
+html, .l-page-body {
+  height: 100%;
   display: flex;
-  min-height: 100vh;
   flex-direction: column;
 }
 
-.page {
-	  flex: 1;
+.l-page {
+	flex: 1 0 auto; /* 2 */
+	width: 100%;
 }
 
 .l-wrapper {

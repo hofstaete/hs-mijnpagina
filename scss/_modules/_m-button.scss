@@ -1,27 +1,44 @@
-// Box - margin, padding, display, etc.
-// Border & Background - border, border-radius, background-color, etc.
-// Text - color, font-size, text-transform, etc.
-// Other stuff - animations, transforms, etc. 
-
 @charset "UTF-8";
- 
-/// MODULE BUTTON
+////
+/// @group Module Button
+////
+
+/// Module button
 $module: 												'button';
 
-// CONFIG
-$border__color--primary:					lighten($secondary-font-color, 20%);
-$border__color--secondary:				mix($primary-color, $white);
-$button__fontcolor--primary:			$secondary-font-color;
-$button__fontcolor--secondary:		$white;
-$button__backgroundcolor--hover:	rgba($black, 0.05);
+/// @require {$secondary-font-color} $secondary-font-color - Add 20 percent light to font color
+$border-color--primary:							lighten($secondary-font-color, 20%);
 
-// BASE
+/// Secondary border-color
+/// @require {$primary-color} $primary-color
+/// @require {$white} $white 
+$border-color--secondary:						mix($primary-color, $white);
+
+/// Primary font-color
+/// @require {$secondary-font-color} $secondary-font-color
+$font-color--primary:								$secondary-font-color;
+
+/// Secondary font-color
+/// @require {$white} $white
+$font-color--secondary:							$white;
+
+/// Adds 95% opacity to $black
+/// @require {$black} $black
+$background-color--hover:						rgba($black, 0.05);
+
+/// Tertiary background-color
+/// @require {$tertiary-color} $tertiary-color
+$background-color--tertiary:				$tertiary-color;
+
+/// Add 5% darken to $tertiary-color
+/// @require {$tertiary-color} $tertiary-color
+$background-color--hover--tertiary: darken($tertiary-color, 5%);
+
 .m-#{$module} {
 	display: inline-block;
-	padding: rem($gel-spacing-unit) rem($gel-spacing-unit);
+	padding: rem($gel-spacing-unit) rem(double($gel-spacing-unit));
 	width: auto;
-	position: relative;
-
+	
 	border-radius: rem(halve($gel-spacing-unit));
 	outline: 0;
 
@@ -29,15 +46,32 @@ $button__backgroundcolor--hover:	rgba($black, 0.05);
 	text-align: center;
 
 	&.-primary {
-		border: 1px solid $border__color--primary;
+		border: 1px solid $border-color--primary;
 
-		color: $button__fontcolor--primary;
+		color: $font-color--primary;
+
+		&:hover {
+			background-color: $background-color--hover;
+		}
 	}
 
 	&.-secondary {
-		border: 1px solid $border__color--secondary;
+		border: 1px solid $border-color--secondary;
 
-		color: $button__fontcolor--secondary;
+		color: $font-color--secondary;
+
+		&:hover {
+			background-color: $background-color--hover;
+		}
+	}
+
+	&.-tertiary {
+		color: $font-color--secondary;
+		background-color: $background-color--tertiary;
+
+		&:hover {
+			background-color: $background-color--hover--tertiary;
+		}
 	}
 
 	&.-half {
@@ -60,8 +94,6 @@ $button__backgroundcolor--hover:	rgba($black, 0.05);
 		outline: 0;
 	}
 	
-	&:hover {
-		background-color: $button__backgroundcolor--hover;
-	}
+
 }
  

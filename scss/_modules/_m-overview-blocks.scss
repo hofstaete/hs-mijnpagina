@@ -1,0 +1,96 @@
+////
+/// @author Michel van der Wereld
+////
+
+@charset "UTF-8";
+
+/// MODULE FOOTER
+$module:	'overview-blocks';
+
+// CONFIG
+$main-backgroundcolor:					darken($white, 7%);
+$block-background-color:				rgba($black, 0.08);
+$link-font-color: 							$primary-font-color;
+$link-font-size:								rem(18px);
+
+// BASE
+.m-#{$module} {
+	background-color: $main-backgroundcolor;
+	display: inline-block;
+	width: 100%;
+
+	&__with-info, &__just-blocks {
+		background-color: $main-backgroundcolor;
+
+		&.-show {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		&.-hide {
+			display: none;
+		}
+	}
+
+	&__with-info {
+
+		&.-left {
+			width: 50%;
+		}
+
+		&.-right {
+			background-color: $block-background-color;
+			width: 50%;
+		}
+
+		.m-overview-blocks__block {
+			padding: rem(140px) rem($gel-spacing-unit) rem(double($gel-spacing-unit));
+
+			&:nth-child(-n+2) {
+				border-bottom: 1px solid $block-background-color;
+			}	
+		}
+	}
+
+	&__just-blocks {
+		display: flex;
+		flex-wrap: wrap;
+
+		.m-overview-blocks__block {
+			padding: rem(200px) rem($gel-spacing-unit) rem(double($gel-spacing-unit));
+
+			&:nth-last-of-type(1){
+				border: none;
+			}
+		}
+	}
+
+	&__block {
+		display: inline-block;
+		text-align: center;
+		border-right: 1px solid $block-background-color;
+		float: left;
+		
+		&.-half {
+			width: 50%;
+		}
+
+		&.-quarter {
+			width: 25%;
+		}
+	}
+
+	&__link {
+		color: $link-font-color;
+		width: 100%;
+		height: 100%;
+		display: block;
+	}
+
+	&__title {
+		color: $link-font-color;
+		font-size: $link-font-size;
+		@include open-sans(600);
+	}
+}
+ 

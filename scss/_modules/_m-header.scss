@@ -1,25 +1,33 @@
-// Box - margin, padding, display, etc.
-// Border & Background - border, border-radius, background-color, etc.
-// Text - color, font-size, text-transform, etc.
-// Other stuff - animations, transforms, etc. 
+////
+/// @group Module Header
+////
 
 @charset "UTF-8";
-
-/// MODULE HEADER
+/// Module header
 $module:	'header';
 
-// CONFIG
-$header__fontcolor--primary:					$secondary-font-color;
-$header__backgroundcolor--primary:		lighten($primary-color, 2%);
-$header__backgroundcolor--secondary:	$white;
+/// Primary font color 
+/// @require {$secondary-font-color} $secondary-font-color
+$font-color--primary:					$secondary-font-color;
 
-// BASE
+/// Primary background color 
+/// @require {$primary-color} $primary-color - Makes primary-color 2 percent lighter
+$background-color--primary:		lighten($primary-color, 2%);
+
+/// Secondary background color 
+/// @require {$white} $white
+$background-color--secondary:	$white;
+
+/// SVG icon background fill color 
+/// @require {$secondary-font-color} $secondary-font-color
+$svg-icon-color:							$secondary-font-color;
+
 .m-#{$module} {
-	background-color: $header__backgroundcolor--primary;
+	background-color: $background-color--primary;
 	@include clearfix;
 
   @include mq($from: tablet) {
-  	background-color: $header__backgroundcolor--secondary;
+  	background-color: $background-color--secondary;
   	margin: rem(double($gel-spacing-unit)) 0;
   }
 
@@ -45,7 +53,7 @@ $header__backgroundcolor--secondary:	$white;
 		display: none;
 		
 		@include mq($from: tablet) {
-			min-height: 50px;
+			min-height: rem(42px);
 			float: left;
 	    display: flex;
 	    flex-direction: column;
@@ -56,7 +64,13 @@ $header__backgroundcolor--secondary:	$white;
 
 	&__phonenumber {
 		padding: rem($gel-spacing-unit) rem(double($gel-spacing-unit));
-		color: $header__fontcolor--primary;
+		color: $font-color--primary;
+		margin: 1px; //align with other top buttons bacause of their border.
+
+		&__icon {
+			fill: $svg-icon-color;
+	    vertical-align: middle;
+
+		}
 	}
 }
- 

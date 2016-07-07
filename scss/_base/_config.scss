@@ -1,8 +1,12 @@
+////
+/// @author Michel van der Wereld
+////
+
 @charset "UTF-8";
 
 /// CONFIG
 
-/// SUSY
+/// Sets basic of susy grid framework
 $susy: (
   //debug: (image: show-columns),
   columns: 12, 
@@ -12,24 +16,25 @@ $susy: (
   math: fluid
 );
 
-/// SASS-MQ
-// To enable support for browsers that do not support @media queries, (IE <= 8, Firefox <= 3, Opera <= 9) set $mq-responsive to false
-// Create a separate stylesheet served exclusively to these browsers, meaning @media queries will be rasterized, relying on the cascade itself
+/// Turn on SASS-MQ
 $mq-responsive: true;
 
-// Name your breakpoints in a way that creates a ubiquitous language across team members. It will improve communication between stakeholders, designers, developers, and testers.
+/// Breakpoints
+/// Name your breakpoints in a way that creates a ubiquitous language across team members. It will improve communication between stakeholders, designers, developers, and testers.
 $mq-breakpoints: (
-	mobile:  320px,
-  tablet:  768px,
+  mobile: 320px,
+  tablet: 768px,
   desktop: 980px,
-	wide:    1300px,
+  wide: 1300px,
   mobileLandscape: 480px
 );
 
-// If you want to display the currently active breakpoint in the top right corner of your site during development, add the breakpoints to this list, ordered by width, e.g. (mobile, tablet, desktop).
+/// Show Breakpoints
+/// If you want to display the currently active breakpoint in the top right corner of your site during development, add the breakpoints to this list, ordered by width, e.g. (mobile, tablet, desktop).
 $mq-show-breakpoints: (mobile, mobileLandscape, tablet, desktop, wide);
 
-$mq_highdensity:    "(-webkit-min-device-pixel-ratio: 1.5)",
-                    "( min-device-pixel-ratio: 1.5)",
-                    "( min-resolution: 144dpi)",
-                    "( min-resolution: 1.5dppx)";
+/// Set the hightdensity variable. Handy for checking if a higher density. 
+$mq_highdensity:  "(-webkit-min-device-pixel-ratio: 1.5)",
+                  "( min-device-pixel-ratio: 1.5)",
+                  "( min-resolution: 144dpi)",
+                  "( min-resolution: 1.5dppx)";

@@ -1,3 +1,7 @@
+////
+/// @author Michel van der Wereld
+////
+
 // Import fonts
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
 
@@ -8,8 +12,8 @@ $bold: 700;
 
 // CONFIG
 $small-font-size: 				rem(11px);
-$base-font-size: 					1rem;
-$base-line-height: 				2rem;
+$base-font-size: 					rem(16px); //1rem
+$base-line-height: 				rem(32px); //2rem
 $base-font-color: 				$primary-font-color;
 
 $h1-font-size: 						rem(38px);
@@ -28,6 +32,7 @@ html{
 	@include open-sans();
 	line-height: $base-line-height;
 	font-size: $base-font-size;
+	text-rendering: optimizeLegibility;
 }
 
 // HEADING

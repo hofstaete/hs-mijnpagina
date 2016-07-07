@@ -1,8 +1,13 @@
-@charset "UTF-8";
-
 ////
 /// @author Michel van der Wereld
 ////
+
+// Box - margin, padding, display, etc.
+// Border & Background - border, border-radius, background-color, etc.
+// Text - color, font-size, text-transform, etc.
+// Other stuff - animations, transforms, etc. 
+
+@charset "UTF-8";
 
 /// HEALTH CHECK
 //@import "_base/_healthcheck";
@@ -26,12 +31,18 @@
 @import "_layouts/_l-base";
 
 // MODULES IMPORTS
+@import "_modules/_m-button";
+
 @import "_modules/_m-header";
-@import "_modules/_m-header-image";
 @import "_modules/_m-main";
 @import "_modules/_m-footer";
-@import "_modules/_m-button";
+
 @import "_modules/_m-nav";
 
-@import "_modules/_m-overview-block";
 @import "_modules/_m-user-mobile";
+@import "_modules/_m-header-image";
+@import "_modules/_m-overview-blocks";
+
+// SHAME
+@import "_hacks/_shame";
+

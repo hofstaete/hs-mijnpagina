@@ -1,8 +1,12 @@
+////
+/// @author Michel van der Wereld
+////
+
 @import "_base/_z-index";
 @import "_base/_global";
 @import "bower_components/sass-mq/mq";
 
-.page{
+.l-page{
 	margin-top: 0;
 
 	&.margin-top{

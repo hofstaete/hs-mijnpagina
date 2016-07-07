@@ -1,10 +1,13 @@
-// Z-index Leveling
+////
+/// @author Michel van der Wereld
+////
 
+/// Z-index Leveling
 $z-index: (
-  popup: 							500,
-  overlay:						400,
-  navigation:      	 	300,
-  footer: 						200,
+  popup: 500,
+  overlay: 400,
+  navigation: 300,
+  footer: 200,
 );
 
 @function z-index($key) {

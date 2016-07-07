@@ -1,42 +1,68 @@
-// Box - margin, padding, display, etc.
-// Border & Background - border, border-radius, background-color, etc.
-// Text - color, font-size, text-transform, etc.
-// Other stuff - animations, transforms, etc. 
-
 @charset "UTF-8";
+////
+/// @group Module Header-image
+////
 
-/// MODULE HEADER
+/// Module header-image
 $module:	'header-image';
 
-// CONFIG
-$header__fontcolor--primary:					$secondary-font-color;
-$header__backgroundcolor--primary:		lighten($primary-color, 2%);
-$header__backgroundcolor--secondary:	$white;
+/// Primary font color
+/// @require {$white} $white
+$fontcolor--primary:					$white;
+
+/// Font shadow color
+/// @require {$black} $black - Makes black 50 percent opacity
+$font-shadow:									rgba($black, 0.5);
 
 // BASE
 .m-#{$module} {
 	display: none;
+	height: rem(368px);
+	width: 100%;
+	padding: rem(quadruple($gel-spacing-unit));
 
+	background-image: url("../img/header.png");
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-origin: padding-box;
+  background-position: 0 0;
+  background-repeat: repeat;
+  background-size: auto auto;
+	background-position: center center;
+  background-size: cover;
+
+	@include mq($from: tablet) {
+			display: inline-block;
+	}
 	&.-show {
 		display: none;
 
 		@include mq($from: tablet) {
 			display: inline-block;
-			height: rem(368px);
-			width: 100%;
-		
-			background-image: url("../img/header.png");
-		  background-attachment: scroll;
-	    background-clip: border-box;
-	    background-origin: padding-box;
-	    background-position: 0 0;
-	    background-repeat: repeat;
-	    background-size: auto auto;
-			background-position: center center;
-	    background-size: cover;
+
 		}
 	}
 	&.-hide {
 		display: none;
 	}
+
+	&__title {
+		width: 40%;
+		margin-bottom: rem(double($gel-spacing-unit));
+
+	  @include open-sans(700);
+	  color: $fontcolor--primary;
+  	font-size: $h2-font-size;
+  	text-transform: uppercase;
+  	text-shadow: 2px 2px 3px $font-shadow;
+  	line-height: rem(quadruple($gel-spacing-unit));
+	}
+
+	&__button {
+		@include open-sans(700);
+		padding: rem($gel-spacing-unit) rem(double($gel-spacing-unit));
+		text-transform: uppercase;
+		line-height: rem(quadruple($gel-spacing-unit));
+	}
+
 }

@@ -31,45 +31,47 @@
 
 
 </head>
-<body>
+<body class="l-page-body">
 
 
-<div class="page">
+<div class="l-page">
 
-  <!-- For prototyping -->
-  <link rel="stylesheet" href="css/for-prototype.css">
-  <div class="for-prototype">
-    <div>Klik hieronder om te switchen naar:</div>
-    
-    <a href="#" class="m-button -primary overview-action active">De overzichtspagina met actie</a>
-    <a href="#" class="m-button -primary overview-consultant">De overzichtspagina met adviseursinformatie</a>
 
-  </div>
-  <!-- For prototyping -->
 
   <header>
     <header>
       <div class="l-wrapper">
         <div class="[ l-layout ] m-header">
-          <a href="#index" class="m-header__logo">
+          <a href="_overview.html" class="m-header__logo">
             <img src="img/logo-hofstaete.png" alt="Hofstaete" srcset="img/logo-hofstaete.svg" width="145" height="25">
           </a>
 
           <section class="l-ptb--double m-header--mobile">
-            <a href="tel:033 888 55 22" class="m-button -secondary -half -margin-right">bel ons</a>
-            <a href="#" class="m-button -secondary -half --margin-left">mail ons</a>
+            <a href="tel:035 699 15 50" class="m-button -secondary -half -margin-right">bel ons</a>
+            <a href="mailto:info@hofstaete.nl" class="m-button -secondary -half --margin-left">mail ons</a>
           </section>
 
           <section class="m-header--tablet">
-            <div class="m-header__phonenumber">Bel 033 888 55 22</div>
-            <a href="#" class="m-button -primary">Over ons</a>
-            <a href="#" class="m-button -primary -margin-left">FAQ</a>
-            <a href="#" class="m-button -primary -margin-left">Contact</a>
+            <div class="m-header__phonenumber">
+              <?xml version="1.0" ?>
+              <!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+              <svg class="m-header__phonenumber__icon" enable-background="new 0 0 139 139" viewBox="0 0 139 139" height="24px" width="24px" id="Phone" 
+              version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">  
+              <path d="M67.317,81.952c-9.284-7.634-15.483-17.054-18.742-22.414l-2.431-4.583c0.85-0.912,7.332-7.853,10.141-11.619  c3.53-4.729-1.588-9-1.588-9S40.296,19.933,37.014,17.076c-3.282-2.861-7.06-1.272-7.06-1.272  c-6.898,4.457-14.049,8.332-14.478,26.968C15.46,60.22,28.705,78.216,43.028,92.148c14.346,15.734,34.043,31.504,53.086,31.486  c18.634-0.425,22.508-7.575,26.965-14.473c0,0,1.59-3.775-1.268-7.06c-2.86-3.284-17.265-17.688-17.265-17.688  s-4.268-5.119-8.998-1.586c-3.525,2.635-9.855,8.496-11.38,9.917C84.171,92.749,73.582,87.104,67.317,81.952z"/>
+              </svg>
+              035 699 15 50
+            </div>
+            <a href="_about.html" class="m-button -primary">Over ons</a>
+            <a href="_faq.html" class="m-button -primary -margin-left">FAQ</a>
+            <a href="_contact.html" class="m-button -primary -margin-left">Contact</a>
           </section>
         </div>
 
         <div class="l-layout">
-          <div class="m-header-image">Action image</div>
+          <div class="m-header-image">
+            <div class="m-header-image__title">Sluit nu een reisverzekering af met 25% korting</div>
+            <a href="#" class="[ m-button -tertiary ] m-header-image__button">Pak die korting</a>
+          </div>
         </div>
       </div>
 
@@ -79,19 +81,19 @@
     <div class="m-nav -mobile">
       <ul>
         <li class="m-nav__item -mobile">
-          <a href="products.html" class="m-nav__link -mobile -active">
+          <a href="_products.html" class="m-nav__link -mobile -active">
             <span class="m-nav__icon -mobile -products"></span>
             <span class="m-nav__text -mobile">Producten</span>
           </a>
         </li>
         <li class="m-nav__item -mobile">
-          <a href="data.html" class="m-nav__link -mobile">
+          <a href="_data.html" class="m-nav__link -mobile">
             <span class="m-nav__icon -mobile -data"></span>
             <span class="m-nav__text -mobile">Gegevens</span>
           </a>
         </li>
         <li class="m-nav__item -mobile">
-          <a href="damage.html" class="m-nav__link -mobile">
+          <a href="_damage.html" class="m-nav__link -mobile">
             <span class="m-nav__icon -mobile -damage">
               <span class="m-nav__damage-counter--mobile">3</span>
             </span>
@@ -99,13 +101,13 @@
           </a>
         </li>
         <li class="m-nav__item -mobile">
-          <a href="payments.html" class="m-nav__link -mobile">
+          <a href="_payments.html" class="m-nav__link -mobile">
             <span class="m-nav__icon -mobile -payments"></span>
             <span class="m-nav__text -mobile">Betalingen</span>
           </a>
         </li>
         <li class="m-nav__item -mobile">
-          <a href="#contact" class="m-nav__link -mobile">
+          <a href="_contact.html" class="m-nav__link -mobile">
             <span class="m-nav__icon -mobile -contact"></span>
             <span class="m-nav__text -mobile">Contact</span>
           </a>
@@ -118,24 +120,24 @@
       <div class="l-wrapper l-layout">
         <ul class="m-nav__ul">
           <li class="m-nav__item -tablet">
-            <a href="overview.html" data-page="overview" class="m-nav__link -tablet -active">Overzicht</a>
+            <a href="_overview.html" data-page="overview" class="m-nav__link -tablet -active">Overzicht</a>
           </li>
           <li class="m-nav__item -tablet">
-            <a href="products.html" data-page="products" class="m-nav__link -tablet">Producten</a>
+            <a href="_products.html" data-page="products" class="m-nav__link -tablet">Producten</a>
           </li>
           <li class="m-nav__item -tablet">
-            <a href="payments.html" data-page="payments" class="m-nav__link -tablet">Betalingen</a>
+            <a href="_payments.html" data-page="payments" class="m-nav__link -tablet">Betalingen</a>
           </li>
           <li class="m-nav__item -tablet">
-            <a href="damage.html" data-page="damage" class="m-nav__link -tablet">Schades<span class="m-nav__damage-counter--tablet">3</span></a>
+            <a href="_damage.html" data-page="damage" class="m-nav__link -tablet">Schades<span class="m-nav__damage-counter--tablet">3</span></a>
           </li>
         </ul>
         <div class="m-nav__right">
-          <a href="data.html" class="m-nav__link -tablet -data">
+          <a href="_data.html" class="m-nav__link -tablet -data">
             Mijn gegevens <img class="m-nav__profile-picture" src="http://placekitten.com/g/200/200" />
           </a>
-          <a href="#" class="m-nav__link -tablet -cart -active">
-            <span class="m-nav__cart--counter">1</span> 
+          <a href="_basket.html" class="m-nav__link -tablet -basket">
+            <span class="m-nav__basket--counter">1</span> 
           </a>
         </div>
       </div> 
@@ -152,56 +154,87 @@
 
 
 <footer class="l-layout m-footer">
-  <div m-footer__name>Bedrijfsnaam Tussenpersoon</div>
-  <div m-footer__adress>Straatnaam 123, 1234 AA Zaandam</div>
-  <div m-footer__phonenumber>Tel 012 1234 567</div>
+  <div m-footer__name>Hofstaete</div>
+  <div m-footer__adress>Gooimeer 8, 1411 DD Naarden</div>
+  <div m-footer__phonenumber>Tel 035 699 15 50</div>
 </footer>
 
 
+<!-- For prototyping -->
+<link rel="stylesheet" href="css/for-prototype.css">
+<div class="for-prototype">
+  <div>Klik hieronder om te switchen naar:</div>
+  
+  <a href="#" class="m-button -primary overview-action active">De overzichtspagina met actie</a>
+  <a href="#" class="m-button -primary overview-consultant">De overzichtspagina met adviseursinformatie</a>
 
-
+</div>
+<!-- For prototyping -->
 
 <script type="text/javascript">
-
-  $('.for-prototype').addClass('active');
-  $('.page').removeClass('margin-top');
-  $('.page').addClass('margin-top');
 
   $(document).ready(function(){
 
     $(function(){
-      $(".m-main").load('overview.html');
+      $(".m-main").load('_overview.html'); // set default
+      $('.for-prototype').addClass('active');
+      $('.l-page').removeClass('margin-top');
+      $('.l-page').addClass('margin-top');
+      
+      $('.m-header__logo').click(function (e) { 
+        e.preventDefault();
+        $('.for-prototype').addClass('active');
+        $('.l-page').removeClass('margin-top');
+        $('.l-page').addClass('margin-top');
+        $('.m-header-image').removeClass('-hide');
+        $('.m-header-image').addClass('-show');
+      });
+      
       $('.m-nav__link').click(function (e) { 
-          e.preventDefault();
-          $('a.m-nav__link').removeClass('-active');
-          $(this).addClass('-active');
-          $(".m-main").load($(this).attr("href"));
+        e.preventDefault();
+        $('a.m-nav__link').removeClass('-active');
+        $(this).addClass('-active');
+        $(".m-main").load($(this).attr("href"));
 
-          // for prototype //
-          if($(this).attr('data-page') == 'overview') {
-            $('.for-prototype').addClass('active');
-            $('.page').removeClass('margin-top');
-            $('.page').addClass('margin-top');
-            $('.m-header-image').show();
-          }
-          else {
-            $('.for-prototype').removeClass('active');
-            $('.page').removeClass('margin-top');
-            $('.m-header-image').hide();
-          }
-          // end for prototype //
+        // for prototype //
+        if($(this).attr('data-page') == 'overview') {
+          $('.for-prototype').addClass('active');
+          $('.l-page').removeClass('margin-top');
+          $('.l-page').addClass('margin-top');
+          $('.m-header-image').removeClass('-hide');
+          $('.m-header-image').addClass('-show');
+        }
+        else {
+          $('.for-prototype').removeClass('active');
+          $('.l-page').removeClass('margin-top');
+          $('.m-header-image').removeClass('-show');
+          $('.m-header-image').addClass('-hide');
+        }
+        // end for prototype //
+      });
+
+      $('.m-header--tablet .m-button').click(function (e) { 
+        e.preventDefault();
+        $(".m-main").load($(this).attr("href"));            
+        $('.for-prototype').removeClass('active');
+        $('.l-page').removeClass('margin-top');
+        $('.m-header-image').removeClass('-show');
+        $('.m-header-image').addClass('-hide');
       });
 
     });
 
+    // for prototype //
     $('.overview-action').click(function (e) { 
       e.preventDefault();
       $('.overview-consultant').removeClass('active');
       $(this).addClass('active');
       $('.m-header-image').removeClass('-hide');
       $('.m-header-image').addClass('-show');
-      $('.m-overview-block--just-blocks').show();
-      $('.m-overview-block--info').hide();
+      $('.m-overview-blocks__with-info').removeClass('-show');
+      $('.m-overview-blocks__with-info').addClass('-hide');
+      $('.m-overview-blocks__just-blocks').removeClass('-hide');
+      $('.m-overview-blocks__just-blocks').addClass('-show');
     });
 
     $('.overview-consultant').click(function (e) { 
@@ -209,12 +242,14 @@
       $('.overview-action').removeClass('active');
       $(this).addClass('active');
       $('.m-header-image').removeClass('-show');
-      $('.m-header-image').addClass('-hide')
-      $('.m-overview-block--just-blocks').hide();
-      $('.m-overview-block--info').show();
+      $('.m-header-image').addClass('-hide');
+      $('.m-overview-blocks__with-info').removeClass('-hide');
+      $('.m-overview-blocks__with-info').addClass('-show');
+      $('.m-overview-blocks__just-blocks').removeClass('-show');
+      $('.m-overview-blocks__just-blocks').addClass('-hide');
     });
+    // end for prototype //
          
-
   });
 </script>
 
