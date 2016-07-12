@@ -47,8 +47,8 @@
           </a>
 
           <section class="l-ptb--double m-header--mobile">
-            <a href="tel:035 699 15 50" class="m-button -secondary -half -margin-right">bel ons</a>
-            <a href="mailto:info@hofstaete.nl" class="m-button -secondary -half --margin-left">mail ons</a>
+            <a href="tel:035 699 15 50" class="m-button -tertiary -half -margin-right">bel ons</a>
+            <a href="mailto:info@hofstaete.nl" class="m-button -tertiary -half --margin-left">mail ons</a>
           </section>
 
           <section class="m-header--tablet">
@@ -56,21 +56,22 @@
               <?xml version="1.0" ?>
               <!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
               <svg class="m-header__phonenumber__icon" enable-background="new 0 0 139 139" viewBox="0 0 139 139" height="24px" width="24px" id="Phone" 
-              version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">  
+              version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img">  
+              <title>Telefoonnummer</title>
               <path d="M67.317,81.952c-9.284-7.634-15.483-17.054-18.742-22.414l-2.431-4.583c0.85-0.912,7.332-7.853,10.141-11.619  c3.53-4.729-1.588-9-1.588-9S40.296,19.933,37.014,17.076c-3.282-2.861-7.06-1.272-7.06-1.272  c-6.898,4.457-14.049,8.332-14.478,26.968C15.46,60.22,28.705,78.216,43.028,92.148c14.346,15.734,34.043,31.504,53.086,31.486  c18.634-0.425,22.508-7.575,26.965-14.473c0,0,1.59-3.775-1.268-7.06c-2.86-3.284-17.265-17.688-17.265-17.688  s-4.268-5.119-8.998-1.586c-3.525,2.635-9.855,8.496-11.38,9.917C84.171,92.749,73.582,87.104,67.317,81.952z"/>
               </svg>
               035 699 15 50
             </div>
-            <a href="_about.html" class="m-button -primary">Over ons</a>
-            <a href="_faq.html" class="m-button -primary -margin-left">FAQ</a>
-            <a href="_contact.html" class="m-button -primary -margin-left">Contact</a>
+            <a href="_about.html" class="m-button -secondary">Over ons</a>
+            <a href="_faq.html" class="m-button -secondary -margin-left">FAQ</a>
+            <a href="_contact.html" class="m-button -secondary -margin-left">Contact</a>
           </section>
         </div>
 
         <div class="l-layout">
           <div class="m-header-image">
             <div class="m-header-image__title">Sluit nu een reisverzekering af met 25% korting</div>
-            <a href="#" class="[ m-button -tertiary ] m-header-image__button">Pak die korting</a>
+            <a class="[ m-button -action -l ] m-header-image__button">Pak die korting</a>
           </div>
         </div>
       </div>
@@ -153,10 +154,14 @@
 </div>
 
 
-<footer class="l-layout m-footer">
-  <div m-footer__name>Hofstaete</div>
-  <div m-footer__adress>Gooimeer 8, 1411 DD Naarden</div>
-  <div m-footer__phonenumber>Tel 035 699 15 50</div>
+<footer class="m-footer">
+  <div class="l-wrapper l-layout l-ptb ">
+    <div class="m-footer__name">Hofstaete Kennisgroep B.V.</div>
+    <div class="m-footer__adress">Gooimeer 8, 1411 DD Naarden</div>
+    <div class="m-footer__phonenumber">Tel 035 699 15 50</div>
+    <div class="m-footer__feedback"><a href="#" class="m-button -secondary">Feedback</a></div>
+  </div>
+
 </footer>
 
 
@@ -165,17 +170,19 @@
 <div class="for-prototype">
   <div>Klik hieronder om te switchen naar:</div>
   
-  <a href="#" class="m-button -primary overview-action active">De overzichtspagina met actie</a>
-  <a href="#" class="m-button -primary overview-consultant">De overzichtspagina met adviseursinformatie</a>
+  <a href="#" class="m-button -secondary overview-action active">De overzichtspagina met actie</a>
+  <a href="#" class="m-button -secondary overview-consultant">De overzichtspagina met adviseursinformatie</a>
 
 </div>
 <!-- For prototyping -->
 
 <script type="text/javascript">
 
+
   $(document).ready(function(){
 
-    $(function(){
+      $(function(){
+
       $(".m-main").load('_overview.html'); // set default
       $('.for-prototype').addClass('active');
       $('.l-page').removeClass('margin-top');

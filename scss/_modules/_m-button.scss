@@ -6,33 +6,56 @@
 /// Module button
 $module: 												'button';
 
-/// @require {$secondary-font-color} $secondary-font-color - Add 20 percent light to font color
-$border-color--primary:							lighten($secondary-font-color, 20%);
-
-/// Secondary border-color
-/// @require {$primary-color} $primary-color
-/// @require {$white} $white 
-$border-color--secondary:						mix($primary-color, $white);
-
-/// Primary font-color
+/// Primary button-font-color
 /// @require {$secondary-font-color} $secondary-font-color
-$font-color--primary:								$secondary-font-color;
+$button-font-color--primary:								$white;
+/// Primary button-background-color
+/// @require {$black} $black - Adds 95percent opacity to black
+$button-background-color--primary:					$primary-color;
+/// Primary button-background-color--hover
+/// @require {$primary-color} $primary-color - Adds 5percent darken to primary-color
+$button-background-color--primary--hover:		darken($primary-color, 5%);
+/// Primary button-border-color
+/// @require {$primary-color} $primary-color - Add 20 percent light to font color
+$button-border-color--primary:							$primary-color;
 
-/// Secondary font-color
+/// Secondary button-font-color
+/// @require {$secondary-font-color} $secondary-font-color
+$button-font-color--secondary:							$secondary-font-color;
+/// Secondary button-background-color
+$button-background-color--secondary:				transparent;
+/// Secondary button-background-color--hover
+/// @require {$secondary-font-color} $secondary-font-color - Adds 90percent opacity to secondary-font-color
+$button-background-color--secondary--hover:	rgba($secondary-font-color, 0.1);
+/// Secondary border-color
+/// @require {$secondary-font-color} $secondary-font-color
+/// @require {$white} $white 
+$button-border-color--secondary:						mix($secondary-font-color, $white);
+
+/// Tertiary button-font-color
 /// @require {$white} $white
-$font-color--secondary:							$white;
+$button-font-color--tertiary:								$white;
+/// Tertiary button-background-color
+$button-background-color--tertiary:					transparent;
+/// Tertiary button-background-color--hover
+/// @require {$black} $black - Adds 95percent opacity to black
+$button-background-color--tertiary--hover:	rgba($black, 0.05);
+/// Tertiary border-color
+/// @require {$white} $white 
+$button-border-color--tertiary:							$white;
 
-/// Adds 95% opacity to $black
-/// @require {$black} $black
-$background-color--hover:						rgba($black, 0.05);
-
-/// Tertiary background-color
-/// @require {$tertiary-color} $tertiary-color
-$background-color--tertiary:				$tertiary-color;
-
-/// Add 5% darken to $tertiary-color
-/// @require {$tertiary-color} $tertiary-color
-$background-color--hover--tertiary: darken($tertiary-color, 5%);
+/// Action button-font-color
+/// @require {$white} $white
+$button-font-color--action:									$white;
+/// Action button-background-color
+/// @require {$action-color} $action-color
+$button-background-color--action:						$action-color;
+/// Action button-background-color--hover
+/// @require {$action-color} $action-color - Adds 5percent darken to action-color
+$button-background-color--action--hover:		darken($action-color, 5%);
+/// Action button-border-color
+/// @require {$action-color} $action-color
+$button-border-color--action:								$action-color;
 
 .m-#{$module} {
 	display: inline-block;
@@ -46,34 +69,62 @@ $background-color--hover--tertiary: darken($tertiary-color, 5%);
 	text-align: center;
 
 	&.-primary {
-		border: 1px solid $border-color--primary;
+		border: 1px solid $button-border-color--primary;
 
-		color: $font-color--primary;
+		color: $button-font-color--primary;
+		background-color: $button-background-color--primary;
 
 		&:hover {
-			background-color: $background-color--hover;
+			background-color: $button-background-color--primary--hover;
 		}
 	}
 
 	&.-secondary {
-		border: 1px solid $border-color--secondary;
+		border: 1px solid $button-border-color--secondary;
 
-		color: $font-color--secondary;
+		color: $button-font-color--secondary;
+		background-color: $button-background-color--secondary;
 
 		&:hover {
-			background-color: $background-color--hover;
+			background-color: $button-background-color--secondary--hover;
 		}
 	}
 
 	&.-tertiary {
-		color: $font-color--secondary;
-		background-color: $background-color--tertiary;
+		border: 1px solid $button-border-color--tertiary;
+
+		color: $button-font-color--tertiary;
+		background-color: $button-background-color--tertiary;
 
 		&:hover {
-			background-color: $background-color--hover--tertiary;
+			background-color: $button-background-color--tertiary--hover;
 		}
 	}
 
+	&.-action {
+		color: $button-font-color--action;
+		background-color: $button-background-color--action;
+
+		&:hover {
+			background-color: $button-background-color--action--hover;
+		}
+	}
+
+	// Size of buttons Medium is default
+	&.-s {
+		font-size: $small-font-size;
+	}
+
+	&.-l {
+		font-size: $large-font-size;
+		padding: rem($gel-spacing-unit + 4px) rem(double($gel-spacing-unit + 4px));
+	}
+
+	&.-xl {
+		width: 50%;
+	}
+
+	// Width of buttons
 	&.-half {
 		width: 50%;
 	}
@@ -82,6 +133,7 @@ $background-color--hover--tertiary: darken($tertiary-color, 5%);
 		width: 100%;
 	}
 
+	// Margins of buttons
 	&.-margin-right {
 		margin-right: rem($gel-spacing-unit);
 	}
@@ -90,10 +142,9 @@ $background-color--hover--tertiary: darken($tertiary-color, 5%);
 		margin-left: rem($gel-spacing-unit);
 	}
 
+	// Remove dotted outline from clicked links.
 	&:hover, &:active, &:focus {
 		outline: 0;
 	}
-	
-
 }
  

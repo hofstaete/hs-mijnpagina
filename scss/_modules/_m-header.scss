@@ -27,7 +27,7 @@ $svg-icon-color:							$secondary-font-color;
 	@include clearfix;
 
   @include mq($from: tablet) {
-  	background-color: $background-color--secondary;
+  	background-color: transparent;
   	margin: rem(double($gel-spacing-unit)) 0;
   }
 

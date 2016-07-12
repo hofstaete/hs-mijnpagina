@@ -3,12 +3,20 @@
 /// @group Layout Base
 ////
 
+/// Background color of the whole page
+/// @require {$white} $white - Makes white 1 percent darken
+$body-background-color:								darken($white, 1%);
+
 @charset "UTF-8";
 
 html, .l-page-body {
   height: 100%;
   display: flex;
   flex-direction: column;
+}
+
+.l-page-body {
+	background-color: $body-background-color;
 }
 
 .l-page {

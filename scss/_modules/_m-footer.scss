@@ -8,11 +8,15 @@ $module:	'footer';
 
 /// Footer background color
 /// @require {$white} $white - Makes the white color 6 percent darker
-$footer-background:								darken($white, 6%);
+$footer-background:								darken($white, 8%);
 
 /// Footer border color
 /// @require {$secondary-font-color} $secondary-font-color
 $footer-border:										$secondary-font-color;
+
+/// Footer border color
+/// @require {$secondary-font-color} $secondary-font-color
+$footer-divider:									rgba($black, 0.08);
 
 /// Footer font color
 /// @require {$secondary-font-color} $secondary-font-color
@@ -20,11 +24,10 @@ $footer-font:											$secondary-font-color;
 
 // BASE
 .m-#{$module} {
-	flex: none; /* 2 */
-	padding-bottom: rem(48px);
-	margin-top: rem(double($gel-spacing-unit));
+	flex: none;
 	display: inline-block;
 	width: 100%;
+	padding-bottom: rem(48px + $gel-spacing-unit ); // to come above mobile menu
 
 	border-top: 1px solid $footer-border;
 
@@ -32,20 +35,57 @@ $footer-font:											$secondary-font-color;
 	color: $footer-font;
 	text-align: center;
 
-	@include mq($from: tablet) { 
-		padding-bottom: 0;
+	@include mq($from: tablet) {
+		padding-bottom: 0; 
+	}
+	@include mq($from: desktop) { 
+		
+		text-align: left;
 	}
 
 	&__name {
-		
+		@include open-sans(600);
+
+		@include mq($from: tablet) {
+			
+			display: inline-block;
+			padding-right: rem(triple($gel-spacing-unit));
+			padding-top: rem($gel-spacing-unit);
+			padding-bottom: rem($gel-spacing-unit);
+		}
+
+		@include mq($from: desktop) {
+			float: left;
+		}
+
 	}
-  
-  &__adress {
 
-  }
+	&__adress, &__phonenumber {
+		@include mq($from: tablet) {
+			display: inline-block;
+			padding-left: rem(triple($gel-spacing-unit));
+			padding-right: rem(triple($gel-spacing-unit));
+			padding-top: rem($gel-spacing-unit);
+			padding-bottom: rem($gel-spacing-unit);
+			
+			border-left: 2px solid $footer-divider;
+		}
 
-  &__phonenumber {
+		@include mq($from: desktop) {
+			float: left;
+		}
 
-  }
+	}
+
+	&__phonenumber {
+
+	}
+
+	&__feedback {
+		@include mq($from: desktop) {
+			float: right;
+		}
+		@include clearfix();
+	}
 }
  

@@ -1,0 +1,28 @@
+////
+/// @group Module Feedback
+////
+
+@charset "UTF-8";
+/// Module main
+$module:	'feedback';
+
+// Background color of main 
+// @require {$white} $white - Makes white 1 percent darken
+// $main-background-color:								darken($white, 1%);
+
+// BASE
+.m-#{$module} {
+	width: 100%;
+	text-align: center;
+
+	&__span {
+		@include open-sans(600);
+		font-size: $extra-large-font-size;
+	}
+
+	&__button {
+		@include open-sans(700);
+		text-transform: uppercase;
+	}
+}
+ 

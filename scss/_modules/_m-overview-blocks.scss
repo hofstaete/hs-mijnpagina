@@ -8,10 +8,17 @@
 $module:	'overview-blocks';
 
 // CONFIG
-$main-backgroundcolor:					darken($white, 7%);
+$main-backgroundcolor:					darken($white, 8%);
 $block-background-color:				rgba($black, 0.08);
 $link-font-color: 							$primary-font-color;
+
+/// SVG icon background fill color 
+/// @require {$secondary-font-color} $secondary-font-color
 $link-font-size:								rem(18px);
+
+/// SVG icon background fill color 
+/// @require {$secondary-font-color} $secondary-font-color
+$svg-icon-color:							$primary-font-color;
 
 // BASE
 .m-#{$module} {
@@ -33,7 +40,7 @@ $link-font-size:								rem(18px);
 	}
 
 	&__with-info {
-
+		
 		&.-left {
 			width: 50%;
 		}
@@ -41,11 +48,39 @@ $link-font-size:								rem(18px);
 		&.-right {
 			background-color: $block-background-color;
 			width: 50%;
+			padding: rem(quadruple($gel-spacing-unit));
+		}
+		
+		&__h2, &__h3, &__address, &__postalcode-city, &__google-maps-link, &__phonenumber, &__email {
+			width: 100%;
+		}
+
+		&__address, &__postalcode-city, &__google-maps-link, &__phonenumber, &__email {
+			@include open-sans(600);
+		}
+
+		&__address {
+		}
+
+		&__postalcode-city {
+		}
+
+		&__google-maps-link {
+			margin-bottom: rem(quadruple($gel-spacing-unit));
+		}
+		
+		&__phonenumber {
+		}
+
+		&__email {
+			margin-bottom: rem(quadruple($gel-spacing-unit));
 		}
 
 		.m-overview-blocks__block {
-			padding: rem(140px) rem($gel-spacing-unit) rem(double($gel-spacing-unit));
-
+			> .m-overview-blocks__link {
+				padding: rem(48px) rem($gel-spacing-unit);
+			}
+			
 			&:nth-child(-n+2) {
 				border-bottom: 1px solid $block-background-color;
 			}	
@@ -57,7 +92,9 @@ $link-font-size:								rem(18px);
 		flex-wrap: wrap;
 
 		.m-overview-blocks__block {
-			padding: rem(200px) rem($gel-spacing-unit) rem(double($gel-spacing-unit));
+			> .m-overview-blocks__link {
+				padding: rem(64px) rem($gel-spacing-unit);
+			}
 
 			&:nth-last-of-type(1){
 				border: none;
@@ -80,14 +117,25 @@ $link-font-size:								rem(18px);
 		}
 	}
 
+	&__icon {
+		height: rem(80px);
+
+		&__svg {
+			fill: $svg-icon-color;
+		}
+	}
+
 	&__link {
-		color: $link-font-color;
 		width: 100%;
 		height: 100%;
 		display: block;
+
+		color: $link-font-color;
 	}
 
 	&__title {
+		margin: rem(double($gel-spacing-unit)) 0 0 0;	
+		
 		color: $link-font-color;
 		font-size: $link-font-size;
 		@include open-sans(600);
