@@ -143,8 +143,6 @@ $button-border-color--action:								$action-color;
 	}
 
 	// Remove dotted outline from clicked links.
-	&:hover, &:active, &:focus {
-		outline: 0;
-	}
+	@include remove-outline();
 }
  

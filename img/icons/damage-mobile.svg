@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 12.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 51448)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_svg "http://www.w3.org/2000/svg">
+	<!ENTITY ns_xlink "http://www.w3.org/1999/xlink">
+]>
+<svg  version="1.1" id="Layer_1" xmlns="&ns_svg;" xmlns:xlink="&ns_xlink;" width="22" height="21" viewBox="0 0 22 21"
+	 overflow="visible" enable-background="new 0 0 22 21" xml:space="preserve">
+<title>mp-icon-nav-schades</title>
+<desc>Created with Sketch.</desc>
+<g id="Mobile-Tussenstap">
+	<g id="iPhone-6-klantmap-_x3E_-producten" transform="translate(-176.000000, -625.000000)">
+		<g id="tabnav" transform="translate(0.000000, 618.000000)">
+			<g id="mp-icon-nav-schades" transform="translate(177.000000, 7.000000)">
+				<g>
+					<path fill="#939393" d="M9,7.09v6.654c0,0.276,0.224,0.5,0.5,0.5s0.5-0.224,0.5-0.5V7.09c0-0.276-0.224-0.5-0.5-0.5
+						S9,6.813,9,7.09z"/>
+				</g>
+				<g id="Group-6">
+					<g>
+						<path fill="#939393" d="M9.053,0.211l-9.565,19.129c-0.078,0.155-0.069,0.339,0.022,0.486
+							c0.091,0.147,0.252,0.237,0.425,0.237h19.129c0.173,0,0.334-0.09,0.426-0.237c0.091-0.147,0.099-0.331,0.021-0.486
+							L9.948,0.211C9.863,0.042,9.69-0.065,9.5-0.065S9.138,0.042,9.053,0.211z M9.5,1.553c0.78,1.561,8.118,16.237,8.755,17.511
+							c-1.419,0-16.093,0-17.511,0C1.382,17.79,8.72,3.114,9.5,1.553z"/>
+					</g>
+					<g>
+						<path fill="#939393" d="M8.565,16.521c0,0.516,0.419,0.936,0.935,0.936s0.936-0.42,0.936-0.936s-0.42-0.935-0.936-0.935
+							S8.565,16.006,8.565,16.521z M9.436,16.521c0-0.03,0.035-0.064,0.065-0.064c0.065,0.1,0.035,0.13,0,0.13L9.436,16.521z"/>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

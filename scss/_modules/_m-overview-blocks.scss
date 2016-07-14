@@ -17,8 +17,12 @@ $link-font-color: 							$primary-font-color;
 $link-font-size:								rem(18px);
 
 /// SVG icon background fill color 
-/// @require {$secondary-font-color} $secondary-font-color
+/// @require {$primary-font-color} $primary-font-color
 $svg-icon-color:							$primary-font-color;
+
+/// SVG icon hover background fill color 
+/// @require {$primary-color} $primary-color
+$svg-icon-color--hover:				$primary-color;
 
 // BASE
 .m-#{$module} {
@@ -29,9 +33,17 @@ $svg-icon-color:							$primary-font-color;
 	&__with-info, &__just-blocks {
 		background-color: $main-backgroundcolor;
 
+			@include mq($until: tablet) { 
+				display: none;
+			}
+
 		&.-show {
 			display: flex;
 			flex-wrap: wrap;
+
+			@include mq($until: tablet) { 
+				display: none;
+			}
 		}
 
 		&.-hide {
@@ -57,6 +69,10 @@ $svg-icon-color:							$primary-font-color;
 
 		&__address, &__postalcode-city, &__google-maps-link, &__phonenumber, &__email {
 			@include open-sans(600);
+		}
+
+		&__logo {
+			margin-right: rem($gel-spacing-unit);
 		}
 
 		&__address {
@@ -131,6 +147,9 @@ $svg-icon-color:							$primary-font-color;
 		display: block;
 
 		color: $link-font-color;
+
+		// Remove dotted outline from clicked links.
+		@include remove-outline();
 	}
 
 	&__title {

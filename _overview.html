@@ -4,11 +4,16 @@
       <img class="m-user-mobile__profile-picture" src="http://placekitten.com/g/200/200" />
     </div>
     <div class="m-user-mobile__name">A. de Vries</div>
-    <div class="m-user-mobile__download-links">
+<!--     <div class="m-user-mobile__download-links">
       <a class="m-user-mobile__download-link" href="#download">download polisblad</a>
-    </div>
+    </div> -->
   </section>
   
+  <section class="l-layout l-ptb--double for-prototype__products-overview">
+    <h1>Producten</h1>
+    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos dolores, sunt ratione aperiam qui nam vel quae sed possimus, asperiores dolore, accusantium at, eligendi sit doloremque tenetur debitis non corporis.</div>
+  </section>
+
   <section class="l-layout l-ptb--double">
       <section class="m-overview-blocks__with-info -hide">
         
@@ -119,13 +124,13 @@
         <!-- right -->
         <section class="m-overview-blocks__with-info -right">
           <h2 class="h2 m-overview-blocks__with-info__h2">Uw adviseur</h2>
-          <h3 class="h3 m-overview-blocks__with-info__h3">Hofstaete Kennisgroep B.V.</h3>
+          <h3 class="h3 m-overview-blocks__with-info__h3">
+            <img class="m-overview-blocks__with-info__logo" src="img/logo-hofstaete.png" alt="Hofstaete" srcset="img/logo-hofstaete.svg" width="145" height="25"> Hofstaete Kennisgroep B.V.</h3>
           <span class="m-overview-blocks__with-info__address">Gooimeer 8</span>
           <span class="m-overview-blocks__with-info__postalcode-city">1411 DD Naarden</span>
-          <a href="http://maps.google.com/?q=Gooimeer 8 1411DD Naarden" target="_blank" class="m-overview-blocks__with-info__google-maps-link">Bekijk in Google Maps</a>
-
+          <div class="m-overview-blocks__with-info__google-maps-link"><a href="http://maps.google.com/?q=Gooimeer 8 1411DD Naarden" target="_blank">Bekijk in Google Maps</a></div>
           <span class="m-overview-blocks__with-info__phonenumber">Tel 035 699 15 50</span>
-          <a href="mailto:info@hofstaete.nl" class="m-overview-blocks__with-info__email">info@hofstaete.nl</a>
+          <div class="m-overview-blocks__with-info__email"><a href="mailto:info@hofstaete.nl">info@hofstaete.nl</a></div>
         </section>
 
       </section>
@@ -207,7 +212,7 @@
           </a>
         </div>
         <div class="m-overview-blocks__block -quarter">
-          <a href="http://www.hofstaete.nl" target="_blank" class="m-overview-blocks__link">
+          <a href="http://www.hofstaete.nl" target="_blank" class="m-overview-blocks__link -external">
             <div class="m-overview-blocks__icon">
               <?xml version="1.0" encoding="UTF-8" standalone="no"?>
                 <svg class="m-overview-blocks__icon__svg" width="65px" height="70px" viewBox="0 0 65 70" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -241,7 +246,7 @@
 
 <script type="text/javascript">
   $(document).ready(function(){
-    $('.m-overview-blocks__link').click(function (e) { 
+    $('.m-overview-blocks__link:not(.-external)').click(function (e) { 
       e.preventDefault();
       $(".m-main").load($(this).attr("href"));
     });

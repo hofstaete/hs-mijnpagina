@@ -18,9 +18,9 @@ $mobile-border:                   $secondary-font-color;
 /// @require {$secondary-font-color} $secondary-font-color
 $mobile-link:                     $secondary-font-color;
 
-/// Nav link hover color for mobile
-/// @require {$primary-color} $primary-color - Makes the primary-color color 10 percent lighter
-$mobile-link--hover:              lighten($primary-color, 10%);
+/// Nav link active and hover color for mobile
+/// @require {$primary-color} $primary-color - Makes the primary-color color 5 percent lighter
+$mobile-link--active--hover:      lighten($primary-color, 5%);
 
 /// Nav damage round background-color for mobile
 /// @require {$warning} $warning
@@ -61,6 +61,15 @@ $tablet-damage:                   $white;
 /// Nav damage round text-color for tablet
 /// @require {$primary-color} $primary-color
 $tablet-damage-text:              $primary-color;
+
+/// SVG icon fill color 
+/// @require {$primary-color} $primary-color
+$svg-icon-color:              $secondary-font-color;
+
+/// Hover SVG icon fill color 
+/// @require {$primary-color} $primary-color
+$svg-icon-color--hover:       $primary-color;
+
 
 .m-#{$module} {
   z-index: map-get($z-index, navigation);
@@ -129,7 +138,8 @@ $tablet-damage-text:              $primary-color;
   }
 
   &__link {
-
+    @include remove-outline();
+    
     &.-mobile {
       width: 100%;
       height: rem(48px);
@@ -139,9 +149,21 @@ $tablet-damage-text:              $primary-color;
       text-decoration: none;
       font-size: $small-font-size;
       color: $mobile-link;
+      
+      &:hover, &.-active {
+        color: $mobile-link--active--hover;
+      }
 
-      &:hover, &.-active{
-        color: $mobile-link--hover;
+      &.-active {
+        .m-nav__icon__svg {
+          fill: $svg-icon-color--hover;
+        }
+      }
+
+      &:hover {
+        .m-nav__icon__svg {
+          fill: $svg-icon-color--hover;
+        }
       }
     }
 
@@ -210,23 +232,26 @@ $tablet-damage-text:              $primary-color;
       display: block;
       margin: rem(8px) auto 0;
       
-      &.-products {
-        @include img-retina-svg('../img/icons/products', 'png', 20px, 20px);
-      }
-      &.-data {
-        @include img-retina-svg('../img/icons/products', 'png', 20px, 20px);
-      }
-      &.-damage {
-        @include img-retina-svg('../img/icons/products', 'png', 20px, 20px);
-      }
-      &.-payments {
-        @include img-retina-svg('../img/icons/products', 'png', 20px, 20px);
-      }
-      &.-contact {
-        @include img-retina-svg('../img/icons/products', 'png', 20px, 20px);
-      }
+      // &.-products {
+      //   @include img-retina-svg('../img/icons/products', 'png', 20px, 20px);
+      // }
+      // &.-data {
+      //   @include img-retina-svg('../img/icons/products', 'png', 20px, 20px);
+      // }
+      // &.-damage {
+      //   @include img-retina-svg('../img/icons/products', 'png', 20px, 20px);
+      // }
+      // &.-payments {
+      //   @include img-retina-svg('../img/icons/products', 'png', 20px, 20px);
+      // }
+      // &.-contact {
+      //   @include img-retina-svg('../img/icons/products', 'png', 20px, 20px);
+      // }
     }
     
+    &__svg {
+      fill: $svg-icon-color;
+    }
   }
 
   &__text {

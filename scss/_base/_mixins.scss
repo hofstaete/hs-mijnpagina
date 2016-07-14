@@ -42,3 +42,10 @@
         }
     }
 }
+
+/// A Mixin to remove that dashed/dotted outline on links
+@mixin remove-outline(){
+  &:hover, &:active, &:focus {
+    outline: 0;
+  }
+}

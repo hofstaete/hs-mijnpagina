@@ -43,4 +43,11 @@
 		border-color: $primary-color;
 		color: $primary-color;
 	}
+
+
+	&__products-overview {
+		@include mq($from: tablet) {
+			display: none;
+		}
+	}
 }
