@@ -182,8 +182,6 @@ $svg-icon-color--hover:       $primary-color;
       text-decoration: none;
       @include open-sans(600);
       
-      
-
       &:hover, &:active, &:focus {
         outline: 0;
       }
@@ -285,7 +283,7 @@ $svg-icon-color--hover:       $primary-color;
     
     vertical-align: top;
     text-align: center;
-    font-size: $small-font-size;
+    font-size: $extra-small-font-size;
     line-height: 0.9rem;    
     background-color: $tablet-damage;
     color: $tablet-damage-text;
@@ -300,6 +298,7 @@ $svg-icon-color--hover:       $primary-color;
 
     border-radius: 50%;
 
+    font-size: $extra-small-font-size;
     line-height: 0.9rem;    
     background-color: $mobile-damage;
     color: $mobile-damage-text;
@@ -316,7 +315,7 @@ $svg-icon-color--hover:       $primary-color;
     
     vertical-align: top;
     text-align: center;
-    font-size: $small-font-size;
+    font-size: $extra-small-font-size;
     line-height: 0.9rem;    
     background-color: $tablet-damage;
     color: $tablet-damage-text;

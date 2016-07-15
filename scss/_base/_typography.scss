@@ -11,6 +11,7 @@ $semi-bold: 600;
 $bold: 700;
 
 // CONFIG
+$extra-small-font-size: 	rem(10px);
 $small-font-size: 				rem(11px);
 $base-font-size: 					rem(16px); //1rem
 $base-line-height: 				rem(32px); //2rem
@@ -49,9 +50,18 @@ html{
 .h4 { font-size: $h4-font-size; }
 .h5 { font-size: $h5-font-size; }
 
+// LISTS
+ul {
+    list-style-type: none;
+}
+ul, ol {
+    margin: 0;
+    padding: 0;
+}
+
 // LINKS
 a {
-		text-decoration: underline;
+	text-decoration: underline;
 	color: $link-font-color;
 
 	&:hover {

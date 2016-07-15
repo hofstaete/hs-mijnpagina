@@ -2,15 +2,718 @@
   <section>
     <div class="l-layout">
       
-      <h1 class="h1">Schades</h1>
       
-      <p>
-        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem sed velit voluptates dignissimos alias repellat ea cupiditate et, non dolor. Aperiam tempore, blanditiis deserunt commodi quod vel nemo ex soluta.</span>
-        <span>Corporis, nobis sint, id odit quisquam provident asperiores quo vero cumque perferendis eius. Dicta incidunt reiciendis repudiandae nesciunt? Eius voluptatum, quia quasi aliquid eum ipsum quas repellat, dolores tenetur expedita.</span>
-        <span>Distinctio, expedita. Debitis, error repellat cum quae iure expedita quod in nam possimus, quibusdam amet ea earum praesentium maiores dignissimos impedit. Beatae placeat quasi nostrum, libero voluptates fugit deserunt provident.</span>
-        <span>Harum numquam eveniet quae dolorum neque ratione rerum, omnis temporibus commodi, nihil accusantium expedita. Sit natus aperiam quaerat, repellat, ex nam, labore, ad libero illo tenetur sint magnam fuga ipsa!</span>
-        <span>Aut, quis. Consectetur molestiae reiciendis at aperiam, reprehenderit et cumque fuga sint, eaque illo, quas facilis debitis facere nostrum. Doloribus, ab animi labore atque consequatur voluptate nihil vero, neque quos.</span>
-      </p>
+      
+      <section>
+        <h1 class="h1">Schades</h1>
+          <ul class="list-line list-line--filter">
+            <section class="filter">
+              <button data-filter="" data-button-type="filter" type="button" class="filter__btn filter__btn--active">
+                <span class="filter__text">
+                  Toon alles
+                </span>
+                <span class="filter__count">
+                  (13)
+                </span>              
+              </button>
+              <button data-filter="open" data-button-type="filter" type="button" class="filter__btn">
+                <span class="filter__text">
+                  In behandeling
+                </span>
+                <span class="filter__count">
+                  (12)
+                </span>
+              </button>            
+              <button data-filter="closed" data-button-type="filter" type="button" class="filter__btn">
+                <span class="filter__text">
+                  Afgehandeld
+                </span>
+                <span class="filter__count">
+                  (1)
+                </span>
+              </button>
+            </section>
+          </ul>
+          
+          <div class="container">
+            <ul class="list-line list-line--table-header">
+              <li class="list-line__item list-line__item--claim-number">
+                <span class="label">
+                  schade­nr.
+                </span>
+              </li>
+              <li class="list-line__item list-line__item--claim-polis">
+                <span class="label">
+                  polis
+                </span>
+              </li>             
+              <li class="list-line__item list-line__item--claim-date">
+                <span class="label">
+                  schade­datum
+                </span>         
+              </li>                
+              <li class="list-line__item list-line__item--claim-paid">
+                <span class="label">
+                  uitbe­taald
+                </span>         
+              </li>              
+              <li class="list-line__item list-line__item--claim-status">
+                <span class="label">
+                  status
+                </span>         
+              </li>              
+            </ul> 
+            
+            <ul data-filter-open="true" data-filterable-line="" class="list-line list-line--table">
+              <li class="list-line__item list-line__item--claim-number">
+                <a href="/relatie-schadedetails?claimid=dc5f2c981b664427b156da886404c9c7">4012521</a>
+              </li>
+              <li class="list-line__item list-line__item--claim-polis">
+                <section data-action="toggle-tooltip">
+                  Bestelauto (7-VBZ-12 VOLKSWAGEN CADDY 77 KW BESTEL )
+                </section>
+                
+                
+                <div style="display: none;" class="tooltip tooltip--left">
+                  <div class="tooltip__label">
+                    Polisnummer: 440574670002
+                  </div>
+                </div>
+                
+              </li>
+              <li class="list-line__item list-line__item--claim-date">
+                29-06-2016
+              </li>
+              <li class="list-line__item list-line__item--claim-paid">
+                <section>
+                  <span class="premium__valuta">
+                    €
+                  </span>
+                  <span class="premium__euro">
+                    4.677,00
+                  </span>                  
+                </section>
+
+                           
+              </li>
+              <li class="list-line__item list-line__item--claim-status">
+                <section data-action="toggle-tooltip">
+                  <span class="state state--status_in_behandeling">
+                    In behandeling
+                  </span>
+                </section>
+                
+                
+                <div style="display: none;" class="tooltip tooltip--right">
+                  <div class="tooltip__label">
+                    In behandeling
+                  </div>
+                </div>
+                
+              </li>
+            </ul>
+            
+            <ul data-filter-open="true" data-filterable-line="" class="list-line list-line--table">
+              <li class="list-line__item list-line__item--claim-number">
+                <a href="/relatie-schadedetails?claimid=b5297f0e2702442493e7668fb528e562">4012522</a>
+              </li>
+              <li class="list-line__item list-line__item--claim-polis">
+                <section data-action="toggle-tooltip">
+                  Bestelauto (7-VBZ-12 VOLKSWAGEN CADDY 77 KW BESTEL )
+                </section>
+                
+                
+                <div style="display: none;" class="tooltip tooltip--left">
+                  <div class="tooltip__label">
+                    Polisnummer: 440574670002
+                  </div>
+                </div>
+                
+              </li>
+              <li class="list-line__item list-line__item--claim-date">
+                28-06-2016
+              </li>
+              <li class="list-line__item list-line__item--claim-paid">
+                <section>
+                  <span class="premium__valuta">
+                    €
+                  </span>
+                  <span class="premium__euro">
+                    0,00
+                  </span>                  
+                </section>
+
+                           
+              </li>
+              <li class="list-line__item list-line__item--claim-status">
+                <section data-action="toggle-tooltip">
+                  <span class="state state--status_in_behandeling">
+                    In behandeling
+                  </span>
+                </section>
+                
+                
+                <div style="display: none;" class="tooltip tooltip--right">
+                  <div class="tooltip__label">
+                    In behandeling
+                  </div>
+                </div>
+                
+              </li>
+            </ul>
+            
+            <ul data-filter-open="true" data-filterable-line="" class="list-line list-line--table">
+              <li class="list-line__item list-line__item--claim-number">
+                <a href="/relatie-schadedetails?claimid=6ed1f57052974ff782037a810059710c">4012511</a>
+              </li>
+              <li class="list-line__item list-line__item--claim-polis">
+                <section data-action="toggle-tooltip">
+                  Personenauto Zakelijk (49-FX-RX ALFA ROMEO ALFA ROMEO SPYDER; )
+                </section>
+                
+                
+                <div style="display: none;" class="tooltip tooltip--left">
+                  <div class="tooltip__label">
+                    Polisnummer: 440574670005
+                  </div>
+                </div>
+                
+              </li>
+              <li class="list-line__item list-line__item--claim-date">
+                23-06-2016
+              </li>
+              <li class="list-line__item list-line__item--claim-paid">
+                <section>
+                  <span class="premium__valuta">
+                    €
+                  </span>
+                  <span class="premium__euro">
+                    11.111,00
+                  </span>                  
+                </section>
+
+                           
+              </li>
+              <li class="list-line__item list-line__item--claim-status">
+                <section data-action="toggle-tooltip">
+                  <span class="state state--status_in_behandeling">
+                    In behandeling
+                  </span>
+                </section>
+                
+                
+                <div style="display: none;" class="tooltip tooltip--right">
+                  <div class="tooltip__label">
+                    In behandeling
+                  </div>
+                </div>
+                
+              </li>
+            </ul>
+            
+            <ul data-filter-open="true" data-filterable-line="" class="list-line list-line--table">
+              <li class="list-line__item list-line__item--claim-number">
+                <a href="/relatie-schadedetails?claimid=e0ddf655198c45689a4022726df233c2">4012513</a>
+              </li>
+              <li class="list-line__item list-line__item--claim-polis">
+                <section data-action="toggle-tooltip">
+                  Personenauto Zakelijk (49-FX-RX ALFA ROMEO ALFA ROMEO SPYDER; )
+                </section>
+                
+                
+                <div style="display: none;" class="tooltip tooltip--left">
+                  <div class="tooltip__label">
+                    Polisnummer: 440574670005
+                  </div>
+                </div>
+                
+              </li>
+              <li class="list-line__item list-line__item--claim-date">
+                23-06-2016
+              </li>
+              <li class="list-line__item list-line__item--claim-paid">
+                <section>
+                  <span class="premium__valuta">
+                    €
+                  </span>
+                  <span class="premium__euro">
+                    11.112,00
+                  </span>                  
+                </section>
+
+                           
+              </li>
+              <li class="list-line__item list-line__item--claim-status">
+                <section data-action="toggle-tooltip">
+                  <span class="state state--status_in_behandeling">
+                    In behandeling
+                  </span>
+                </section>
+                
+                
+                <div style="display: none;" class="tooltip tooltip--right">
+                  <div class="tooltip__label">
+                    In behandeling
+                  </div>
+                </div>
+                
+              </li>
+            </ul>
+            
+            <ul data-filter-open="true" data-filterable-line="" class="list-line list-line--table">
+              <li class="list-line__item list-line__item--claim-number">
+                <a href="/relatie-schadedetails?claimid=230127e7f5794ed3961332163d87a5ac">4012007</a>
+              </li>
+              <li class="list-line__item list-line__item--claim-polis">
+                <section data-action="toggle-tooltip">
+                  Aansprakelijkheid
+                </section>
+                
+                
+                <div style="display: none;" class="tooltip tooltip--left">
+                  <div class="tooltip__label">
+                    Polisnummer: 440574670001
+                  </div>
+                </div>
+                
+              </li>
+              <li class="list-line__item list-line__item--claim-date">
+                03-02-2015
+              </li>
+              <li class="list-line__item list-line__item--claim-paid">
+                <section>
+                  <span class="premium__valuta">
+                    €
+                  </span>
+                  <span class="premium__euro">
+                    0,00
+                  </span>                  
+                </section>
+
+                           
+              </li>
+              <li class="list-line__item list-line__item--claim-status">
+                <section data-action="toggle-tooltip">
+                  <span class="state state--status_in_behandeling">
+                    In behandeling
+                  </span>
+                </section>
+                
+                
+                <div style="display: none;" class="tooltip tooltip--right">
+                  <div class="tooltip__label">
+                    Wacht op reactie tegenpartij
+
+                  </div>
+                </div>
+                
+              </li>
+            </ul>
+            
+            <ul data-filter-open="true" data-filterable-line="" class="list-line list-line--table">
+              <li class="list-line__item list-line__item--claim-number">
+                <a href="/relatie-schadedetails?claimid=52ce01bf9a984879959e2ce083d4fe5d">4012008</a>
+              </li>
+              <li class="list-line__item list-line__item--claim-polis">
+                <section data-action="toggle-tooltip">
+                  Personenauto Zakelijk (49-FX-RX ALFA ROMEO ALFA ROMEO SPYDER; )
+                </section>
+                
+                
+                <div style="display: none;" class="tooltip tooltip--left">
+                  <div class="tooltip__label">
+                    Polisnummer: 440574670005
+                  </div>
+                </div>
+                
+              </li>
+              <li class="list-line__item list-line__item--claim-date">
+                03-02-2015
+              </li>
+              <li class="list-line__item list-line__item--claim-paid">
+                <section>
+                  <span class="premium__valuta">
+                    €
+                  </span>
+                  <span class="premium__euro">
+                    0,00
+                  </span>                  
+                </section>
+
+                           
+              </li>
+              <li class="list-line__item list-line__item--claim-status">
+                <section data-action="toggle-tooltip">
+                  <span class="state state--status_in_behandeling">
+                    In behandeling
+                  </span>
+                </section>
+                
+                
+                <div style="display: none;" class="tooltip tooltip--right">
+                  <div class="tooltip__label">
+                    In behandeling
+                  </div>
+                </div>
+                
+              </li>
+            </ul>
+            
+            <ul data-filter-open="true" data-filterable-line="" class="list-line list-line--table">
+              <li class="list-line__item list-line__item--claim-number">
+                <a href="/relatie-schadedetails?claimid=aa01a31efc0b44989df51f562fd7ca4c">4012006</a>
+              </li>
+              <li class="list-line__item list-line__item--claim-polis">
+                <section data-action="toggle-tooltip">
+                  Personenauto Zakelijk (49-FX-RX ALFA ROMEO ALFA ROMEO SPYDER; )
+                </section>
+                
+                
+                <div style="display: none;" class="tooltip tooltip--left">
+                  <div class="tooltip__label">
+                    Polisnummer: 440574670005
+                  </div>
+                </div>
+                
+              </li>
+              <li class="list-line__item list-line__item--claim-date">
+                03-02-2015
+              </li>
+              <li class="list-line__item list-line__item--claim-paid">
+                <section>
+                  <span class="premium__valuta">
+                    €
+                  </span>
+                  <span class="premium__euro">
+                    100,00
+                  </span>                  
+                </section>
+
+                           
+              </li>
+              <li class="list-line__item list-line__item--claim-status">
+                <section data-action="toggle-tooltip">
+                  <span class="state state--status_in_behandeling">
+                    In behandeling
+                  </span>
+                </section>
+                
+                
+                <div style="display: none;" class="tooltip tooltip--right">
+                  <div class="tooltip__label">
+                    In behandeling
+                  </div>
+                </div>
+                
+              </li>
+            </ul>
+            
+            <ul data-filter-open="true" data-filterable-line="" class="list-line list-line--table">
+              <li class="list-line__item list-line__item--claim-number">
+                <a href="/relatie-schadedetails?claimid=fa0b4dcae5264274abd4e969d8d82ebe">4012004</a>
+              </li>
+              <li class="list-line__item list-line__item--claim-polis">
+                <section data-action="toggle-tooltip">
+                  Personenauto Zakelijk (49-FX-RX ALFA ROMEO ALFA ROMEO SPYDER; )
+                </section>
+                
+                
+                <div style="display: none;" class="tooltip tooltip--left">
+                  <div class="tooltip__label">
+                    Polisnummer: 440574670005
+                  </div>
+                </div>
+                
+              </li>
+              <li class="list-line__item list-line__item--claim-date">
+                03-02-2015
+              </li>
+              <li class="list-line__item list-line__item--claim-paid">
+                <section>
+                  <span class="premium__valuta">
+                    €
+                  </span>
+                  <span class="premium__euro">
+                    0,00
+                  </span>                  
+                </section>
+
+                           
+              </li>
+              <li class="list-line__item list-line__item--claim-status">
+                <section data-action="toggle-tooltip">
+                  <span class="state state--status_in_behandeling">
+                    In behandeling
+                  </span>
+                </section>
+                
+                
+                <div style="display: none;" class="tooltip tooltip--right">
+                  <div class="tooltip__label">
+                    In behandeling
+                  </div>
+                </div>
+                
+              </li>
+            </ul>
+            
+            <ul data-filter-open="true" data-filterable-line="" class="list-line list-line--table">
+              <li class="list-line__item list-line__item--claim-number">
+                <a href="/relatie-schadedetails?claimid=e374e0d82cda477991c2cde16b8d6673">4010630</a>
+              </li>
+              <li class="list-line__item list-line__item--claim-polis">
+                <section data-action="toggle-tooltip">
+                  Personenauto Zakelijk (49-FX-RX ALFA ROMEO ALFA ROMEO SPYDER; )
+                </section>
+                
+                
+                <div style="display: none;" class="tooltip tooltip--left">
+                  <div class="tooltip__label">
+                    Polisnummer: 440574670005
+                  </div>
+                </div>
+                
+              </li>
+              <li class="list-line__item list-line__item--claim-date">
+                03-02-2014
+              </li>
+              <li class="list-line__item list-line__item--claim-paid">
+                <section>
+                  <span class="premium__valuta">
+                    €
+                  </span>
+                  <span class="premium__euro">
+                    0,00
+                  </span>                  
+                </section>
+
+                           
+              </li>
+              <li class="list-line__item list-line__item--claim-status">
+                <section data-action="toggle-tooltip">
+                  <span class="state state--status_in_behandeling">
+                    In behandeling
+                  </span>
+                </section>
+                
+                
+                <div style="display: none;" class="tooltip tooltip--right">
+                  <div class="tooltip__label">
+                    AOV wacht op meldingsformulier
+                  </div>
+                </div>
+                
+              </li>
+            </ul>
+            
+            <ul data-filter-open="true" data-filterable-line="" class="list-line list-line--table">
+              <li class="list-line__item list-line__item--claim-number">
+                <a href="/relatie-schadedetails?claimid=6db1053b0b2842cf9ca846ee9117244a">4010617</a>
+              </li>
+              <li class="list-line__item list-line__item--claim-polis">
+                <section data-action="toggle-tooltip">
+                  Bestelauto (7-VBZ-12 VOLKSWAGEN CADDY 77 KW BESTEL )
+                </section>
+                
+                
+                <div style="display: none;" class="tooltip tooltip--left">
+                  <div class="tooltip__label">
+                    Polisnummer: 440574670002
+                  </div>
+                </div>
+                
+              </li>
+              <li class="list-line__item list-line__item--claim-date">
+                22-01-2014
+              </li>
+              <li class="list-line__item list-line__item--claim-paid">
+                <section>
+                  <span class="premium__valuta">
+                    €
+                  </span>
+                  <span class="premium__euro">
+                    90.425,00
+                  </span>                  
+                </section>
+
+                           
+              </li>
+              <li class="list-line__item list-line__item--claim-status">
+                <section data-action="toggle-tooltip">
+                  <span class="state state--status_in_behandeling">
+                    In behandeling
+                  </span>
+                </section>
+                
+                
+                <div style="display: none;" class="tooltip tooltip--right">
+                  <div class="tooltip__label">
+                    Wacht op expertiserapport tbv verzekerde
+                  </div>
+                </div>
+                
+              </li>
+            </ul>
+            
+            <ul data-filter-closed="true" data-filterable-line="" class="list-line list-line--table">
+              <li class="list-line__item list-line__item--claim-number">
+                <a href="/relatie-schadedetails?claimid=97f0aa1a891e47b08e4f17657c157159">4010619</a>
+              </li>
+              <li class="list-line__item list-line__item--claim-polis">
+                <section data-action="toggle-tooltip">
+                  Personenauto Zakelijk (49-FX-RX ALFA ROMEO ALFA ROMEO SPYDER; )
+                </section>
+                
+                
+                <div style="display: none;" class="tooltip tooltip--left">
+                  <div class="tooltip__label">
+                    Polisnummer: 440574670005
+                  </div>
+                </div>
+                
+              </li>
+              <li class="list-line__item list-line__item--claim-date">
+                22-01-2014
+              </li>
+              <li class="list-line__item list-line__item--claim-paid">
+                <section>
+                  <span class="premium__valuta">
+                    €
+                  </span>
+                  <span class="premium__euro">
+                    10.222,00
+                  </span>                  
+                </section>
+
+                           
+              </li>
+              <li class="list-line__item list-line__item--claim-status">
+                <section data-action="toggle-tooltip">
+                  <span class="state state--status_afgerond">
+                    Afgehandeld
+                  </span>
+                </section>
+                
+                
+                <div style="display: none;" class="tooltip tooltip--right">
+                  <div class="tooltip__label">
+                    Afgehandeld
+                  </div>
+                </div>
+                
+              </li>
+            </ul>
+            
+            <ul data-filter-open="true" data-filterable-line="" class="list-line list-line--table">
+              <li class="list-line__item list-line__item--claim-number">
+                <a href="/relatie-schadedetails?claimid=ec07b80a534645ceb3d157f7d6c3b0cb">4010620</a>
+              </li>
+              <li class="list-line__item list-line__item--claim-polis">
+                <section data-action="toggle-tooltip">
+                  Bestelauto (7-VBZ-12 VOLKSWAGEN CADDY 77 KW BESTEL )
+                </section>
+                
+                
+                <div style="display: none;" class="tooltip tooltip--left">
+                  <div class="tooltip__label">
+                    Polisnummer: 440574670002
+                  </div>
+                </div>
+                
+              </li>
+              <li class="list-line__item list-line__item--claim-date">
+                22-01-2014
+              </li>
+              <li class="list-line__item list-line__item--claim-paid">
+                <section>
+                  <span class="premium__valuta">
+                    €
+                  </span>
+                  <span class="premium__euro">
+                    9.849,00
+                  </span>                  
+                </section>
+
+                           
+              </li>
+              <li class="list-line__item list-line__item--claim-status">
+                <section data-action="toggle-tooltip">
+                  <span class="state state--status_in_behandeling">
+                    In behandeling
+                  </span>
+                </section>
+                
+                
+                <div style="display: none;" class="tooltip tooltip--right">
+                  <div class="tooltip__label">
+                    In behandeling
+                  </div>
+                </div>
+                
+              </li>
+            </ul>
+            
+            <ul data-filter-open="true" data-filterable-line="" class="list-line list-line--table">
+              <li class="list-line__item list-line__item--claim-number">
+                <a href="/relatie-schadedetails?claimid=fd2e494cfd3f4de282fa50ce6dc36298">4010616</a>
+              </li>
+              <li class="list-line__item list-line__item--claim-polis">
+                <section data-action="toggle-tooltip">
+                  Aansprakelijkheid
+                </section>
+                
+                
+                <div style="display: none;" class="tooltip tooltip--left">
+                  <div class="tooltip__label">
+                    Polisnummer: 440574670001
+                  </div>
+                </div>
+                
+              </li>
+              <li class="list-line__item list-line__item--claim-date">
+                22-01-2014
+              </li>
+              <li class="list-line__item list-line__item--claim-paid">
+                <section>
+                  <span class="premium__valuta">
+                    €
+                  </span>
+                  <span class="premium__euro">
+                    50.000,00
+                  </span>                  
+                </section>
+
+                           
+              </li>
+              <li class="list-line__item list-line__item--claim-status">
+                <section data-action="toggle-tooltip">
+                  <span class="state state--status_in_behandeling">
+                    In behandeling
+                  </span>
+                </section>
+                
+                
+                <div style="display: none;" class="tooltip tooltip--right">
+                  <div class="tooltip__label">
+                    In behandeling
+                  </div>
+                </div>
+                
+              </li>
+            </ul>
+            
+          </div>
+          
+      
+          
+          
+
+          <section class="msg">
+            <p>
+              Wilt u een nieuwe schade melden? Ga dan naar het <a href="producten-overzicht">'Overzicht producten'</a>.
+            </p>
+          </section>
+        </section>
 
     </div>
   </section>

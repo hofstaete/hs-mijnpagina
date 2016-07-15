@@ -1,0 +1,216 @@
+////
+/// @group Hip CSS
+////
+
+@charset "UTF-8";
+
+.container {
+    float: left;
+    margin-bottom: 1em;
+    width: 100%;
+}
+
+// .list-line
+.list-line {
+    background-color: white;
+    /// @todo Fix to global colors
+    border-bottom: 1px solid #dadada;
+    /// @todo Fix to global colors
+    border-left: 1px solid #f0f0f0;
+    float: left;
+    min-height: 2em;
+    padding: 1em;
+    width: 100%;
+}
+
+.list-line.list-line--filter {
+    min-height: 4.75em;
+    /// @todo Fix to global colors
+    border: 1px solid #f0f0f0;
+}
+
+
+.list-line.list-line--table, 
+.list-line.list-line--table-header {
+	
+  display: table-row;
+  font-size: 14px;
+}
+
+.list-line.list-line--header, 
+.list-line.list-line--table-header {
+  min-height: 2.75em;
+  padding-bottom: 0;
+  @include mq($until: tablet) {
+  	display: none;
+  }
+}
+
+// .list-line__item
+.list-line__item::after {
+    clear: both;
+    content: " ";
+    display: block;
+    height: 0;
+}
+
+.list-line.list-line--table .list-line__item,
+.list-line.list-line--table-header .list-line__item {
+	@include mq($from: tablet) {
+    display: table-cell;
+  }
+}
+
+.list-line__item {
+  min-height: 0.5em;
+
+  &::before {
+  	font-size: $extra-small-font-size;
+		//font-weight: 700;
+		text-transform: uppercase;
+		margin-bottom: rem(-16px);
+		display: block;
+	}
+
+	@include mq($from: tablet) {
+    float: left;
+    padding-right: 0.5em;
+    position: relative;
+  }
+}
+
+.list-line__item.list-line__item--invoice-number {
+
+	@include mq($until: tablet) {
+		&::before {
+			content: "factuur­nr.";
+		}
+  }
+
+  @include mq($from: tablet) {
+    width: 12%;
+  }
+}
+
+.list-line__item.list-line__item--invoice-type {
+	@include mq($until: tablet) {
+		&::before {
+			content: "soort";
+		}
+  }
+	@include mq($from: tablet) {
+    width: 18%;
+  }
+}
+
+.list-line__item.list-line__item--invoice-date {
+	@include mq($until: tablet) {
+		&::before {
+			content: "Factuur­datum";
+		}
+  }
+	@include mq($from: tablet) {
+    width: 14%;
+  }
+}
+
+.list-line__item.list-line__item--invoice-from-till {
+  @include mq($until: tablet) {
+		&::before {
+			content: "Periode van/tot";
+		}
+  }
+	@include mq($from: tablet) {
+    width: 23%;
+  }
+}
+
+.list-line__item.list-line__item--invoice-premium {
+    
+  @include mq($until: tablet) {
+		&::before {
+			content: "Bedrag";
+		}
+  }
+	@include mq($from: tablet) {
+    width: 15%;
+  }
+}
+
+.list-line__item.list-line__item--invoice-premium-open {
+    
+  @include mq($until: tablet) {
+		&::before {
+			content: "Openstaand";
+		}
+  }
+	@include mq($from: tablet) {
+    width: 15%;
+  }
+
+}
+
+.list-line__item.list-line__item--invoice-menu {
+    width: 3%;
+}
+
+
+// .label
+.label {
+    color: #000;
+    font-size: $extra-small-font-size;
+    //letter-spacing: 0.0625em;
+    margin: 0 0 0.5em;
+    text-transform: uppercase;
+}
+.label, .label-checkbox {
+    display: block;
+}
+
+
+// .filter
+.filter__btn {
+    background: transparent none repeat scroll 0 0;
+    border: 1px solid transparent;
+    border-radius: rem(halve($gel-spacing-unit));
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    padding: 1em;
+    text-transform: uppercase;
+
+    @include mq($until: tablet) {
+    	width: 100%;
+    }
+}
+
+.filter__btn:first-child {
+    margin-left: 0;
+}
+
+.filter__btn.filter__btn--active {
+
+		/// @todo Fix to global colors
+    border: 1px solid #8c8c8c;
+    /// @todo Fix to global colors
+    color: #535353;
+    cursor: default;
+}
+
+.filter__btn.filter__btn--active .filter__text {
+	/// @todo Fix to global colors
+  color: #535353;
+}
+
+.filter__text {
+	/// @todo Fix to global colors
+    color: #a8a8a8;
+    /// @todo Fix font weight
+    font-weight: 700;
+}
+
+.filter__count {
+	/// @todo Fix to global colors
+    color: #a8a8a8;
+    /// @todo Fix font weight
+    font-weight: 400;
+}

@@ -2,15 +2,314 @@
   <section>
     <div class="l-layout">
       
-      <h1 class="h1">Betalingen</h1>
       
-      <p>
-        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem sed velit voluptates dignissimos alias repellat ea cupiditate et, non dolor. Aperiam tempore, blanditiis deserunt commodi quod vel nemo ex soluta.</span>
-        <span>Corporis, nobis sint, id odit quisquam provident asperiores quo vero cumque perferendis eius. Dicta incidunt reiciendis repudiandae nesciunt? Eius voluptatum, quia quasi aliquid eum ipsum quas repellat, dolores tenetur expedita.</span>
-        <span>Distinctio, expedita. Debitis, error repellat cum quae iure expedita quod in nam possimus, quibusdam amet ea earum praesentium maiores dignissimos impedit. Beatae placeat quasi nostrum, libero voluptates fugit deserunt provident.</span>
-        <span>Harum numquam eveniet quae dolorum neque ratione rerum, omnis temporibus commodi, nihil accusantium expedita. Sit natus aperiam quaerat, repellat, ex nam, labore, ad libero illo tenetur sint magnam fuga ipsa!</span>
-        <span>Aut, quis. Consectetur molestiae reiciendis at aperiam, reprehenderit et cumque fuga sint, eaque illo, quas facilis debitis facere nostrum. Doloribus, ab animi labore atque consequatur voluptate nihil vero, neque quos.</span>
-      </p>
+      
+<section>
+      <h1 class="h1">Betalingen</h1>    
+          <ul class="list-line list-line--filter">
+            <section class="filter">
+              <button data-filter="" data-button-type="filter" type="button" class="filter__btn filter__btn--active">
+                <span class="filter__text">
+                  Toon alles
+                </span>
+                <span class="filter__count">
+                  (4)
+                </span>              
+              </button>
+              <button data-filter="paid" data-button-type="filter" type="button" class="filter__btn">
+                <span class="filter__text">
+                  Betaald
+                </span>
+                <span class="filter__count">
+                  (0)
+                </span>
+              </button>            
+              <button data-filter="open" data-button-type="filter" type="button" class="filter__btn">
+                <span class="filter__text">
+                  Openstaand
+                </span>
+                <span class="filter__count">
+                  (4)
+                </span>
+              </button>
+            </section>
+          </ul>
+          
+          <div class="container">
+            <ul class="list-line list-line--table-header">
+              <li class="list-line__item list-line__item--invoice-number">
+                <span class="label">
+                  factuur­nr.
+                </span>
+              </li>
+              <li class="list-line__item list-line__item--invoice-type">
+                <span class="label">
+                  soort
+                </span>
+              </li>             
+              <li class="list-line__item list-line__item--invoice-date">
+                <span class="label">
+                  Factuur­datum
+                </span>         
+              </li>              
+              <li class="list-line__item list-line__item--invoice-from-till">
+                <span class="label">
+                  Periode van/tot
+                </span>         
+              </li>              
+              <li class="list-line__item list-line__item--invoice-premium">
+                <span class="label">
+                  bedrag
+                </span>         
+              </li>              
+              <li class="list-line__item list-line__item--invoice-premium-open">
+                <span class="label">
+                  openstaand
+                </span>         
+              </li>    
+              <li class="list-line__item list-line__item--invoice-menu">
+                &nbsp;
+              </li>
+            </ul> 
+            
+            <ul data-filter-open="true" data-filterable-line="" class="list-line list-line--table">
+              <li class="list-line__item list-line__item--invoice-number">
+                <section data-action="toggle-tooltip">
+                  598770
+                </section>
+
+                
+                <div style="display: none;" class="tooltip tooltip--left">
+                  <div class="tooltip__label">
+                    Status: In behandeling bij Incassobureau
+                  </div>
+                </div>
+                
+
+              </li>
+              <li class="list-line__item list-line__item--invoice-type">
+                <section data-action="toggle-tooltip">
+                  Machtiging met nota
+                </section>
+
+                
+                <div style="display: none;" class="tooltip tooltip--left">
+                  <div class="tooltip__label">
+                    CompleetVerzekerd Mijn bedrijf
+                  </div>
+                </div>
+                
+              </li>
+              <li class="list-line__item list-line__item--invoice-date">
+                  14-03-2016
+              </li>
+              <li class="list-line__item list-line__item--invoice-from-till">
+                14-03-2016 - 14-03-2017
+              </li>
+              <li class="list-line__item list-line__item--invoice-premium">
+                <span class="premium__valuta">
+                  €
+                </span>
+                <span class="premium__euro">
+                  592,44
+                </span> 
+              </li>
+              <li class="list-line__item list-line__item--invoice-premium-open">
+                <section>
+                  <span class="premium__valuta">
+                    €
+                  </span>
+                  <span class="premium__euro">
+                    592,44                  
+                  </span>
+                </section>
+                
+              </li>
+              <li class="list-line__item list-line__item--invoice-menu">
+                <button onclick="Sys.Modules.Invoices.Download('598770');" class="btn-i btn-i--pdf" type="button"></button>
+              </li>
+            </ul>
+            
+            <ul data-filter-open="true" data-filterable-line="" class="list-line list-line--table">
+              <li class="list-line__item list-line__item--invoice-number">
+                <section data-action="toggle-tooltip">
+                  563313
+                </section>
+
+                
+                <div style="display: none;" class="tooltip tooltip--left">
+                  <div class="tooltip__label">
+                    Status: In behandeling bij Incassobureau
+                  </div>
+                </div>
+                
+
+              </li>
+              <li class="list-line__item list-line__item--invoice-type">
+                <section data-action="toggle-tooltip">
+                  Machtiging met nota
+                </section>
+
+                
+                <div style="display: none;" class="tooltip tooltip--left">
+                  <div class="tooltip__label">
+                    CompleetVerzekerd Mijn bedrijf
+                  </div>
+                </div>
+                
+              </li>
+              <li class="list-line__item list-line__item--invoice-date">
+                  14-03-2015
+              </li>
+              <li class="list-line__item list-line__item--invoice-from-till">
+                14-03-2015 - 14-03-2016
+              </li>
+              <li class="list-line__item list-line__item--invoice-premium">
+                <span class="premium__valuta">
+                  €
+                </span>
+                <span class="premium__euro">
+                  643,58
+                </span> 
+              </li>
+              <li class="list-line__item list-line__item--invoice-premium-open">
+                <section>
+                  <span class="premium__valuta">
+                    €
+                  </span>
+                  <span class="premium__euro">
+                    643,58                  
+                  </span>
+                </section>
+                
+              </li>
+              <li class="list-line__item list-line__item--invoice-menu">
+                <button onclick="Sys.Modules.Invoices.Download('563313');" class="btn-i btn-i--pdf" type="button"></button>
+              </li>
+            </ul>
+            
+            <ul data-filter-open="true" data-filterable-line="" class="list-line list-line--table">
+              <li class="list-line__item list-line__item--invoice-number">
+                <section data-action="toggle-tooltip">
+                  532420
+                </section>
+
+                
+                <div style="display: none;" class="tooltip tooltip--left">
+                  <div class="tooltip__label">
+                    Status: In behandeling bij Incassobureau
+                  </div>
+                </div>
+                
+
+              </li>
+              <li class="list-line__item list-line__item--invoice-type">
+                <section data-action="toggle-tooltip">
+                  Nota (zonder accept giro)
+                </section>
+
+                
+                <div style="display: none;" class="tooltip tooltip--left">
+                  <div class="tooltip__label">
+                    CompleetVerzekerd Mijn bedrijf
+                  </div>
+                </div>
+                
+              </li>
+              <li class="list-line__item list-line__item--invoice-date">
+                  11-04-2014
+              </li>
+              <li class="list-line__item list-line__item--invoice-from-till">
+                11-04-2014 - 14-03-2015
+              </li>
+              <li class="list-line__item list-line__item--invoice-premium">
+                <span class="premium__valuta">
+                  €
+                </span>
+                <span class="premium__euro">
+                  -160,64
+                </span> 
+              </li>
+              <li class="list-line__item list-line__item--invoice-premium-open">
+                <section>
+                  <span class="premium__valuta">
+                    €
+                  </span>
+                  <span class="premium__euro">
+                    160,64                  
+                  </span>
+                </section>
+                
+              </li>
+              <li class="list-line__item list-line__item--invoice-menu">
+                <button onclick="Sys.Modules.Invoices.Download('532420');" class="btn-i btn-i--pdf" type="button"></button>
+              </li>
+            </ul>
+            
+            <ul data-filter-open="true" data-filterable-line="" class="list-line list-line--table">
+              <li class="list-line__item list-line__item--invoice-number">
+                <section data-action="toggle-tooltip">
+                  531998
+                </section>
+
+                
+                <div style="display: none;" class="tooltip tooltip--left">
+                  <div class="tooltip__label">
+                    Status: Derde herinnering verstuurd
+                  </div>
+                </div>
+                
+
+              </li>
+              <li class="list-line__item list-line__item--invoice-type">
+                <section data-action="toggle-tooltip">
+                  Machtiging met nota
+                </section>
+
+                
+                <div style="display: none;" class="tooltip tooltip--left">
+                  <div class="tooltip__label">
+                    CompleetVerzekerd Mijn bedrijf
+                  </div>
+                </div>
+                
+              </li>
+              <li class="list-line__item list-line__item--invoice-date">
+                  14-03-2014
+              </li>
+              <li class="list-line__item list-line__item--invoice-from-till">
+                14-03-2014 - 14-03-2015
+              </li>
+              <li class="list-line__item list-line__item--invoice-premium">
+                <span class="premium__valuta">
+                  €
+                </span>
+                <span class="premium__euro">
+                  865,66
+                </span> 
+              </li>
+              <li class="list-line__item list-line__item--invoice-premium-open">
+                <section>
+                  <span class="premium__valuta">
+                    €
+                  </span>
+                  <span class="premium__euro">
+                    865,66                  
+                  </span>
+                </section>
+                
+              </li>
+              <li class="list-line__item list-line__item--invoice-menu">
+                <button onclick="Sys.Modules.Invoices.Download('531998');" class="btn-i btn-i--pdf" type="button"></button>
+              </li>
+            </ul>
+            
+          </div>
+          
+      
+          
+          
+        </section>
 
     </div>
   </section>
