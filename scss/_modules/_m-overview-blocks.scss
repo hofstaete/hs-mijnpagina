@@ -11,6 +11,7 @@ $module:	'overview-blocks';
 $main-backgroundcolor:					darken($white, 8%);
 $block-background-color:				rgba($black, 0.08);
 $link-font-color: 							$primary-font-color;
+$block-background-color--hover:	rgba($black, 0.08);
 
 /// SVG icon background fill color 
 /// @require {$secondary-font-color} $secondary-font-color
@@ -150,6 +151,14 @@ $svg-icon-color--hover:				$primary-color;
 
 		// Remove dotted outline from clicked links.
 		@include remove-outline();
+
+		&:hover {
+			background-color: $block-background-color--hover;
+
+			.m-overview-blocks__icon{
+				transform: scale(1.2);
+			}
+    }
 	}
 
 	&__title {

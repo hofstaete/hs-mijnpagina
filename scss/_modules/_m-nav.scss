@@ -129,8 +129,6 @@ $svg-icon-color--hover:       $primary-color;
       @include mq($from: desktop) {
         &:first-child{
           & > .m-nav__link{
-            @include img-retina-svg('../img/icons/home', 'png', 20px, 20px, no-repeat, 16px 50%);
-            padding-left: rem(48px);
           }
         }
       }
@@ -202,22 +200,21 @@ $svg-icon-color--hover:       $primary-color;
           padding: rem(12px) rem(triple($gel-spacing-unit));
         }
       }
-
+      
       &.-basket {
         position: relative;
         float: left;
-        padding: rem(20px) rem(triple($gel-spacing-unit));
-
-        @include mq($from: desktop) {
-          padding: rem(20px) rem(quadruple($gel-spacing-unit));
-        }
+        padding: rem(24px) rem(double($gel-spacing-unit)) rem(16px);
 
         border: none;
-        @include img-retina-svg('../img/icons/basket', 'png', 24px, 24px);
+        //@include img-retina-svg('../img/icons/basket', 'png', 24px, 24px);
         background-color: $tablet-item--active;
         
         text-align: right;
       }
+    }
+    &__icon {
+      display: inline-block;
     }
   }
 
@@ -249,6 +246,8 @@ $svg-icon-color--hover:       $primary-color;
     
     &__svg {
       fill: $svg-icon-color;
+      vertical-align: text-top;
+      margin-right: rem($gel-spacing-unit);
     }
   }
 
@@ -273,11 +272,12 @@ $svg-icon-color--hover:       $primary-color;
 
   &__basket--counter {
     display: inline-block;
-    top: 5px;
-    right: 10px;
+    top: 22px;
+    right: 8px;
     width: 15px;
     height: 15px;
-    margin-right: -5px;
+    //margin-right: -5px;
+    position: absolute;
 
     border-radius: 50%;
     
