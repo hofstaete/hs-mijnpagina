@@ -70,6 +70,10 @@ $svg-icon-color:              $secondary-font-color;
 /// @require {$primary-color} $primary-color
 $svg-icon-color--hover:       $primary-color;
 
+/// SVG icon fill color for tablet
+/// @require {$white} $white
+$svg-icon-color-tablet:       $white;
+
 
 .m-#{$module} {
   z-index: map-get($z-index, navigation);
@@ -187,7 +191,7 @@ $svg-icon-color--hover:       $primary-color;
       &:hover{
         background-color: $tablet-item--hover;
       }
-      
+
       &.-active{
         background-color: $tablet-item--active;
       }
@@ -204,17 +208,20 @@ $svg-icon-color--hover:       $primary-color;
       &.-basket {
         position: relative;
         float: left;
-        padding: rem(24px) rem(double($gel-spacing-unit)) rem(16px);
 
         border: none;
-        //@include img-retina-svg('../img/icons/basket', 'png', 24px, 24px);
         background-color: $tablet-item--active;
         
         text-align: right;
       }
     }
+
     &__icon {
-      display: inline-block;
+      display: none;
+      @include mq($from: desktop) {
+        display: inline-block;
+      }
+      margin-right: rem($gel-spacing-unit);
     }
   }
 
@@ -226,28 +233,18 @@ $svg-icon-color--hover:       $primary-color;
       height: 20px;
       display: block;
       margin: rem(8px) auto 0;
-      
-      // &.-products {
-      //   @include img-retina-svg('../img/icons/products', 'png', 20px, 20px);
-      // }
-      // &.-data {
-      //   @include img-retina-svg('../img/icons/products', 'png', 20px, 20px);
-      // }
-      // &.-damage {
-      //   @include img-retina-svg('../img/icons/products', 'png', 20px, 20px);
-      // }
-      // &.-payments {
-      //   @include img-retina-svg('../img/icons/products', 'png', 20px, 20px);
-      // }
-      // &.-contact {
-      //   @include img-retina-svg('../img/icons/products', 'png', 20px, 20px);
-      // }
     }
     
     &__svg {
-      fill: $svg-icon-color;
-      vertical-align: text-top;
-      margin-right: rem($gel-spacing-unit);
+
+      &.-mobile {
+        fill: $svg-icon-color;
+      }
+
+      &.-tablet {
+        fill: $svg-icon-color-tablet;
+        vertical-align: sub;
+      }
     }
   }
 
@@ -270,24 +267,8 @@ $svg-icon-color--hover:       $primary-color;
     vertical-align: middle;
   }
 
-  &__basket--counter {
-    display: inline-block;
-    top: 22px;
-    right: 8px;
-    width: 15px;
-    height: 15px;
-    //margin-right: -5px;
-    position: absolute;
+  
 
-    border-radius: 50%;
-    
-    vertical-align: top;
-    text-align: center;
-    font-size: $extra-small-font-size;
-    line-height: 0.9rem;    
-    background-color: $tablet-damage;
-    color: $tablet-damage-text;
-  }
 
   &__damage-counter--mobile {
     position: absolute;
@@ -304,12 +285,13 @@ $svg-icon-color--hover:       $primary-color;
     color: $mobile-damage-text;
   }
 
-  &__damage-counter--tablet {
+  &__basket--counter, &__damage-counter--tablet {
     display: inline-block;
-    top: 5px;
-    right: 10px;
+    top: rem(double($gel-spacing-unit));
+    right: rem($gel-spacing-unit);
     width: 15px;
     height: 15px;
+    position: absolute;
 
     border-radius: 50%;
     

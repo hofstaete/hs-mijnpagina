@@ -5,31 +5,48 @@
   xmlns="http://www.w3.org/2000/svg"
   xmlns:xlink="http://www.w3.org/1999/xlink"
   xmlns:ev="http://www.w3.org/2001/xml-events"
-  viewBox="0 0 24 22"
-  height="22" width="24"
-  class="m-nav__icon__svg">
+  viewBox="-0.5 -1.5 24 24"
+  width="24" height="24"
+  class="m-overview-blocks__icon__svg">
 
-  <g id="tablet" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-      <g id="iPad-dashboard-mvp-02" transform="translate(-978.000000, -91.000000)">
-          <g id="navbar" transform="translate(0.000000, 68.000000)">
-              <g id="mp-icon-winkelmandje" transform="translate(978.000000, 23.000000)">
-                  <g id="Group-7">
-                      <polygon id="Stroke-1" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" points="20.5 21.5 3.5 21.5 1.5 10.5 22.5 10.5"></polygon>
-                      <mask id="mask-2" fill="white">
-                          <use xlink:href="#path-1"></use>
-                      </mask>
-                      <g id="Clip-4"></g>
-                      <polygon id="Stroke-3" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" mask="url(#mask-2)" points="23.5 10.5 0.5 10.5 0.5 8.5 23.5 8.5"></polygon>
-                      <path d="M3.5,6.5 L9.5,0.5" id="Stroke-5" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" mask="url(#mask-2)"></path>
-                      <path d="M20.5,6.5 L14.5,0.5" id="Stroke-6" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" mask="url(#mask-2)"></path>
-                  </g>
-                  <path d="M13.5,12.5 L13.5,18.5" id="Stroke-8" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"></path>
-                  <path d="M17.5,12.5 L17.5,18.5" id="Stroke-9" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"></path>
-                  <path d="M10.5,12.5 L10.5,18.5" id="Stroke-10" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"></path>
-                  <path d="M6.5,12.5 L6.5,18.5" id="Stroke-11" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"></path>
-              </g>
+<g>
+  <g>
+    <g>
+      <g>
+        <g>
+          <g>
+            <path class="st0" d="M1,9.5c-0.1,0-0.3,0.1-0.4,0.2c-0.1,0.1-0.1,0.3-0.1,0.4l2,11c0,0.2,0.3,0.4,0.5,0.4h17
+              c0.2,0,0.4-0.2,0.5-0.4l2-11c0-0.1,0-0.3-0.1-0.4c-0.1-0.1-0.2-0.2-0.4-0.2H1z M21.4,10.5c-0.2,1-1.7,9.3-1.8,10
+              c-0.8,0-15.4,0-16.2,0c-0.1-0.7-1.6-9-1.8-10C2.7,10.5,20.3,10.5,21.4,10.5z"/>
           </g>
+          <g id="Clip-4">
+          </g>
+          <g>
+            <path class="st0" d="M0,7.5c-0.3,0-0.5,0.2-0.5,0.5v2c0,0.3,0.2,0.5,0.5,0.5h23c0.3,0,0.5-0.2,0.5-0.5V8
+              c0-0.3-0.2-0.5-0.5-0.5H0z M22.5,8.5c0,0.4,0,0.6,0,1c-0.9,0-21.1,0-22,0c0-0.4,0-0.6,0-1C1.4,8.5,21.6,8.5,22.5,8.5z"/>
+          </g>
+          <g>
+            <path class="st0" d="M8.6-0.4l-6,6c-0.2,0.2-0.2,0.5,0,0.7s0.5,0.2,0.7,0l6-6c0.2-0.2,0.2-0.5,0-0.7S8.8-0.5,8.6-0.4z"/>
+          </g>
+          <g>
+            <path class="st0" d="M13.6-0.4c-0.2,0.2-0.2,0.5,0,0.7l6,6c0.2,0.2,0.5,0.2,0.7,0s0.2-0.5,0-0.7l-6-6
+              C14.2-0.5,13.8-0.5,13.6-0.4z"/>
+          </g>
+          <g>
+            <path class="st0" d="M12.5,12v6c0,0.3,0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5v-6c0-0.3-0.2-0.5-0.5-0.5S12.5,11.7,12.5,12z"/>
+          </g>
+          <g>
+            <path class="st0" d="M16.5,12v6c0,0.3,0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5v-6c0-0.3-0.2-0.5-0.5-0.5S16.5,11.7,16.5,12z"/>
+          </g>
+          <g>
+            <path class="st0" d="M9.5,12v6c0,0.3,0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5v-6c0-0.3-0.2-0.5-0.5-0.5S9.5,11.7,9.5,12z"/>
+          </g>
+          <g>
+            <path class="st0" d="M5.5,12v6c0,0.3,0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5v-6c0-0.3-0.2-0.5-0.5-0.5S5.5,11.7,5.5,12z"/>
+          </g>
+        </g>
       </g>
+    </g>
   </g>
+</g>
 </svg>
-
