@@ -1,8 +1,20 @@
+@charset "UTF-8";
 ////
 /// @group Hip CSS
 ////
 
-@charset "UTF-8";
+/// background-color for list-line--table
+/// @require {$white} $white - Makes the white color 2 percent darker
+$list-line--table:               darken($white, 2%);
+
+/// border-color for filter__btn--active
+/// @require {$primary-font-color} $primary-font-color
+$filter__btn--active:            $primary-font-color;
+
+/// border-color for filter__btn--active
+/// @require {$white} $white - Makes the white color 2 percent darker
+$filter__btn--inactive:          #f0f0f0;
+
 
 .container {
     float: left;
@@ -12,29 +24,48 @@
 
 // .list-line
 .list-line {
-    background-color: white;
-    /// @todo Fix to global colors
-    border-bottom: 1px solid #dadada;
-    /// @todo Fix to global colors
-    border-left: 1px solid #f0f0f0;
-    float: left;
-    min-height: 2em;
-    padding: 1em;
-    width: 100%;
+  background-color: white;
+  /// @todo Fix to global colors
+  //border-bottom: 1px solid #dadada;
+  /// @todo Fix to global colors
+  //border-left: 1px solid #f0f0f0;
+  float: left;
+  min-height: 2em;
+  padding: 1em;
+  width: 100%;
+  /// @todo Fix to global colors
+  border-top: 1px solid #f0f0f0;
+  border-right: 1px solid #f0f0f0;
+  border-left: 1px solid #f0f0f0;
+
+  &:first-of-type {
+    border-bottom: 1px solid $list-line--table;
+  }
+
+  &:last-of-type {
+    border-bottom: 1px solid #f0f0f0;
+  }
 }
 
 .list-line.list-line--filter {
-    min-height: 4.75em;
-    /// @todo Fix to global colors
-    border: 1px solid #f0f0f0;
+  min-height: 4.75em;
+  margin-bottom: rem(double($gel-spacing-unit));
 }
 
+.list-line.list-line--table {
+  &:nth-child(odd) {
+    background-color: $list-line--table;
+  }
+}
 
 .list-line.list-line--table, 
 .list-line.list-line--table-header {
 	
   display: table-row;
   font-size: 14px;
+  border-top: 1px solid #f0f0f0;
+  border-right: 1px solid #f0f0f0;
+  border-left: 1px solid #f0f0f0;
 }
 
 .list-line.list-line--header, 
@@ -63,6 +94,7 @@
 
 .list-line__item {
   min-height: 0.5em;
+  word-wrap: break-word;
 
   &::before {
   	font-size: $extra-small-font-size;
@@ -155,6 +187,82 @@
 }
 
 
+
+
+.list-line__item.list-line__item--claim-number {
+  @include mq($until: tablet) {
+    &::before {
+      content: "Schadenr.";
+    }
+  }
+  @include mq($from: tablet) {
+    width: 8em;
+  }
+}
+
+.list-line__item.list-line__item--claim-polis {
+  @include mq($until: tablet) {
+    &::before {
+      content: "Polis";
+    }
+  }
+  @include mq($from: tablet) {
+    width: calc(100% - 32em);
+  }
+}
+
+.list-line__item.list-line__item--claim-date {
+  @include mq($until: tablet) {
+    &::before {
+      content: "Schade­datum";
+    }
+  }
+  @include mq($from: tablet) {
+    width: 8em;
+  }
+}
+.list-line__item.list-line__item--claim-paid {
+  @include mq($until: tablet) {
+    &::before {
+      content: "Uitbetaald";
+    }
+  }
+  @include mq($from: tablet) {
+    width: 8em;
+  }
+}
+.list-line__item.list-line__item--claim-status {
+  @include mq($until: tablet) {
+    &::before {
+      content: "Status";
+    }
+  }
+  @include mq($from: tablet) {
+    width: 8em;
+  }
+}
+
+.list-line__item.list-line__item--label-products {
+    width: calc(100% - 24.2em);
+}
+.list-line__item.list-line__item--premium-products {
+    padding-right: 0;
+    width: 7em;
+}
+.list-line__item.list-line__item--menu-products {
+    float: right;
+    padding-right: 0;
+    position: relative;
+    width: 2em;
+}
+.list-line__item.list-line__item--action-products {
+    float: right;
+    padding-right: 0;
+    text-align: right;
+    width: 7.2em;
+}
+
+
 // .label
 .label {
     color: #000;
@@ -169,9 +277,15 @@
 
 
 // .filter
-.filter__btn {
+
+.filter {
+  @include mq($from: tablet) {
+    display: inline-block; 
+  }
+  
+  &__btn {
     background: transparent none repeat scroll 0 0;
-    border: 1px solid transparent;
+    border: 1px solid $filter__btn--inactive;
     border-radius: rem(halve($gel-spacing-unit));
     font-size: 12px;
     letter-spacing: 0.1em;
@@ -179,20 +293,31 @@
     text-transform: uppercase;
 
     @include mq($until: tablet) {
-    	width: 100%;
+      width: 100%;
     }
+
+    &:first-child {
+        margin-left: 0;
+    }
+  }
+
+  &__report-damage {
+    @include mq($until: tablet) {
+      width: 100%;
+    }
+    @include mq($from: tablet) {
+      float: right;
+    }
+  }
 }
 
-.filter__btn:first-child {
-    margin-left: 0;
-}
 
 .filter__btn.filter__btn--active {
 
 		/// @todo Fix to global colors
-    border: 1px solid #8c8c8c;
+    border: 1px solid $filter__btn--active;
     /// @todo Fix to global colors
-    color: #535353;
+    color: $filter__btn--active;
     cursor: default;
 }
 
@@ -213,4 +338,17 @@
     color: #a8a8a8;
     /// @todo Fix font weight
     font-weight: 400;
+}
+
+
+
+
+
+
+.rubric__title {
+    color: $secondary-font-color;
+    font-size: 0.8em;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline-block;
 }
