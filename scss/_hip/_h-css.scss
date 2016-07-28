@@ -69,7 +69,7 @@ $label-font-color:               #3c3e3f;
     background-color: transparent;
     border: none;
     color: #000;
-    font-weight: 700;
+    @include open-sans(700);
     padding-top: 0;
 }
 
@@ -372,21 +372,25 @@ $label-font-color:               #3c3e3f;
 	/// @todo Fix to global colors
     color: #a8a8a8;
     /// @todo Fix font weight
-    font-weight: 700;
+    @include open-sans(700);
 }
 
 .filter__count {
 	/// @todo Fix to global colors
     color: #a8a8a8;
     /// @todo Fix font weight
-    font-weight: 400;
+    @include open-sans(400);
+}
+
+.filter__report-damage {
+  @include open-sans(600);
 }
 
 .rubric {
   &__title {
     color: $secondary-font-color;
     font-size: 0.8em;
-    font-weight: 700;
+    @include open-sans(700);
     text-transform: uppercase;
     display: inline-block;
   }
@@ -395,36 +399,6 @@ $label-font-color:               #3c3e3f;
     margin-top: 1em;
   }
 }
-
-.link {
-  &--claim {
-    @include open-sans(600);
-    color: $warning;
-
-    &:hover{
-      color: darken($warning, 5%);
-    }
-  }
-
-  &--mutate {
-    @include open-sans(600);
-    color: $primary-font-color;
-
-    &:hover{
-      color: darken($primary-font-color, 5%);
-    }
-  }
-
-  &--calculate {
-    @include open-sans(600);
-    color: $primary-font-color;
-
-    &:hover{
-      color: darken($primary-font-color, 5%);
-    }
-  }
-}
-
 
 .state {
   border: 1px solid #d3d3d3;

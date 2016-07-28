@@ -25,6 +25,7 @@
 @import "_base/_reset";
 @import "_base/_z-index";
 @import "_base/_typography";
+@import "_base/_animations";
 //@import "_base/_healthcheck";
 
 // LAYOUTS IMPORTS
@@ -43,6 +44,8 @@
 @import "_modules/_m-header-image";
 @import "_modules/_m-overview-blocks";
 @import "_modules/_m-feedback";
+
+@import "_modules/_m-message";
 
 // HIP NEXT CSS FOR FORMS ETC
 @import "_hip/_h-css";

@@ -1,0 +1,47 @@
+////
+/// @group Module Message
+////
+
+@charset "UTF-8";
+/// Module header
+$module:	'message';
+
+.m-#{$module} {
+	background-color: $message;
+	color: darken($message, 60%);
+	@include open-sans(700);
+	padding: rem($gel-spacing-unit) 0;
+
+	&__text {
+		display: inline;
+	}
+
+	&__link {
+		@include open-sans(700);
+		color: darken($message, 60%);
+
+		&:hover {
+			color: darken($message, 65%);
+		}
+	}
+
+	&__icon {
+		display: inline;
+		margin-right: rem($gel-spacing-unit);
+
+		&__svg {
+			vertical-align: text-top;
+			fill: darken($message, 60%);
+    animation-name: pulse;
+
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 10;
+    animation-name: bounceIn;
+    animation-timing-function: ease-out;
+
+		}
+	}
+}
+
+ 
