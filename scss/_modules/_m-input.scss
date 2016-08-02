@@ -1,0 +1,35 @@
+@charset "UTF-8";
+////
+/// @group Module Button
+////
+
+/// Module button
+$module: 'input';
+
+.m-#{$module} {
+	display: inline-block;
+	padding: rem($gel-spacing-unit) rem(double($gel-spacing-unit));
+	width: auto;
+	
+	border-radius: rem(halve($gel-spacing-unit));
+	outline: 0;
+
+	text-decoration: none;
+	text-align: left;
+	line-height: rem(quadruple($gel-spacing-unit));
+
+	&.primary {
+		color: $primary-font-color;
+		border: 1px solid $primary-font-color;
+
+		&::placeholder {
+			font-size: $small-font-size;
+		}
+
+		&:hover {
+			background-color: darken($white, 5%);
+		}
+	}
+
+}
+

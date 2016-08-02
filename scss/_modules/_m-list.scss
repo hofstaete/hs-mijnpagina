@@ -1,0 +1,29 @@
+@charset "UTF-8";
+////
+/// @group Module Button
+////
+
+/// Module button
+$module: 'list';
+
+.m-#{$module} {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+
+  &__item {
+		list-style-type: none;
+
+		&.primary {
+			margin: 0 0 rem(double($gel-spacing-unit));
+
+			&:before {
+		    content: '✔';   
+		    display: inline-block;
+		    margin-right: rem($gel-spacing-unit);
+			}
+		}
+  }
+}
+
+

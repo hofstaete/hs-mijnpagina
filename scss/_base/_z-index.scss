@@ -8,6 +8,7 @@ $z-index: (
   overlay: 400,
   navigation: 300,
   footer: 200,
+  dividers: 100
 );
 
 @function z-index($key) {

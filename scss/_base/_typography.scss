@@ -50,15 +50,6 @@ html{
 .h4 { font-size: $h4-font-size; }
 .h5 { font-size: $h5-font-size; }
 
-// LISTS
-ul {
-    list-style-type: none;
-}
-ul, ol {
-    margin: 0;
-    padding: 0;
-}
-
 // LINKS
 a {
 	text-decoration: underline;

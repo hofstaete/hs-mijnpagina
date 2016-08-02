@@ -67,6 +67,7 @@ $button-border-color--action:								$action-color;
 
 	text-decoration: none;
 	text-align: center;
+	line-height: rem(32px);
 
 	&.-primary {
 		border: 1px solid $button-border-color--primary;
@@ -123,6 +124,12 @@ $button-border-color--action:								$action-color;
 	&.-xl {
 		width: 50%;
 	}
+
+	// Font weights
+	&.-bold {
+		@include open-sans(700);
+	}
+
 
 	// Width of buttons
 	&.-half {

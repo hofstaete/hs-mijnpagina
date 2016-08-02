@@ -75,10 +75,64 @@
 
 <main>
   <div class="m-main">
-    <!-- here content -->
+    
+    <section class="m-login">
+      <form style="" autocomplete="off" class="m-login__form" id="loginform">
+        <h1>Inloggen</h1>
+        <div class="m-login__form-line">
+          <input type="text" autocomplete="off" data-required="true" class="m-input primary" placeholder="E-mailadres" id="e-mail">
+        </div>
+
+        <div class="m-login__form-line">
+          <input type="password" data-required="true" class="m-input primary" placeholder="Wachtwoord" id="password">
+        </div>
+        
+        <span style="display: none" class="m-login__form-error" id="loginerror"></span>
+
+        <button class="m-button -primary -bold" type="button" id="loginbutton">Inloggen</button>
+        <footer class="m-login__footer">
+          <p class="m-login__footer-text">
+            <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+                "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+            <svg version="1.1"
+              baseProfile="full"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xmlns:ev="http://www.w3.org/2001/xml-events"
+              viewBox="0 0 32 32"
+              height="32" width="32"
+              class="m-login__icon__svg">
+              <path d="M22 16 L22 12 A6 6 0 0 0 10 12 L10 16 z M4 16 L6 16 L6 12 A10 10 0 0 1 26 12 L26 16 L28 16 L28 30 L4 30 z"/>
+            </svg>
+            beveiligde verbinding
+          </p>
+        </footer>
+      </form>
+      <div class="m-login__create-account">
+        <h2>Nog geen account?</h2>
+        <p>Maak vandaag nog een gratis account aan om inzicht te krijgen in uw verzekeringen</p>
+        <ul class="m-list">
+          <li class="m-list__item primary">Beheer uw verzekerignen online</li>
+          <li class="m-list__item primary">Direct schade melden en volgen</li>
+          <li class="m-list__item primary">Direct schade melden en volgen</li>
+        </ul>
+        <a href="#" class="m-button -secondary">Maak gratis een account aan</a>
+      </div>
+    </section>
+
   </div>
 </main>
 </div>
+
+<footer class="m-footer">
+  <div class="l-wrapper l-layout l-ptb ">
+    <div class="m-footer__name">Hofstaete Kennisgroep B.V.</div>
+    <div class="m-footer__adress">Gooimeer 8, 1411 DD Naarden</div>
+    <div class="m-footer__phonenumber">Tel 035 699 15 50</div>
+    <div class="m-footer__feedback"><a href="#" class="m-button -secondary">Feedback</a></div>
+  </div>
+
+</footer>
 
 
 

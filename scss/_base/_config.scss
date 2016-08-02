@@ -23,10 +23,11 @@ $mq-responsive: true;
 /// Name your breakpoints in a way that creates a ubiquitous language across team members. It will improve communication between stakeholders, designers, developers, and testers.
 $mq-breakpoints: (
   mobile: 320px,
+  mobileLandscape: 480px,
   tablet: 768px,
   desktop: 980px,
   wide: 1300px,
-  mobileLandscape: 480px
+  extraWide: 1500px  
 );
 
 /// Show Breakpoints
