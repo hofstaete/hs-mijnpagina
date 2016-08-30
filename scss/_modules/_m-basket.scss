@@ -1,0 +1,175 @@
+////
+/// @group Module basket
+////
+
+@charset "UTF-8";
+/// Module header
+$module:	'basket';
+
+.m-#{$module} {
+	
+	&__progress {
+    display: table;
+    list-style: outside none none;
+    margin: rem(double($gel-spacing-unit)) auto;
+    padding: 0;
+    table-layout: fixed;
+    width: 100%;
+
+		&__step {
+    display: table-cell;
+    font-size: 0.8em;
+    list-style: outside none none;
+    position: relative;
+    text-align: left;
+    padding-right: rem($gel-spacing-unit);
+    word-wrap: break-word;
+
+			&.-active {
+				&:before, &:after {
+					background: $primary-color;
+				}
+			}
+
+			&:before {
+				background: mix($secondary-font-color, $white) none repeat scroll 0 0;
+		    border-radius: 100%;
+		    content: "";
+		    display: block;
+		    height: rem(double($gel-spacing-unit));
+		    //margin: 0 auto 0.25em;
+		    margin: 2px 0 0 -1px;
+		    position: relative;
+		    text-align: left;
+		    width: rem(double($gel-spacing-unit));
+		    z-index: 1000;
+			}
+
+			&:after {
+				content: '';
+	      position: absolute;
+	      display: block;
+	      background: mix($secondary-font-color, $white);
+	      width: 100%;
+	      height: 0.625rem;
+	      top: 0.3rem;
+	      //left: 50%;
+				border: 0;
+	      z-index: -1;
+			}
+
+		}
+	}
+
+	&__new-situation {
+		text-align: center;
+		margin: rem(double($gel-spacing-unit)) auto;
+	}
+
+	&__table-container {
+		border: 1px solid mix($secondary-font-color, $white);
+		border-radius: rem(halve($gel-spacing-unit));
+	}
+
+	&__table {
+		width: 100%;
+
+		&__row {
+			height: rem($gel-spacing-unit * 6);
+			border-bottom: 1px solid mix($secondary-font-color, $white);
+
+			&.-existing-products {
+				background: darken($white, 5%)
+			}
+		}
+		&__cell {
+			width: 100%;
+			display: block;
+			padding: rem(double($gel-spacing-unit));	 
+			
+			@include open-sans(600);
+
+			@include mq($from: tablet) {
+				display: table-cell;
+				width: auto;
+			}
+
+			&:empty {
+				display: none;
+
+				@include mq($from: tablet) {
+					display: table-cell;
+				}
+			}
+
+			&.-price {
+				@include mq($from: tablet) {
+					text-align: right;
+				}
+			}
+
+			&--extra-info {
+				color: $secondary-font-color;
+				@include open-sans(400);
+			}
+		}
+
+		&__from-price {
+			text-decoration: line-through;
+			color: mix($secondary-font-color, $white);
+		}
+
+		&__price {
+
+		}
+	}
+
+	&__add-or-request {
+		@include mq($from: tablet) {
+			margin: rem(double($gel-spacing-unit)) auto;
+			@include clearfix();
+		}
+	}
+
+	&__add-product {
+		//padding: rem(double($gel-spacing-unit));
+		margin: rem(double($gel-spacing-unit)) auto;
+		text-align: left;
+
+		@include mq($from: tablet) {
+			float: left;
+		}
+	}
+
+	&__request-products {
+		background-color: $message;
+		padding: rem(double($gel-spacing-unit));
+		border-radius: rem(halve($gel-spacing-unit));
+		@include clearfix();
+
+		@include mq($from: tablet) {
+			float: right;
+		}
+
+		&__total {
+			line-height: rem(quadruple($gel-spacing-unit));
+			padding: rem($gel-spacing-unit) rem(double($gel-spacing-unit));
+		}
+
+		> .m-button {
+			float: right;
+		}
+	}
+
+	&__help-change {
+		width: 100%;
+		text-align: right;
+		text-transform: lowercase;
+		font-size: $small-font-size;
+		color: $secondary-font-color;
+
+		@include mq($from: tablet) {
+			float: left;
+		}
+	}
+}

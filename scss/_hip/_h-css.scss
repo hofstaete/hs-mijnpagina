@@ -54,6 +54,11 @@ $label-font-color:               #3c3e3f;
   &:last-of-type {
     border-bottom: 1px solid #f0f0f0;
   }
+
+  &__change {
+    float: right;
+    display: inline-block;
+  }
 }
 
 .list-line.list-line--filter {
@@ -125,6 +130,33 @@ $label-font-color:               #3c3e3f;
     float: left;
     padding-right: 0.5em;
     position: relative;
+  }
+
+  &.-left, &.-right {
+    display: inline-block;
+  }
+
+  &.-left{
+    text-align: left;
+  }
+  &.-right {
+    text-align: right;
+  }
+
+  @include mq($from: tablet) {
+
+    &.-left, &.-right {
+      text-align: left;
+      width: 100%;
+      display: inline-block;
+    }
+    &.-left {
+      width: 40%;
+    }
+    
+    &.-right {
+      width: 60%;
+    }
   }
 }
 
