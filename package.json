@@ -3,9 +3,7 @@
   "version": "0.0.1",
   "description": "Klantensite Hofstaete Klanten",
   "main": "gulpfile.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/michelvdwereld/hs-mijnpagina.git"
@@ -20,8 +18,6 @@
     "browser-sync": "^2.13.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
-    "gulp-csslint": "^0.3.1",
-    "gulp-csslint-scss-reporter": "0.0.1",
     "gulp-modernizr": "^1.0.0-alpha",
     "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^1.6.0",
