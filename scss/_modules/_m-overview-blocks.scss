@@ -1,38 +1,14 @@
-////
-/// @author Michel van der Wereld
-////
-
 @charset "UTF-8";
 
-/// MODULE FOOTER
 $module:	'overview-blocks';
 
-// CONFIG
-$main-backgroundcolor:					darken($white, 8%);
-$block-background-color:				rgba($black, 0.08);
-$link-font-color: 							$primary-font-color;
-$block-background-color--hover:	rgba($black, 0.08);
-
-/// SVG icon background fill color 
-/// @require {$secondary-font-color} $secondary-font-color
-$link-font-size:								rem(18px);
-
-/// SVG icon background fill color 
-/// @require {$primary-font-color} $primary-font-color
-$svg-icon-color:							$primary-font-color;
-
-/// SVG icon hover background fill color 
-/// @require {$primary-color} $primary-color
-$svg-icon-color--hover:				$primary-color;
-
-// BASE
 .m-#{$module} {
-	background-color: $main-backgroundcolor;
+	background-color: darken($white, 8%);
 	display: inline-block;
 	width: 100%;
 
 	&__with-info, &__just-blocks {
-		background-color: $main-backgroundcolor;
+		background-color: darken($white, 8%);
 
 			@include mq($until: tablet) { 
 				display: none;
@@ -59,7 +35,7 @@ $svg-icon-color--hover:				$primary-color;
 		}
 
 		&.-right {
-			background-color: $block-background-color;
+			background-color: rgba($black, 0.08);
 			width: 50%;
 			padding: rem(quadruple($gel-spacing-unit));
 		}
@@ -99,7 +75,7 @@ $svg-icon-color--hover:				$primary-color;
 			}
 			
 			&:nth-child(-n+2) {
-				border-bottom: 1px solid $block-background-color;
+				border-bottom: 1px solid rgba($black, 0.08);
 			}	
 		}
 	}
@@ -122,7 +98,7 @@ $svg-icon-color--hover:				$primary-color;
 	&__block {
 		display: inline-block;
 		text-align: center;
-		border-right: 1px solid $block-background-color;
+		border-right: 1px solid rgba($black, 0.08);
 		float: left;
 		
 		&.-half {
@@ -132,13 +108,24 @@ $svg-icon-color--hover:				$primary-color;
 		&.-quarter {
 			width: 25%;
 		}
+
+		&:hover{
+			svg {
+				transform: scale(1.2);
+			}
+		}
+
+		svg {
+			width: rem(80px);
+			height: rem(80px);
+		}
 	}
 
 	&__icon {
 		height: rem(80px);
 
 		&__svg {
-			fill: $svg-icon-color;
+			fill: $primary-font-color;
 		}
 	}
 
@@ -147,13 +134,14 @@ $svg-icon-color--hover:				$primary-color;
 		height: 100%;
 		display: block;
 
-		color: $link-font-color;
+		color: $primary-font-color;
 
 		// Remove dotted outline from clicked links.
 		@include remove-outline();
 
 		&:hover {
-			background-color: $block-background-color--hover;
+			background-color: rgba($primary-font-color, 0.08);
+			color: $primary-font-color;
 
 			.m-overview-blocks__icon{
 				transform: scale(1.2);
@@ -164,8 +152,8 @@ $svg-icon-color--hover:				$primary-color;
 	&__title {
 		margin: rem(double($gel-spacing-unit)) 0 0 0;	
 		
-		color: $link-font-color;
-		font-size: $link-font-size;
+		color: $primary-font-color;
+		font-size: rem(18px);
 		@include open-sans(600);
 	}
 }

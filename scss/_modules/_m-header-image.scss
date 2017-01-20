@@ -1,20 +1,7 @@
 @charset "UTF-8";
-////
-/// @group Module Header-image
-////
-
-/// Module header-image
+ 
 $module:	'header-image';
 
-/// Primary font color
-/// @require {$white} $white
-$fontcolor--primary:					$white;
-
-/// Font shadow color
-/// @require {$black} $black - Makes black 50 percent opacity
-$font-shadow:									rgba($black, 0.5);
-
-// BASE
 .m-#{$module} {
 	display: none;
 	height: rem(368px);
@@ -27,19 +14,18 @@ $font-shadow:									rgba($black, 0.5);
   background-origin: padding-box;
   background-position: 0 0;
   background-repeat: repeat;
-  background-size: auto auto;
 	background-position: center top;
   background-size: cover;
 
 	@include mq($from: tablet) {
 			display: inline-block;
 	}
+
 	&.-show {
 		display: none;
 
 		@include mq($from: tablet) {
 			display: inline-block;
-
 		}
 	}
 	&.-hide {
@@ -51,10 +37,10 @@ $font-shadow:									rgba($black, 0.5);
 		margin-bottom: rem(double($gel-spacing-unit));
 
 	  @include open-sans(700);
-	  color: $fontcolor--primary;
+	  color: $white;
   	font-size: $h2-font-size;
   	text-transform: uppercase;
-  	text-shadow: 2px 2px 3px $font-shadow;
+  	text-shadow: 2px 2px 3px rgba($black, 0.5);
   	line-height: rem(quadruple($gel-spacing-unit));
 	}
 

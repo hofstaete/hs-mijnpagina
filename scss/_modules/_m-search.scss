@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+$module: 'search';
+
+.m-#{$module} {
+
+	&--dashboard {
+		@include span(12);
+	}
+}

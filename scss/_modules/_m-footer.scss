@@ -1,38 +1,17 @@
 @charset "UTF-8";
-////
-/// @group Module Footer
-////
 
-/// Module footer
 $module:	'footer';
 
-/// Footer background color
-/// @require {$white} $white - Makes the white color 6 percent darker
-$footer-background:								darken($white, 8%);
-
-/// Footer border color
-/// @require {$secondary-font-color} $secondary-font-color
-$footer-border:										$secondary-font-color;
-
-/// Footer border color
-/// @require {$secondary-font-color} $secondary-font-color
-$footer-divider:									rgba($black, 0.08);
-
-/// Footer font color
-/// @require {$secondary-font-color} $secondary-font-color
-$footer-font:											$secondary-font-color;
-
-// BASE
 .m-#{$module} {
 	flex: none;
 	display: inline-block;
 	width: 100%;
-	padding-bottom: rem(48px + $gel-spacing-unit ); // to come above mobile menu
+	padding-bottom: rem(48px + $gel-spacing-unit); // to be visible above mobile menu
 
-	border-top: 1px solid $footer-border;
+	border-top: 1px solid $secondary-font-color;
 
-	background-color: $footer-background;
-	color: $footer-font;
+	background-color: darken($white, 8%);
+	color: $secondary-font-color;
 	text-align: center;
 
 	@include mq($from: tablet) {
@@ -68,7 +47,7 @@ $footer-font:											$secondary-font-color;
 			padding-top: rem($gel-spacing-unit);
 			padding-bottom: rem($gel-spacing-unit);
 			
-			border-left: 2px solid $footer-divider;
+			border-left: 2px solid rgba($black, 0.08);
 		}
 
 		@include mq($from: desktop) {

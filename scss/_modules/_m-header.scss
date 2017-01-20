@@ -1,29 +1,9 @@
-////
-/// @group Module Header
-////
-
 @charset "UTF-8";
-/// Module header
+
 $module:	'header';
 
-/// Primary font color 
-/// @require {$secondary-font-color} $secondary-font-color
-$font-color--primary:					$secondary-font-color;
-
-/// Primary background color 
-/// @require {$primary-color} $primary-color - Makes primary-color 2 percent lighter
-$background-color--primary:		lighten($primary-color, 2%);
-
-/// Secondary background color 
-/// @require {$white} $white
-$background-color--secondary:	$white;
-
-/// SVG icon background fill color 
-/// @require {$secondary-font-color} $secondary-font-color
-$svg-icon-color:							$secondary-font-color;
-
 .m-#{$module} {
-	background-color: $background-color--primary;
+	background-color: lighten($primary-color, 2%);
 	@include clearfix;
 
   @include mq($from: tablet) {
@@ -45,12 +25,13 @@ $svg-icon-color:							$secondary-font-color;
   	@include mq($from: tablet) {
   		float: right;
 	  	display: flex;
-	  	
 	  }
   }
 
 	&__logo {
 		display: none;
+		
+		@include remove-outline();
 		
 		@include mq($from: tablet) {
 			min-height: rem(42px);
@@ -64,13 +45,16 @@ $svg-icon-color:							$secondary-font-color;
 
 	&__phonenumber {
 		padding: rem($gel-spacing-unit) rem(double($gel-spacing-unit));
-		color: $font-color--primary;
+		color: $secondary-font-color;
 		margin: 1px; //align with other top buttons bacause of their border.
+		
+		svg {
+			vertical-align: middle;
+		}
 
 		&__icon {
-			fill: $svg-icon-color;
+			fill: $secondary-font-color;
 	    vertical-align: middle;
-
 		}
 	}
 }

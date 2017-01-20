@@ -1,0 +1,5 @@
+https://www.quora.com/How-popular-is-VueJS-in-the-industry
+
+vue js routing: 			https://github.com/vuejs/vue-router
+state management pattern + library:	https://github.com/vuejs/vuex
+hot reload				https://github.com/vuejs/vue-hot-reload-api

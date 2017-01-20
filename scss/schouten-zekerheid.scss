@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+$white:									#ffffff;
+$black:									#000000;
+
+$primary-font-color:		#3c3e3f;
+$secondary-font-color:	#a0a7ab;
+
+$primary-color: 				#264c94;
+$secondary-color: 			#ffd41c;
+$action-color:					#159cd6;
+$disabled-color:				#a0a7ab;
+$warning:								#ec2302;
+
+/// Import all imports
+@import "_base/_imports";

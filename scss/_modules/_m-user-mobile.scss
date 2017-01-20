@@ -1,21 +1,9 @@
-////
-/// @author Michel van der Wereld
-////
-
 @charset "UTF-8";
 
-/// MODULE USER-MOBILE
 $module:  'user-mobile';
 
-// CONFIG
-$user-mobile__fontcolor--primary:					$white;
-$user-mobile__fontcolor--secondary:				mix($primary-color, $white);
-$user-mobile__backgroundcolor--primary:		$primary-color;
-$user-mobile__bordercolor--primary:				$white;
-
-// BASE
 .m-#{$module} {
-	background-color: $user-mobile__backgroundcolor--primary;
+	background-color: $primary-color;
 	@include clearfix;
 
   @include mq($from: tablet) {
@@ -26,7 +14,7 @@ $user-mobile__bordercolor--primary:				$white;
   	border-radius: 50%;
 	  height: 75px;
     width: 75px;
-    border: rem(halve($gel-spacing-unit)) solid $user-mobile__bordercolor--primary;
+    border: rem(halve($gel-spacing-unit)) solid $white;
 
   	&-wrapper{
   		text-align: center;
@@ -37,7 +25,7 @@ $user-mobile__bordercolor--primary:				$white;
   }
 
   &__name {
-  	color: $user-mobile__fontcolor--primary;
+  	color: $white;
   	text-align: center;
   }
 
@@ -46,7 +34,7 @@ $user-mobile__bordercolor--primary:				$white;
   }
 
  	&__download-link {
- 		color: $user-mobile__fontcolor--secondary;
+ 		color: mix($primary-color, $white);
   }
 }
  

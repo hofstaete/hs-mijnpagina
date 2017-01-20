@@ -1,61 +1,6 @@
 @charset "UTF-8";
-////
-/// @group Module Button
-////
 
-/// Module button
-$module: 												'button';
-
-/// Primary button-font-color
-/// @require {$secondary-font-color} $secondary-font-color
-$button-font-color--primary:								$white;
-/// Primary button-background-color
-/// @require {$black} $black - Adds 95percent opacity to black
-$button-background-color--primary:					$primary-color;
-/// Primary button-background-color--hover
-/// @require {$primary-color} $primary-color - Adds 5percent darken to primary-color
-$button-background-color--primary--hover:		darken($primary-color, 5%);
-/// Primary button-border-color
-/// @require {$primary-color} $primary-color - Add 20 percent light to font color
-$button-border-color--primary:							$primary-color;
-
-/// Secondary button-font-color
-/// @require {$secondary-font-color} $secondary-font-color
-$button-font-color--secondary:							$secondary-font-color;
-/// Secondary button-background-color
-$button-background-color--secondary:				transparent;
-/// Secondary button-background-color--hover
-/// @require {$secondary-font-color} $secondary-font-color - Adds 90percent opacity to secondary-font-color
-$button-background-color--secondary--hover:	rgba($secondary-font-color, 0.1);
-/// Secondary border-color
-/// @require {$secondary-font-color} $secondary-font-color
-/// @require {$white} $white 
-$button-border-color--secondary:						mix($secondary-font-color, $white);
-
-/// Tertiary button-font-color
-/// @require {$white} $white
-$button-font-color--tertiary:								$white;
-/// Tertiary button-background-color
-$button-background-color--tertiary:					transparent;
-/// Tertiary button-background-color--hover
-/// @require {$black} $black - Adds 95percent opacity to black
-$button-background-color--tertiary--hover:	rgba($black, 0.05);
-/// Tertiary border-color
-/// @require {$white} $white 
-$button-border-color--tertiary:							$white;
-
-/// Action button-font-color
-/// @require {$white} $white
-$button-font-color--action:									$white;
-/// Action button-background-color
-/// @require {$action-color} $action-color
-$button-background-color--action:						$action-color;
-/// Action button-background-color--hover
-/// @require {$action-color} $action-color - Adds 5percent darken to action-color
-$button-background-color--action--hover:		darken($action-color, 5%);
-/// Action button-border-color
-/// @require {$action-color} $action-color
-$button-border-color--action:								$action-color;
+$module: 'button';
 
 .m-#{$module} {
 	display: inline-block;
@@ -70,45 +15,52 @@ $button-border-color--action:								$action-color;
 	line-height: rem(32px);
 
 	&.-primary {
-		border: 1px solid $button-border-color--primary;
+		border: 1px solid $primary-color;
 
-		color: $button-font-color--primary;
-		background-color: $button-background-color--primary;
+		color: $white;
+		background-color: $primary-color;
 
 		&:hover {
-			background-color: $button-background-color--primary--hover;
+			background-color: darken($primary-color, 5%);
 		}
 	}
 
 	&.-secondary {
-		border: 1px solid $button-border-color--secondary;
+		border: 1px solid mix($secondary-font-color, $white);
 
-		color: $button-font-color--secondary;
-		background-color: $button-background-color--secondary;
+		color: $secondary-font-color;
+		background-color: transparent;
 
 		&:hover {
-			background-color: $button-background-color--secondary--hover;
+			background-color: rgba($secondary-font-color, 0.1);
 		}
 	}
 
 	&.-tertiary {
-		border: 1px solid $button-border-color--tertiary;
+		border: 1px solid $white;
 
-		color: $button-font-color--tertiary;
-		background-color: $button-background-color--tertiary;
+		color: $white;
+		background-color: transparent;
 
 		&:hover {
-			background-color: $button-background-color--tertiary--hover;
+			background-color: rgba($black, 0.05);
 		}
 	}
 
 	&.-action {
-		color: $button-font-color--action;
-		background-color: $button-background-color--action;
+		color: $white;
+		background-color: $action-color;
 
 		&:hover {
-			background-color: $button-background-color--action--hover;
+			background-color: darken($action-color, 5%);
 		}
+	}
+
+	&.-disabled {
+		border: 1px solid $disabled-color;
+		color: $white;
+		background-color: $disabled-color;
+
 	}
 
 	// Size of buttons Medium is default
@@ -127,9 +79,8 @@ $button-border-color--action:								$action-color;
 
 	// Font weights
 	&.-bold {
-		@include open-sans(700);
+		@include open-sans($bold);
 	}
-
 
 	// Width of buttons
 	&.-half {

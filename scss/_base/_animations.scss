@@ -12,17 +12,15 @@
     40% {transform: translateY(-30px);} 
     60% {transform: translateY(-15px);} 
 } 
-  
-/*
- * Adding the animation to our element
-*/
+
+// * Adding the animation to our element
+
 .bounce { 
     animation-name: bounce; 
 }
 
-/*
- * FadeIn animation
-*/
+// * FadeIn animation
+
 @keyframes fadeIn { 
     0% {opacity: 0;} 
     100% {opacity: 1;} 
@@ -30,10 +28,9 @@
 .fadeIn { 
     animation-name: fadeIn; 
 }
-  
-/*
- * FadeOut animation
-*/
+
+// * FadeOut animation
+
 @keyframes fadeOut{ 
     0% {opacity: 1;} 
     100% {opacity: 0;} 
@@ -42,9 +39,8 @@
     animation-name: fadeOut; 
 }
 
-/*
- * Pulse animation
-*/
+// * Pulse animation
+
 @keyframes pulse { 
     0% { transform: scale(1); } 
     50% { transform: scale(1.1); } 
@@ -54,9 +50,8 @@
     animation-name: pulse; 
 }
 
-/*
- * Flash animation
-*/
+// * Flash animation
+
 @keyframes flash { 
     0%, 50%, 100% {opacity: 1;} 
     25%, 75% {opacity: 0;} 
@@ -65,9 +60,7 @@
     animation-name: flash; 
 }
 
-/*
- * Shake animation
-*/
+// * Shake animation
   
 @keyframes shake { 
     0%, 100% {transform: translateX(0);} 

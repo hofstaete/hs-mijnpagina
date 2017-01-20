@@ -1,9 +1,5 @@
-////
-/// @group Module Login
-////
-
 @charset "UTF-8";
-/// Module Login
+
 $module:	'login';
 
 .m-#{$module} {
@@ -64,7 +60,6 @@ $module:	'login';
 	
 	// Form
 	&__form {
-
 		h1 {
 			margin-top: 0;
 		}

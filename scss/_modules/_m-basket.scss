@@ -1,10 +1,6 @@
-////
-/// @group Module basket
-////
-
 @charset "UTF-8";
-/// Module header
-$module:	'basket';
+
+$module: 'basket';
 
 .m-#{$module} {
 	
@@ -37,7 +33,6 @@ $module:	'basket';
 		    content: "";
 		    display: block;
 		    height: rem(double($gel-spacing-unit));
-		    //margin: 0 auto 0.25em;
 		    margin: 2px 0 0 -1px;
 		    position: relative;
 		    text-align: left;
@@ -53,7 +48,6 @@ $module:	'basket';
 	      width: 100%;
 	      height: 0.625rem;
 	      top: 0.3rem;
-	      //left: 50%;
 				border: 0;
 	      z-index: -1;
 			}
@@ -132,7 +126,6 @@ $module:	'basket';
 	}
 
 	&__add-product {
-		//padding: rem(double($gel-spacing-unit));
 		margin: rem(double($gel-spacing-unit)) auto;
 		text-align: left;
 
@@ -142,7 +135,7 @@ $module:	'basket';
 	}
 
 	&__request-products {
-		background-color: $message;
+		background-color: lighten($primary-color, 40%);
 		padding: rem(double($gel-spacing-unit));
 		border-radius: rem(halve($gel-spacing-unit));
 		@include clearfix();
@@ -154,6 +147,8 @@ $module:	'basket';
 		&__total {
 			line-height: rem(quadruple($gel-spacing-unit));
 			padding: rem($gel-spacing-unit) rem(double($gel-spacing-unit));
+			display: inline-block;
+			border: 1px solid transparent;
 		}
 
 		> .m-button {

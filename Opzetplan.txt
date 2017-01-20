@@ -1,0 +1,162 @@
+Auteur: Michel van der Wereld
+
+Kort samengevat:
+- Theming, d.m.v. een aantal ingestelde kleuren.
+- Resets toegepast. Voor een goede gelijke basis (browsers)
+- Modulair opgezet. Elementen als bijvoorbeeld buttons zijn ingedeeld in een aparte module. 
+- Z-index lagen opgezet, voor goede gelaagdheid op je website (voor bijvoorbeeld popups etc.)
+- Structuur in de Mappen, Sass bestanden + Selectors
+- Structuur in algehele Sass/Css Schrijven d.m.v. BEM + Chainable Modifiers
+- Versioning (momenteel in Git)
+- Workflow in Gulp: automatisch prefixen (voor oudere browsers), sass documenteren (automatisch), browsersync, sourcemaps.
+
+Base:
+- Node.js (NPM) Nodejs Package Manager 
+	- Beheert alle versies van de packages in de package.json file. Je kan Global en voor Dev dependencies packages downloaden zodat je voor projecten je packages gescheiden kunt updaten.
+- Gulp 
+	- Taskrunner. Voert o.b.v. ingestelde commando's taken uit die ingestelt staan in je gulpfile.js Je kunt bijvoorbeeld de 'watch' functie gebruiken om bestanden in de gaten te houden. Als er iets wijzigt/savet voert het iets uit. Bijvoorbeeld bij elke wijziging/save in sass compiled het automatisch naar css. Voorbeeld commando: "gulp watch"
+	- Autoprefixer. Je geeft aan vanaf welke browser je ondersteunt. O.b.v. caniuse.com prefixed autoprefixer je css. 
+	- SassDoc. Voor het automatisch bijhouden/overzicht van alle sass documentatie
+	- Sourcemaps. Voor het debuggen in sass. Dit wordt niet meegenomen naar productie. Dit is enkel voor Developing.
+	- BrowserSync. Handige tool om snel een local servertje op te zetten met mogelijkheid een browser automatisch te laten reloaden na een wijziging/save.
+
+Basis regels CSS/SASS(SCSS):
+- Voertaal is Engels! In classes etc.
+- BEM, OOCSS & SMACSS
+- Strictly no IDs in CSS!!!
+- Avoid unnecessary nesting
+- Keep specificity as low as possible
+- No magic numbers, all units must be derived from GEL units (1)
+- Keep scope limited to thing you’re styling
+- Avoid unnecessary unsetting of styles
+- Lots of comments to explain whats going on to other developers on this way: /// Comment (three slashes)
+
+Folder Structuur: (2)
+- For each new module make a new file for it
+- Prefix filenames (better searching in your editor)
+- Partials get a underscore as a prefix
+- Cut states and modules in different sections
+- One single file for importing all partials like application.scss
+/*Voorbeeld:*/
+	scss/
+	|- _base/
+	|  |- _config.scss
+	|  |- _presets.scss
+	|  |- _headings.scss
+	|  |- ...
+	 
+	|- _layouts/
+	|  |- _l-base.scss
+	|  |- _l-grid.scss
+	 
+	|- _modules/
+	|  |- _m-buttons.scss
+	|  |- _m-tabs.scss
+	 
+	|- _states/
+	|  |- _s-buttons.scss
+	|  |- _s-tabs.scss
+	|- application.scss
+	 
+	stylesheets/
+	|- application.css
+
+Structureer Modules:
+- 1 At first we have a area for Config. There I define specific colors or other stuff for configuration like colors.
+- 2 Now the main part of the file, Base. Writing all the styles here for all types of the module
+- 3 The footer called States. Here I import the states for the current module. Not more.
+/*Voorbeeld*/
+	@charset "UTF-8";
+	 
+	// Config
+	$button-bgcolor: $blue;
+	$button-fontcolor: $white;
+	 
+	// Base
+	.m-button {}
+	.m-button--primary {}
+	.m-button--secondary {}
+	 
+	// States
+	@import "../_states/_s-buttons";
+
+Importeren van onderdelen:
+- 1 Structure in base, layouts and modules
+- 2 For each section only declare @import  once
+- 3 Remove file-ending
+/*Voorbeeld*/
+	@charset "UTF-8";
+	 
+	// Base
+	@import "_base/_config",
+	        "_base/_presets",
+	        "_base/_headings";
+	 
+	// Layouts
+	@import "_layouts/_l-default";
+	 
+	// Modules
+	@import "_modules/_m-buttons",
+	        "_modules/_m-tabs";
+
+BEM / SMACSS:
+/*Voorbeeld*/
+	// Layouts - Prefix "l-"
+	.l-default {}
+	 
+	// Modules - Prefix "m-"
+	.m-accordion {}
+	 
+	// Child element of accordion - Seperator: "__"
+	.m-accordion__trigger {}
+	 
+	// Modifier of accordion - Seperator: "--"
+	.m-accordion--plain {}
+	 
+	// States - Mostly with prefix like "is-"
+	.is-active {}
+	.is-hidden {}
+
+Variabelen:
+- Alle global configs in _global.scss
+- Specifieke variabelen in de module
+- Leesbaarheid is belangrijk
+/*Voorbeeld*/
+	// Colors (global)
+	$white: #fff;
+	$blue: #1675d6;
+	$red: #e8402a;
+	 
+	// Specific naming
+	$button-bgcolor: $blue;
+	$button-fontcolor: $white;
+
+Breakpoints:
+- In het bestand/module waar ze thuis horen, niet in een ander bestand.
+- Gebruik zo min mogelijk verschillende break-points, definieer ze goed van te voren. 
+- Kwa performance maakt het niet uit of je de break-points groepeert in je bestand of dat je het inline gebruikt in je bestand. (3)
+
+Categorizeren CSS Regels:
+- 1 Box - margin, padding, display, etc.
+- 2 Border & Background - border, border-radius, background-color, etc.
+- 3 Text - color, font-size, text-transform, etc.
+- 4 Other stuff - animations, transforms, etc.
+
+CSS Regels:
+- Avoid ID’s
+- Avoid !important
+- Avoid child-selector
+
+- Overall two whitespaces instead tabs for distances
+- One whitespace between element and brace
+- Line-Break between styles and new element
+- Line-Break after closed brace
+- Using HEX instead RGB for colors
+- Convert HEX to RGB with Sass
+    bad example:	color: rgba(255,255,255,.3);
+    good example:	color: rgba(#000, .3);
+
+Links:
+(1) https://github.com/bbc/gel-sass-tools
+(2) http://timhartmann.net/frontend-development/scss-styleguide-with-bem-oocss-smacss/
+(3) https://helloanselm.com/2014/web-performance-one-or-thousand-media-queries/

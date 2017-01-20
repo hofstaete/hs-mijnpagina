@@ -5,7 +5,7 @@ var sass 					= require('gulp-sass');
 var sourcemaps 		= require('gulp-sourcemaps');
 var autoprefixer 	= require('gulp-autoprefixer');
 var uglify 				= require('gulp-uglify');
-var sassdoc 			= require('sassdoc');
+// var sassdoc 			= require('sassdoc');
 var browserSync 	= require('browser-sync').create();
 // Nog toevoegen: imagemin = require 'gulp-imagemin' 
 // pngquant = require 'imagemin-pngquant'
@@ -23,9 +23,9 @@ var sassOptions = {
 	errLogToConsole: true,
 	outputStyle: 'expanded'
 };
-var sassdocOptions = {
-	dest: './scss/sassdoc'
-};
+// var sassdocOptions = {
+// 	dest: './scss/sassdoc'
+// };
 var autoprefixerOptions = {
 	browsers: ['last 3 versions', '> 2%', 'Firefox ESR']
 };
@@ -62,12 +62,12 @@ gulp.task('sass', function () {
 });
 
 // Task to just add sass to sassdoc
-gulp.task('sassdoc', function () {
-	return gulp
-		.src(pathSass)
-		.pipe(sassdoc(sassdocOptions))
-		.resume();
-});
+// gulp.task('sassdoc', function () {
+// 	return gulp
+// 		.src(pathSass)
+// 		// .pipe(sassdoc(sassdocOptions))
+// 		.resume();
+// });
 
 // Watch, handy for developing
 gulp.task('watch', ['browserSync', 'sass'], function() {
@@ -80,10 +80,10 @@ gulp.task('watch', ['browserSync', 'sass'], function() {
 });
 
 // For production:  compress all sass + add necessary prefixes, compile to css
-gulp.task('prod', ['sassdoc'], function () {
+gulp.task('prod', function () {
   return gulp
     .src(pathSass)
-    .pipe(sass({ outputStyle: 'compressed' }))
+    .pipe(sass({ outputStyle: 'expanded' }))
     .pipe(autoprefixer(autoprefixerOptions))
     .pipe(gulp.dest(pathCss));
 });

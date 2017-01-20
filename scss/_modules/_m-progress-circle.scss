@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+$module:  'progress-circle';
+
+.m-#{$module} {
+  width: rem(46px);
+  height: rem(46px);
+  position: relative;
+  display: inline-block;
+
+  svg {
+  width: rem(46px);
+  height: rem(46px);
+  }
+}

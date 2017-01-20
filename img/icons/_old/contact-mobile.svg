@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg class="m-nav__icon__svg" version="1.1" id="Layer_1" xmlns="&ns_svg;" xmlns:xlink="&ns_xlink;" width="22" height="22" viewBox="0 0 22 22"
-	 overflow="visible" enable-background="new 0 0 22 22" xml:space="preserve">
-<g id="Mobile-Tussenstap">
-	<g id="iPhone-6-klantmap-_x3E_-producten" transform="translate(-327.000000, -625.000000)">
-		<g id="tabnav" transform="translate(0.000000, 618.000000)">
-			<g id="mp-icon-nav-contact" transform="translate(328.000000, 8.000000)">
+<!-- Generator: Adobe Illustrator 12.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 51448)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_svg "http://www.w3.org/2000/svg">
+	<!ENTITY ns_xlink "http://www.w3.org/1999/xlink">
+]>
+<svg  version="1.1" id="Layer_1" xmlns="&ns_svg;" xmlns:xlink="&ns_xlink;" width="24" height="22" viewBox="0 0 24 22"
+	 style="overflow:visible;enable-background:new 0 0 24 22;" xml:space="preserve">
+<g id="mp-icon-nav-contact" transform="translate(328.000000, 8.000000)">
 				<g>
 					<path  d="M6.083,9.5c0,1.884,1.533,3.416,3.417,3.416c1.884,0,3.416-1.532,3.416-3.416
 						c0-1.884-1.532-3.417-3.416-3.417C7.616,6.083,6.083,7.616,6.083,9.5z M7.083,9.5c0-1.333,1.084-2.417,2.417-2.417
@@ -48,7 +50,4 @@
 						C16.862,0.416,18.25,0.416,18.25,0.416z"/>
 				</g>
 			</g>
-		</g>
-	</g>
-</g>
 </svg>

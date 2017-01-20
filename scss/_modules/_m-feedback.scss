@@ -1,14 +1,6 @@
-////
-/// @group Module Feedback
-////
-
 @charset "UTF-8";
-/// Module main
-$module:	'feedback';
 
-// Background color of main 
-// @require {$white} $white - Makes white 1 percent darken
-// $main-background-color:								darken($white, 1%);
+$module: 'feedback';
 
 // BASE
 .m-#{$module} {

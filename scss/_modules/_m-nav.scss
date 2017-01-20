@@ -1,79 +1,6 @@
 @charset "UTF-8";
-////
-/// @group Module Nav
-////
 
-/// Module nav
-$module:  'nav';
-
-/// Nav background-color for mobile
-/// @require {$white} $white - Makes the white color 2 percent darker
-$mobile-background:               darken($white, 2%);
-
-/// Nav border-color for mobile
-/// @require {$secondary-font-color} $secondary-font-color
-$mobile-border:                   $secondary-font-color;
-
-/// Nav link color for mobile
-/// @require {$secondary-font-color} $secondary-font-color
-$mobile-link:                     $secondary-font-color;
-
-/// Nav link active and hover color for mobile
-/// @require {$primary-color} $primary-color - Makes the primary-color color 5 percent lighter
-$mobile-link--active--hover:      lighten($primary-color, 5%);
-
-/// Nav damage round background-color for mobile
-/// @require {$warning} $warning
-$mobile-damage:                   $warning;
-
-/// Nav damage round text-color for mobile
-/// @require {$white} $white
-$mobile-damage-text:              $white;
-
-/// Nav background-color for tablet
-/// @require {$primary-color} $primary-color
-$tablet-background:               $primary-color;
-
-/// Nav border color for tablet
-/// @require {$black} $black - Adds opacity of 92 percent to black
-$tablet-border:                   rgba($black, 0.08);
-
-/// Nav item hover color for tablet
-/// @require {$black} $black - Adds opacity of 82 percent to black
-$tablet-item--hover:              rgba($black, 0.18);
-
-/// Nav active item color for tablet
-/// @require {$black} $black - Adds opacity of 92 percent to black
-$tablet-item--active:             rgba($black, 0.08);
-
-/// Nav link color for tablet
-/// @require {$white} $white
-$tablet-link:                     $white;
-
-/// Nav profile image border-color for tablet
-/// @require {$white} $white
-$tablet-profile-image-border:     $white;
-
-/// Nav damage round background-color for tablet
-/// @require {$white} $white
-$tablet-damage:                   $white;
-
-/// Nav damage round text-color for tablet
-/// @require {$primary-color} $primary-color
-$tablet-damage-text:              $primary-color;
-
-/// SVG icon fill color 
-/// @require {$primary-color} $primary-color
-$svg-icon-color:              $secondary-font-color;
-
-/// Hover SVG icon fill color 
-/// @require {$primary-color} $primary-color
-$svg-icon-color--hover:       $primary-color;
-
-/// SVG icon fill color for tablet
-/// @require {$white} $white
-$svg-icon-color-tablet:       $white;
-
+$module: 'nav';
 
 .m-#{$module} {
   z-index: map-get($z-index, navigation);
@@ -86,9 +13,10 @@ $svg-icon-color-tablet:       $white;
     height: rem(48px);
     width: 100%;
 
-    border-top: 1px solid $mobile-border;
 
-    background-color: $mobile-background;
+    border-top: 1px solid $secondary-font-color;
+
+    background-color: darken($white, 2%);
     
     @include mq($from: tablet) {
       display: none;
@@ -100,12 +28,14 @@ $svg-icon-color-tablet:       $white;
     @include mq($from: tablet) {
       display: block;
 
-      background-color: $tablet-background;
+      background-color: $primary-color;
     }
   }
   
   &__ul {
     list-style-type: none;
+    margin: 0;
+    padding: 0;
   }
 
   &__right {
@@ -130,6 +60,13 @@ $svg-icon-color-tablet:       $white;
 
       list-style-type: none;
       
+      &.-home {
+        svg {
+          vertical-align: text-top;
+          margin-right: rem($gel-spacing-unit);
+        }
+      }
+
       @include mq($from: desktop) {
         &:first-child{
           & > .m-nav__link{
@@ -150,21 +87,21 @@ $svg-icon-color-tablet:       $white;
       text-align: center;
       text-decoration: none;
       font-size: $small-font-size;
-      color: $mobile-link;
+      color: $secondary-font-color;
       
       &:hover, &.-active {
-        color: $mobile-link--active--hover;
+        color: lighten($primary-color, 5%);
       }
 
       &.-active {
         .m-nav__icon__svg {
-          fill: $svg-icon-color--hover;
+          fill: $primary-color;
         }
       }
 
       &:hover {
         .m-nav__icon__svg {
-          fill: $svg-icon-color--hover;
+          fill: $primary-color;
         }
       }
     }
@@ -172,15 +109,15 @@ $svg-icon-color-tablet:       $white;
     &.-tablet {
       display: inline-block;
       position: relative;
-      padding: rem(20px) rem(double($gel-spacing-unit));
+      padding: rem(20px);
       
       @include mq($from: desktop) {
-        padding: rem(20px) rem(triple($gel-spacing-unit));
+        padding: rem(20px);
       }
 
-      border-right: 1px solid $tablet-border;
+      border-right: 1px solid rgba($black, 0.08);
 
-      color: $tablet-link;
+      color: $white;
       text-decoration: none;
       @include open-sans(600);
       
@@ -189,15 +126,16 @@ $svg-icon-color-tablet:       $white;
       }
       
       &:hover{
-        background-color: $tablet-item--hover;
+        background-color: rgba($black, 0.18);
       }
 
       &.-active{
-        background-color: $tablet-item--active;
+        background-color: rgba($black, 0.08);
       }
 
       &.-data {
         float: left;
+        line-height: 1rem;
         padding: rem(12px) rem(double($gel-spacing-unit)); // fix the padding or the rest will break
 
         @include mq($from: desktop) {
@@ -210,12 +148,22 @@ $svg-icon-color-tablet:       $white;
         float: left;
 
         border: none;
-        background-color: $tablet-item--active;
         
         text-align: right;
+
+        svg {
+          vertical-align: text-top;
+        }
       }
     }
 
+    &__span {
+      display: inline-block;
+      float: left;
+      line-height: 3rem;
+      margin-right: 1rem;
+    }
+        
     &__icon {
       display: none;
       @include mq($from: desktop) {
@@ -226,25 +174,15 @@ $svg-icon-color-tablet:       $white;
   }
 
   &__icon {
-   
-    &.-mobile {
-      position: relative;
-      width: 20px;
-      height: 20px;
-      display: block;
-      margin: rem(8px) auto 0;
-    }
+    position: relative;
+    width: 24px;
+    height: 24px;
+    display: block;
+    margin: rem(6px) auto 0;
+
     
-    &__svg {
-
-      &.-mobile {
-        fill: $svg-icon-color;
-      }
-
-      &.-tablet {
-        fill: $svg-icon-color-tablet;
-        vertical-align: sub;
-      }
+    svg{
+      text-align: center;
     }
   }
 
@@ -261,13 +199,13 @@ $svg-icon-color-tablet:       $white;
     width: 48px;
     margin-left: rem($gel-spacing-unit);
 
-    border: rem(quarter($gel-spacing-unit)) solid $tablet-profile-image-border;
+    border: rem(quarter($gel-spacing-unit)) solid $white;
     border-radius: 50%;
 
     vertical-align: middle;
   }
 
-  &__damage-counter--mobile {
+  &__counter--mobile {
     position: absolute;
     top: -5px;
     right: -10px;
@@ -278,11 +216,11 @@ $svg-icon-color-tablet:       $white;
 
     font-size: $extra-small-font-size;
     line-height: 0.9rem;    
-    background-color: $mobile-damage;
-    color: $mobile-damage-text;
+    background-color: $warning;
+    color: $white;
   }
 
-  &__basket--counter, &__damage-counter--tablet {
+  &__counter {
     display: inline-block;
     top: rem(double($gel-spacing-unit));
     right: rem($gel-spacing-unit);
@@ -296,8 +234,8 @@ $svg-icon-color-tablet:       $white;
     text-align: center;
     font-size: $extra-small-font-size;
     line-height: 0.9rem;    
-    background-color: $tablet-damage;
-    color: $tablet-damage-text;
+    background-color: $white;
+    color: $primary-color;
   }
 }
  

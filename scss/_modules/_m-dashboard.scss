@@ -1,0 +1,300 @@
+@charset "UTF-8";
+
+$module: 'dashboard';
+
+.m-#{$module} {
+	@include container;
+	@include mq($from: tablet) {
+		padding: 0 rem(16px);
+	}
+
+	&--left {
+		@include span(12);
+
+		@include mq($from: desktop) {
+			@include span(8 no-gutters wide);
+		}
+	}
+
+	&--right {
+		@include span(12);
+
+		@include mq($from: desktop) {
+			@include span(last 4);
+		}
+	}
+	
+	&__search {
+		@include span(12);
+		padding: rem(double($gel-spacing-unit));
+		background-color: darken($white, 8%);
+
+		@include mq($from: desktop) {
+			padding: rem(quadruple($gel-spacing-unit));
+			height: rem(224px);
+		}
+
+		&-box {
+			@include span(12);
+
+			@include mq($from: tablet) {
+				@include span(last 9);
+			}
+			
+			&__label {
+				width: 100%;
+			}
+
+			&__input {
+				width: 100%;
+				height: rem(64px);
+				padding: rem(double($gel-spacing-unit));
+			}
+
+			&__suggestions {}
+			&__span {
+				margin-right: 0.5rem;
+			}
+			&__a {
+				margin-right: 0.5rem;
+				white-space: nowrap;
+			}
+		}
+	}
+
+	&__profile-picture {
+		display: none;
+
+		@include mq($from: tablet) {
+			display: block;
+			@include span(3);
+		}
+		
+		padding-right: rem(double($gel-spacing-unit));
+
+		&__img {
+			max-height: rem(160px);
+			max-width: rem(160px);
+			border: rem(4px) solid $white;
+			border-radius: 50%;
+			width: 100%;			
+		}
+	}
+
+	&__financial {
+		@include span(12);
+		padding: rem(double($gel-spacing-unit));
+
+		@include mq($from: tablet) {
+			@include span(5);
+			border-right: 1px solid darken($white, 8%);
+		}
+
+		&__h2 {
+			width: 100%;
+			word-wrap: break-word;
+  		hyphens: auto;
+		}
+
+		&__block {
+			width: 50%;
+			float: left;
+
+			&.-income {
+
+			}
+
+			&.-income-partner {
+
+			}
+
+			&.-pension {
+
+			}
+
+			&.-saving-investments {
+
+			}
+
+			&__title {
+
+			}
+			&__value {
+				@include open-sans($bold);
+				font-size: $large-font-size;
+			}
+		}
+	
+	}
+		
+	&__insurances {
+		@include span(12);
+		padding: rem(double($gel-spacing-unit));
+		
+
+		@include mq($from: tablet) {
+		@include span(last 7);
+			// border-right: 1px solid darken($white, 8%);
+		}
+
+		&__h2 {
+			width: 100%;
+			float: left;
+		}
+
+		&__damage {
+			@include remove-outline();
+	    float: right;
+	    text-align: right;
+	    font-size: $base-font-size;
+	    letter-spacing: 0;
+	    line-height: 2.2em;
+		}
+
+		&__active, &__recommend {
+	    align-content: flex-start;
+	    display: flex;
+	    flex-wrap: wrap;
+
+		}
+
+		&__block { // link
+			@include remove-outline();
+			float: left;
+			width: calc(100% / 2);
+			padding: rem($gel-spacing-unit);
+			text-align: center;
+			transition: background-color 0.3s ease;
+			
+			@include mq($from: mobileLandscape) {
+				width: calc(100% / 3);
+				padding: rem(double($gel-spacing-unit));
+			}
+			
+			&:hover{
+				background-color: darken($white, 8%);
+			}
+		}
+
+		&__icon {
+
+			& svg {
+				width: 4rem;
+				height: 4rem;
+			}
+		}
+
+		&__title {
+			word-wrap: break-word;
+  		hyphens: auto;
+		}
+	}
+
+	&__real-estate {
+		@include clearfix();
+
+		@include mq($from: tablet) {
+			border-left: 1px solid darken($white, 8%);
+		}
+		
+		&__map {
+			height: rem(calc(400px));
+			background-color: darken($white, 8%);
+
+			@include mq($from: desktop) {
+				max-height: rem(224px);
+			}
+		}
+
+		&__info {
+			padding: rem(double($gel-spacing-unit));
+		}
+
+		&__address {}
+		&__table {
+			margin-bottom: 1rem;
+
+			@include mq($from: desktop) {
+				width: 100%;
+			}
+
+			&-row {}
+			&-cell {
+				padding-right: 1rem;
+			}
+		}
+
+		&__button {
+			width: 100%;
+			> .m-button {
+				width: 100%;
+				@include mq($from: mobileLandscape, $until: desktop) {
+					width: auto;
+				}
+			}
+		}
+	}
+
+	&__new-real-estate {
+		@include clearfix();
+
+		@include mq($from: tablet) {
+			border-left: 1px solid darken($white, 8%);
+		}
+
+		&__h2 {
+			margin-left: rem(double($gel-spacing-unit));
+		}
+
+		&__object { // = link
+			@include clearfix();
+			@include remove-outline();
+			display: block;
+			padding: rem(double($gel-spacing-unit));
+			transition: background-color 0.3s ease;
+			border-bottom: 1px solid darken($white, 8%);
+			
+			&:last-of-type {
+				border-bottom: 0;
+			}
+
+			&:hover{
+				background-color: darken($white, 8%);
+			}
+		}
+		
+		&__img-container{
+			width: 100%;
+			padding-right: 1rem;
+			float: left;
+
+			@include mq($from: mobileLandscape) {
+				width: calc(35% - 1rem);
+			}
+			@include mq($from: desktop) {
+				width: calc(50% - 1rem);
+			}
+		}
+
+		&__img {
+			width: 100%;
+		}
+
+		&__info {
+			width: 65%;
+			float: left;
+
+			@include mq($from: desktop) {
+				width: 50%;
+			}
+		}
+
+		&__address1 {
+			@include open-sans($bold);
+		}
+
+		&__address2 {}
+
+		&__price {}
+	}
+}
